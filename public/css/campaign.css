@@ -4,13 +4,14 @@ table.campaign-list{
 table.campaign-list thead td{
     width:250px;
     background-color:#f9f9f9;
-    height:30px;
+    height:37px;
     font-size:18px;
     font-weight:600;
 }
 
 table.campaign-list tbody tr{
     border-bottom:1px dotted #ececec;
+    height:38px;
 }
 
 table.campaign-list tbody tr:last-of-type{

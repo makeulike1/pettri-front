@@ -26,7 +26,7 @@
 					<a href ="/tracking"><ul class='nav-link-li'><i class="bi bi-share nav-icon"></i>트래킹 링크</ul></a>
 					<a href ="/fraud"><ul class='nav-link-li'><i class="bi bi-emoji-smile-fill nav-icon"></i>프로드 방지</ul></a>
 					<a href ="/attr"><ul class='nav-link-li'><i class="bi bi-bar-chart nav-icon"></i>측정 모델 </ul></a>
-					<a href ="/system"><ul class='nav-link-li'><i class="bi bi-gear nav-icon"></i>시스템 현황 </ul></a>
+					<!--a href ="/system"><ul class='nav-link-li'><i class="bi bi-gear nav-icon"></i>시스템 현황 </ul></a -->
 				</li>
 			</ul>
 		</Router> 
