@@ -3,10 +3,10 @@
 	import Dashboard 	from "./Dashboard.svelte"
 	import Landing		from "./Landing.svelte"
 	import Campaign 	from "./Campaign.svelte"
-	import CampaignInfo from "./CampaignInfo.svelte";
-	import Fraud 	from "./Fraud.svelte"
-	import Tracking from "./Tracking.svelte"
-	import Attr from "./Attr.svelte"
+	import Partner 		from "./Partner.svelte";
+	import Fraud 		from "./Fraud.svelte"
+	import Tracking 	from "./Tracking.svelte"
+	import Attr 		from "./Attr.svelte"
 </script>
 
 <main>
@@ -21,6 +21,7 @@
 			<ul class='nav-no-bullets'>
 				<li>
 					<a href ="/dashboard"><ul class='nav-link-li'><i class="bi bi-clipboard-data nav-icon"></i>대시보드</ul></a>
+					<a href ="/partner"><ul class='nav-link-li'><i class="bi bi-person nav-icon"></i>광고 파트너</ul></a>
 					<a href ="/campaign"><ul class='nav-link-li'><i class="bi bi-globe nav-icon"></i>캠페인</ul></a>
 					<a href ="/landing"><ul class='nav-link-li'><i class="bi bi-gear nav-icon"></i>랜딩 설정</ul></a>
 					<a href ="/tracking"><ul class='nav-link-li'><i class="bi bi-share nav-icon"></i>트래킹 링크</ul></a>
@@ -65,6 +66,11 @@
 				<!-- Router : Attribution Model -->
 				<Route path="/attr" primary={false}>
 					<Attr/>
+				</Route>
+
+				<!-- Router : Partner -->
+				<Route path="/partner" primary={false}>
+					<Partner/>
 				</Route>
 				
 
