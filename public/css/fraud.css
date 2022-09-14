@@ -92,7 +92,6 @@ table.fraud tbody tr:last-of-type{
 
 .modal.fraud .modal-body .label:first-of-type{
     font-size:18px;
-    font-weight:500;
     color:#404040;
     margin-top:0px;
 }
