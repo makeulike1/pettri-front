@@ -1,12 +1,13 @@
 <script>
-	import { Router, Route } from "svelte-navigator";
-	import Dashboard 	from "./Dashboard.svelte"
-	import Landing		from "./Landing.svelte"
-	import Campaign 	from "./Campaign.svelte"
-	import Partner 		from "./Partner.svelte";
-	import Fraud 		from "./Fraud.svelte"
+	import { Router, Route } 	from "svelte-navigator";
+	import Dashboard 			from "./Dashboard.svelte"
+	import Landing				from "./Landing.svelte"
+	import Campaign 			from "./Campaign.svelte"
+	import CampaignInfo			from "./CampaignInfo.svelte"
+	import Partner 				from "./Partner.svelte";
+	import Fraud 				from "./Fraud.svelte"
 	import Tracking 	from "./Tracking.svelte"
-	import Attr 		from "./Attr.svelte"
+	import Attr 				from "./Attr.svelte"
 </script>
 
 <main>
@@ -56,6 +57,11 @@
 				<!-- Router : Campaign -->
 				<Route path="/campaign" primary={false}>
 					<Campaign/>
+				</Route>
+
+				<!-- Router : Campaign Info -->
+				<Route path="/campaign-info" primary={false}>
+					<CampaignInfo/>
 				</Route>
 
 				<!-- Router : Fraud -->

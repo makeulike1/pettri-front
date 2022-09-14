@@ -1,10 +1,4 @@
 <script>
-import CampaignInfo from "./CampaignInfo.svelte";
-
-function showCampaign(){
-    //window.$('#ci').modal('show')
-}
-
 </script>
 <h3 class='head-text'>캠페인 설정</h3>
 <table class='campaign-list'>
@@ -23,7 +17,7 @@ function showCampaign(){
             <td></td>
             <td>2022-09-02 11:14</td>
             <td>2022-09-05 12:01</td>
-            <td><span on:click={showCampaign} class='load-campaign'>상세 보기</span></td>
+            <td><a href="/campaign-info">상세 보기</a></td>
         </tr>
         <tr>
             <td>performance_NCPI</td>
@@ -31,7 +25,7 @@ function showCampaign(){
             <td></td>
             <td>2022-09-02 11:14</td>
             <td>2022-09-05 12:01</td>
-            <td><span on:click={showCampaign} class='load-campaign'>상세 보기</span></td>
+            <td><a href="/campaign-info">상세 보기</a></td>
         </tr>
         <tr>
             <td>Naver Search AD</td>
@@ -39,7 +33,7 @@ function showCampaign(){
             <td></td>
             <td>2022-09-02 11:14</td>
             <td>2022-09-05 12:01</td>
-            <td><span on:click={showCampaign} class='load-campaign'>상세 보기</span></td>
+            <td><a href="/campaign-info">상세 보기</a></td>
         </tr>
         <tr>
             <td>facebook</td>
@@ -47,7 +41,7 @@ function showCampaign(){
             <td></td>
             <td>2022-09-02 11:14</td>
             <td>2022-09-05 12:01</td>
-            <td><span on:click={showCampaign} class='load-campaign'>상세 보기</span></td>
+            <td><a href="/campaign-info">상세 보기</a></td>
         </tr>
         <tr>
             <td>performance_NCPI</td>
@@ -55,9 +49,7 @@ function showCampaign(){
             <td></td>
             <td>2022-09-02 11:14</td>
             <td>2022-09-05 12:01</td>
-            <td><span on:click={showCampaign} class='load-campaign'>상세 보기</span></td>
+            <td><a href="/campaign-info">상세 보기</a></td>
         </tr>
     </tbody>
 </table>
-
-<CampaignInfo/>

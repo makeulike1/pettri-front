@@ -1,5 +1,4 @@
 <script>
-    
     let rows=
         ["Click-Referrer Unit","Click-Identifier(adid/idfa) Unit","Click-Fingerprint Unit","Click-IP Unit",
                     "Google UAC ACe",
