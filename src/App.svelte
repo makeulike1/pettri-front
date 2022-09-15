@@ -8,10 +8,6 @@
 	import Fraud 				from "./Fraud.svelte"
 	import Tracking 			from "./Tracking.svelte"
 	import Attr 				from "./Attr.svelte"
-	import SDKGuide2 			from "./SDKGuide2.svelte";	
-	import SDKGuide1P1 			from "./sdkguide1/page1.svelte";	
-	import SDKGuide1P2 			from "./sdkguide1/page2.svelte";	
-	import SDKGuide1P3 			from "./sdkguide1/page3.svelte";	
 </script>
 
 <main>
@@ -32,16 +28,6 @@
 					<a href ="/tracking"><ul class='nav-link-li'><i class="bi bi-share nav-icon"></i>트래킹 링크</ul></a>
 					<a href ="/fraud"><ul class='nav-link-li'><i class="bi bi-emoji-smile-fill nav-icon"></i>프로드 방지</ul></a>
 					<a href ="/attr"><ul class='nav-link-li'><i class="bi bi-bar-chart nav-icon"></i>측정 모델 </ul></a>
-					<ul class='nav-link-li'>
-						<i class="bi bi-gear nav-icon"></i>SDK 연동 가이드 
-						<li class='sdk'>iOS SDK</li>
-						<ul class='sdk'>
-							<a href="/sdkguide1p1"><li>페트리 초기화</li></a>
-							<a href="/sdkguide1p2"><li>딥 링크 이벤트 분석</li></a>
-							<a href="/sdkguide1p3"><li>이벤트 분석</li></a>
-						</ul>
-						<a href ="/sdkguide2"><li class='sdk'>Android SDK</li></a>
-					</ul>
 				</li>
 			</ul>
 		</Router> 
@@ -91,29 +77,7 @@
 				<Route path="/partner" primary={false}>
 					<Partner/>
 				</Route>
-				
- 
-
-				<!-- Router : SDK Guide 2 -->
-				<Route path="/sdkguide2" primary={false}>
-					<SDKGuide2/>
-				</Route>
-
-				<!-- Router : SDK Guide 1 - Page 1 -->
-				<Route path="/sdkguide1p1" primary={false}>
-					<SDKGuide1P1/>
-				</Route>
-
-				<!-- Router : SDK Guide 1 - Page 2 -->
-				<Route path="/sdkguide1p2" primary={false}>
-					<SDKGuide1P2/>
-				</Route>
-
-				<!-- Router : SDK Guide 1 - Page 3 -->
-				<Route path="/sdkguide1p3" primary={false}>
-					<SDKGuide1P3/>
-				</Route>
-
+		 
 
 			</Router>
 		</div>
@@ -182,14 +146,7 @@
         list-style-type: none; /* Remove bullets */
         padding:0;
     }
-
-	li.sdk{
-		margin-left: 67px;
-		font-size: 20px;
-		line-height: 60px;
-	}
-
-
+ 
 	.nav-icon{margin-right:20px;}
  
 
