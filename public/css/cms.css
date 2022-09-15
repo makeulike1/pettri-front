@@ -32,6 +32,10 @@ h3.head-text{
     font-family: 'Noto Sans KR', sans-serif;
 }
 
+.nav-link-li ul.sdk{
+    margin-left:52px; font-size:20px; line-height:55px;
+}
+
 .nav-link:hover{
     background-color:#ececec;
 }
