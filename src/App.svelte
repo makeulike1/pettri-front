@@ -6,8 +6,10 @@
 	import CampaignInfo			from "./CampaignInfo.svelte"
 	import Partner 				from "./Partner.svelte";
 	import Fraud 				from "./Fraud.svelte"
-	import Tracking 	from "./Tracking.svelte"
+	import Tracking 			from "./Tracking.svelte"
 	import Attr 				from "./Attr.svelte"
+	import SDKGuide1 			from "./SDKGuide1.svelte";	
+	import SDKGuide2 			from "./SDKGuide2.svelte";	
 </script>
 
 <main>
@@ -28,7 +30,11 @@
 					<a href ="/tracking"><ul class='nav-link-li'><i class="bi bi-share nav-icon"></i>트래킹 링크</ul></a>
 					<a href ="/fraud"><ul class='nav-link-li'><i class="bi bi-emoji-smile-fill nav-icon"></i>프로드 방지</ul></a>
 					<a href ="/attr"><ul class='nav-link-li'><i class="bi bi-bar-chart nav-icon"></i>측정 모델 </ul></a>
-					<!--a href ="/system"><ul class='nav-link-li'><i class="bi bi-gear nav-icon"></i>시스템 현황 </ul></a -->
+					<ul class='nav-link-li'>
+						<i class="bi bi-gear nav-icon"></i>SDK 연동 가이드 
+						<a href ="/sdkguide1"><li class='sdk'>iOS SDK</li></a>
+						<a href ="/sdkguide2"><li class='sdk'>Android SDK</li></a>
+					</ul>
 				</li>
 			</ul>
 		</Router> 
@@ -79,6 +85,15 @@
 					<Partner/>
 				</Route>
 				
+				<!-- Router : SDK Guide 1 -->
+				<Route path="/sdkguide1" primary={false}>
+					<SDKGuide1/>
+				</Route>
+
+				<!-- Router : SDK Guide 2 -->
+				<Route path="/sdkguide2" primary={false}>
+					<SDKGuide2/>
+				</Route>
 
 
 			</Router>
@@ -149,6 +164,11 @@
         padding:0;
     }
 
+	li.sdk{
+		margin-left: 67px;
+		font-size: 20px;
+		line-height: 60px;
+	}
 
 
 	.nav-icon{margin-right:20px;}
