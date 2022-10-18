@@ -1,5 +1,5 @@
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 var app = (function () {
     'use strict';
 
@@ -10050,7 +10050,7 @@ var app = (function () {
     const file = "src/App.svelte";
 
     // (28:5) <Link href ="/campaign?app_id={appId}">
-    function create_default_slot_13(ctx) {
+    function create_default_slot_10(ctx) {
     	let ul;
     	let i;
     	let t;
@@ -10078,7 +10078,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_13.name,
+    		id: create_default_slot_10.name,
     		type: "slot",
     		source: "(28:5) <Link href =\\\"/campaign?app_id={appId}\\\">",
     		ctx
@@ -10088,7 +10088,7 @@ var app = (function () {
     }
 
     // (29:5) <Link href ="/partner?app_id={appId}">
-    function create_default_slot_12(ctx) {
+    function create_default_slot_9(ctx) {
     	let ul;
     	let i;
     	let t;
@@ -10116,7 +10116,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_12.name,
+    		id: create_default_slot_9.name,
     		type: "slot",
     		source: "(29:5) <Link href =\\\"/partner?app_id={appId}\\\">",
     		ctx
@@ -10126,7 +10126,7 @@ var app = (function () {
     }
 
     // (30:5) <Link href ="/landing?app_id={appId}">
-    function create_default_slot_11(ctx) {
+    function create_default_slot_8(ctx) {
     	let ul;
     	let i;
     	let t;
@@ -10154,123 +10154,9 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_11.name,
-    		type: "slot",
-    		source: "(30:5) <Link href =\\\"/landing?app_id={appId}\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (31:5) <Link href ="/tracking?app_id={appId}">
-    function create_default_slot_10(ctx) {
-    	let ul;
-    	let i;
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			ul = element("ul");
-    			i = element("i");
-    			t = text("트래킹 링크");
-    			attr_dev(i, "class", "bi bi-share nav-icon svelte-9pb4iy");
-    			add_location(i, file, 30, 68, 1282);
-    			attr_dev(ul, "class", "nav-link-li");
-    			add_location(ul, file, 30, 44, 1258);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, ul, anchor);
-    			append_dev(ul, i);
-    			append_dev(ul, t);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(ul);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_10.name,
-    		type: "slot",
-    		source: "(31:5) <Link href =\\\"/tracking?app_id={appId}\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (32:5) <Link href ="/fraud?app_id={appId}">
-    function create_default_slot_9(ctx) {
-    	let ul;
-    	let i;
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			ul = element("ul");
-    			i = element("i");
-    			t = text("프로드 방지");
-    			attr_dev(i, "class", "bi bi-emoji-smile-fill nav-icon svelte-9pb4iy");
-    			add_location(i, file, 31, 65, 1402);
-    			attr_dev(ul, "class", "nav-link-li");
-    			add_location(ul, file, 31, 41, 1378);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, ul, anchor);
-    			append_dev(ul, i);
-    			append_dev(ul, t);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(ul);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
-    		id: create_default_slot_9.name,
-    		type: "slot",
-    		source: "(32:5) <Link href =\\\"/fraud?app_id={appId}\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (33:5) <Link href ="/attr?app_id={appId}">
-    function create_default_slot_8(ctx) {
-    	let ul;
-    	let i;
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			ul = element("ul");
-    			i = element("i");
-    			t = text("측정 모델");
-    			attr_dev(i, "class", "bi bi-bar-chart nav-icon svelte-9pb4iy");
-    			add_location(i, file, 32, 64, 1532);
-    			attr_dev(ul, "class", "nav-link-li");
-    			add_location(ul, file, 32, 40, 1508);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, ul, anchor);
-    			append_dev(ul, i);
-    			append_dev(ul, t);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(ul);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
     		id: create_default_slot_8.name,
     		type: "slot",
-    		source: "(33:5) <Link href =\\\"/attr?app_id={appId}\\\">",
+    		source: "(30:5) <Link href =\\\"/landing?app_id={appId}\\\">",
     		ctx
     	});
 
@@ -10789,12 +10675,6 @@ var app = (function () {
     	let t7;
     	let link2;
     	let t8;
-    	let link3;
-    	let t9;
-    	let link4;
-    	let t10;
-    	let link5;
-    	let t11;
     	let div6;
     	let div5;
     	let router;
@@ -10803,7 +10683,7 @@ var app = (function () {
     	link0 = new Link({
     			props: {
     				href: "/campaign?app_id=" + /*appId*/ ctx[0],
-    				$$slots: { default: [create_default_slot_13] },
+    				$$slots: { default: [create_default_slot_10] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -10812,7 +10692,7 @@ var app = (function () {
     	link1 = new Link({
     			props: {
     				href: "/partner?app_id=" + /*appId*/ ctx[0],
-    				$$slots: { default: [create_default_slot_12] },
+    				$$slots: { default: [create_default_slot_9] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -10821,33 +10701,6 @@ var app = (function () {
     	link2 = new Link({
     			props: {
     				href: "/landing?app_id=" + /*appId*/ ctx[0],
-    				$$slots: { default: [create_default_slot_11] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	link3 = new Link({
-    			props: {
-    				href: "/tracking?app_id=" + /*appId*/ ctx[0],
-    				$$slots: { default: [create_default_slot_10] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	link4 = new Link({
-    			props: {
-    				href: "/fraud?app_id=" + /*appId*/ ctx[0],
-    				$$slots: { default: [create_default_slot_9] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	link5 = new Link({
-    			props: {
-    				href: "/attr?app_id=" + /*appId*/ ctx[0],
     				$$slots: { default: [create_default_slot_8] },
     				$$scope: { ctx }
     			},
@@ -10886,12 +10739,6 @@ var app = (function () {
     			t7 = space();
     			create_component(link2.$$.fragment);
     			t8 = space();
-    			create_component(link3.$$.fragment);
-    			t9 = space();
-    			create_component(link4.$$.fragment);
-    			t10 = space();
-    			create_component(link5.$$.fragment);
-    			t11 = space();
     			div6 = element("div");
     			div5 = element("div");
     			create_component(router.$$.fragment);
@@ -10917,10 +10764,10 @@ var app = (function () {
     			attr_dev(div4, "id", "left-menu");
     			add_location(div4, file, 20, 2, 612);
     			attr_dev(div5, "class", "mid-cont svelte-9pb4iy");
-    			add_location(div5, file, 39, 3, 1658);
+    			add_location(div5, file, 39, 3, 1665);
     			attr_dev(div6, "class", "cont svelte-9pb4iy");
     			attr_dev(div6, "id", "main");
-    			add_location(div6, file, 36, 2, 1621);
+    			add_location(div6, file, 36, 2, 1628);
     			attr_dev(main, "class", "svelte-9pb4iy");
     			add_location(main, file, 15, 0, 492);
     		},
@@ -10946,13 +10793,7 @@ var app = (function () {
     			mount_component(link1, li, null);
     			append_dev(li, t7);
     			mount_component(link2, li, null);
-    			append_dev(li, t8);
-    			mount_component(link3, li, null);
-    			append_dev(li, t9);
-    			mount_component(link4, li, null);
-    			append_dev(li, t10);
-    			mount_component(link5, li, null);
-    			append_dev(main, t11);
+    			append_dev(main, t8);
     			append_dev(main, div6);
     			append_dev(div6, div5);
     			mount_component(router, div5, null);
@@ -10980,27 +10821,6 @@ var app = (function () {
     			}
 
     			link2.$set(link2_changes);
-    			const link3_changes = {};
-
-    			if (dirty & /*$$scope*/ 4) {
-    				link3_changes.$$scope = { dirty, ctx };
-    			}
-
-    			link3.$set(link3_changes);
-    			const link4_changes = {};
-
-    			if (dirty & /*$$scope*/ 4) {
-    				link4_changes.$$scope = { dirty, ctx };
-    			}
-
-    			link4.$set(link4_changes);
-    			const link5_changes = {};
-
-    			if (dirty & /*$$scope*/ 4) {
-    				link5_changes.$$scope = { dirty, ctx };
-    			}
-
-    			link5.$set(link5_changes);
     			const router_changes = {};
 
     			if (dirty & /*$$scope*/ 4) {
@@ -11014,9 +10834,6 @@ var app = (function () {
     			transition_in(link0.$$.fragment, local);
     			transition_in(link1.$$.fragment, local);
     			transition_in(link2.$$.fragment, local);
-    			transition_in(link3.$$.fragment, local);
-    			transition_in(link4.$$.fragment, local);
-    			transition_in(link5.$$.fragment, local);
     			transition_in(router.$$.fragment, local);
     			current = true;
     		},
@@ -11024,9 +10841,6 @@ var app = (function () {
     			transition_out(link0.$$.fragment, local);
     			transition_out(link1.$$.fragment, local);
     			transition_out(link2.$$.fragment, local);
-    			transition_out(link3.$$.fragment, local);
-    			transition_out(link4.$$.fragment, local);
-    			transition_out(link5.$$.fragment, local);
     			transition_out(router.$$.fragment, local);
     			current = false;
     		},
@@ -11035,9 +10849,6 @@ var app = (function () {
     			destroy_component(link0);
     			destroy_component(link1);
     			destroy_component(link2);
-    			destroy_component(link3);
-    			destroy_component(link4);
-    			destroy_component(link5);
     			destroy_component(router);
     		}
     	};

@@ -33,39 +33,4 @@
   </li>
 </ul>
 
-<style>
-
-.campaign-info .modal-body{
-    padding-left: 40px;
-    padding-top: 25px;
-}
-.campaign-info .modal-body .top-header{
-    padding-bottom:15px;
-    border-bottom:1px dotted #ececec;
-}
-.campaign-info .modal-body .top-header .section{
-    display:inline-block;width:150px; font-size:18px;cursor:pointer;
-}
-
-.campaign-info .modal-body .top-header .section:hover{
-    color:blue;
-}
-
-.campaign-info .sub-header{
-    font-size:20px;
-    font-weight:550;
-    margin-top:20px;
-}
-
-.campaign-info .modal-header{
-    background-color:#00264d;
-    color:white;
-}
-.campaign-info .modal-dialog{
-    max-width:950px;
-}
-
-.campaign-info .modal-header button.close{
-    color:white;
-}
-</style>
+<style></style>
