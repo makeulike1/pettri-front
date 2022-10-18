@@ -71,6 +71,47 @@
 <PartnerSignUp/>
 
 <style>
+    table.partner{
+        margin-top:45px;
+    }
+    table.partner thead td{
+        width:250px;
+        background-color:#f9f9f9;
+        height:37px;
+        font-size:18px;
+        font-weight:600;
+        padding-left:10px;
+    }
+
+    table.partner tbody tr{
+        border-bottom:1px dotted #ececec;
+        height:45px;
+    }
+
+    table.partner tbody tr td{
+        padding-left:10px;
+    }
+
+    table.partner tbody tr td span.active{
+        color:green;
+    }
+
+
+    table.partner tbody tr:last-of-type{
+        border-bottom: none;
+    }
+
+
+
+    table.partner tbody span.config{
+        cursor:pointer;
+    }
+
+    table.partner tbody span.config:hover{
+        color:blue;
+        text-decoration: underline;
+    }
+
 
 </style>
 

@@ -1,4 +1,5 @@
-const url               = new URL(window.location.href)
+const url           = new URL(window.location.href)
+const serverURL     = 'http://test.adrunner.co.kr:8083'
 
 function closeMenu(){
     window.$('#left-menu').hide()

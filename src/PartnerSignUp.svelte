@@ -36,3 +36,55 @@
       </div>
     </div>
 </div>
+<style>
+
+   .modal.partner .modal-content{
+        border:none;
+        width:650px;
+    }
+
+    .modal.partner .modal-header{
+        background-color:#00264d;
+        color:white;
+    }
+
+    .modal.partner .modal-header .close{
+        color:white;
+    }
+
+    .modal.partner .modal-body{
+        padding:30px 39px;
+    }
+
+    .modal.partner .modal-body .label:first-of-type{
+        font-size:18px;
+        font-weight:500;
+        color:#404040;
+        margin-top:0px;
+    }
+    .modal.partner .modal-body .label{
+        margin-top:40px;
+    }
+    .modal.partner .modal-body .text{
+        margin-top:7px;
+        margin-bottom:7px;
+    }
+
+    .modal.partner .modal-body .text textarea{
+        width:550px;
+        border-radius:6px;
+        cursor:pointer;
+        height:150px;
+    }
+
+    .modal.partner .modal-body .text input[type=textbox]{
+        width:550px;
+        border-radius:6px;
+        cursor:pointer;
+    }
+
+    .modal.partner .modal-body .text input[type=textbox]:hover{
+        border:1px solid blue;
+    }
+
+</style>

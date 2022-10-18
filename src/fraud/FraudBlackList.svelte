@@ -35,3 +35,30 @@
 <div id='fraud-black-list-pub' class='cont-2'>
   <FraudBlackListPub/>
 </div>
+<style>
+
+ 
+
+.cont-2.hidden{
+    display:none;
+}
+
+
+
+
+
+.hidden{
+    display:none;
+}
+
+
+#dropdown-1{
+    border-radius:2px;
+    background-color:white;
+    color:#404040;
+    width:130px;
+    text-align:left;
+}
+
+ 
+</style>

@@ -1,13 +1,71 @@
  <script>
+  import { Router, Route, Link } from "yrv";
+  import CPD		from "./campaign/Dashboard.svelte"
+  import CPT    from "./campaign/TrackingLink.svelte"
+  import CPK    from "./campaign/KPI.svelte"
+  import CPP    from "./campaign/Postback.svelte"
+  import CPF    from "./campaign/Fraud.svelte"
+
+   let currentURL = new URL(window.location.href)
+   let appId       = currentURL.searchParams.get("app_id")
    
+
  </script>
 
  <ul class="nav">
   <li class="nav-item">
-      <!-- svelte-ignore a11y-invalid-attribute -->
-      <a class="nav-link active" href="#">트래킹 링크</a>
-      <a class="nav-link active" href="#">KPI 목표 설정</a>
-      <a class="nav-link active" href="#">포스트백 설정</a>
-      <a class="nav-link active" href="#">프로드 설정</a>
+  
+      <Link href="/campaign-info/cpd" class="nav-link campaign active">대시보드</Link>
+      <Link href="/campaign-info/cpt" class="nav-link campaign active">트래킹 링크</Link>
+      <Link href="/campaign-info/cpk" class="nav-link campaign active">KPI 목표 설정</Link>
+      <Link href="/campaign-info/cpp" class="nav-link campaign active">포스트백 설정</Link>
+      <Link href="/campaign-info/cpf" class="nav-link campaign active">프로드 설정</Link>
+      <br>  
+      <Router>
+          <Route path="/cpd"><CPD/></Route>
+          <Route path="/cpt"><CPT/></Route>
+          <Route path="/cpk"><CPK/></Route>
+          <Route path="/cpp"><CPP/></Route>
+          <Route path="/cpf"><CPF/></Route>
+      </Router>
+      
+     
   </li>
 </ul>
+
+<style>
+
+.campaign-info .modal-body{
+    padding-left: 40px;
+    padding-top: 25px;
+}
+.campaign-info .modal-body .top-header{
+    padding-bottom:15px;
+    border-bottom:1px dotted #ececec;
+}
+.campaign-info .modal-body .top-header .section{
+    display:inline-block;width:150px; font-size:18px;cursor:pointer;
+}
+
+.campaign-info .modal-body .top-header .section:hover{
+    color:blue;
+}
+
+.campaign-info .sub-header{
+    font-size:20px;
+    font-weight:550;
+    margin-top:20px;
+}
+
+.campaign-info .modal-header{
+    background-color:#00264d;
+    color:white;
+}
+.campaign-info .modal-dialog{
+    max-width:950px;
+}
+
+.campaign-info .modal-header button.close{
+    color:white;
+}
+</style>

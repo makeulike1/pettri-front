@@ -1,89 +1,84 @@
 <script>
-	import { Router, Route } 	from "svelte-navigator";
-	import Dashboard 			from "./Dashboard.svelte"
-	import Landing				from "./Landing.svelte"
-	import Campaign 			from "./Campaign.svelte"
-	import CampaignInfo			from "./CampaignInfo.svelte"
-	import Partner 				from "./Partner.svelte";
-	import Fraud 				from "./Fraud.svelte"
-	import Tracking 			from "./Tracking.svelte"
-	import Attr 				from "./Attr.svelte"
+	import { Router, Route, Link} 			from "yrv";
+	import Landing						from "./Landing.svelte"
+	import Campaign 					from "./Campaign.svelte"
+	import CampaignInfo					from "./CampaignInfo.svelte"
+	import Partner 						from "./Partner.svelte";
+	import Fraud 						from "./Fraud.svelte"
+	import Tracking 					from "./Tracking.svelte"
+	import Attr 						from "./Attr.svelte"
+	
+	let currentURL = new URL(window.location.href)
+	let appId   = currentURL.searchParams.get("app_id")
+
 </script>
 
 <main>
-	<div class='top-cont'><span class='nav-open-menu' id='open-menu' onclick='openMenu()'>메뉴 펼치기</span></div>
-	<div class='nav' id='left-menu'>
-		<div class="top-nav">
-			<a href='../index.html'><div class='nav-logout'>로그아웃</div></a>
-			<div class='nav-close-out' onclick='closeMenu()'>메뉴닫기</div>
-		</div>
 
-		<Router>
+	<div class='top-cont'><span class='nav-open-menu' id='open-menu' onclick='openMenu()'>메뉴 펼치기</span></div>
+
+	
+		<div class='nav' id='left-menu'>
+			<div class="top-nav">
+				<a href='../index.html'><div class='nav-logout'>로그아웃</div></a>
+				<div class='nav-close-out' onclick='closeMenu()'>메뉴닫기</div>
+			</div>
 			<ul class='nav-no-bullets'>
 				<li>
-					<a href ="/dashboard"><ul class='nav-link-li'><i class="bi bi-clipboard-data nav-icon"></i>대시보드</ul></a>
-					<a href ="/partner"><ul class='nav-link-li'><i class="bi bi-person nav-icon"></i>광고 파트너</ul></a>
-					<a href ="/campaign"><ul class='nav-link-li'><i class="bi bi-globe nav-icon"></i>캠페인</ul></a>
-					<a href ="/landing"><ul class='nav-link-li'><i class="bi bi-gear nav-icon"></i>랜딩 설정</ul></a>
-					<a href ="/tracking"><ul class='nav-link-li'><i class="bi bi-share nav-icon"></i>트래킹 링크</ul></a>
-					<a href ="/fraud"><ul class='nav-link-li'><i class="bi bi-emoji-smile-fill nav-icon"></i>프로드 방지</ul></a>
-					<a href ="/attr"><ul class='nav-link-li'><i class="bi bi-bar-chart nav-icon"></i>측정 모델 </ul></a>
+					<Link href ="/campaign?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-globe nav-icon"></i>캠페인</ul></Link>
+					<Link href ="/partner?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-person nav-icon"></i>광고 파트너</ul></Link>
+					<Link href ="/landing?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-gear nav-icon"></i>랜딩 설정</ul></Link>
+					<Link href ="/tracking?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-share nav-icon"></i>트래킹 링크</ul></Link>
+					<Link href ="/fraud?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-emoji-smile-fill nav-icon"></i>프로드 방지</ul></Link>
+					<Link href ="/attr?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-bar-chart nav-icon"></i>측정 모델 </ul></Link>
 				</li>
 			</ul>
-		</Router> 
+		</div>
+		<div class='cont' id='main'>
+			
 
-	</div>
-	<div class='cont' id='main'>
-		
+			<div class='mid-cont'>
+				<Router>
+					<!-- Router : Tracking Link -->
+					<Route path="/tracking" primary={false}>
+						<Tracking/>
+					</Route>
 
-		<div class='mid-cont'>
-			<Router>
-				<!-- Router : Dashboard -->
-				<Route path="/dashboard" primary={false}>
-					<Dashboard/>
-				</Route>
+					<!-- Router : Landing -->
+					<Route path="/landing" primary={false}>
+						<Landing/>
+					</Route>
 
-				<!-- Router : Tracking Link -->
-				<Route path="/tracking" primary={false}>
-					<Tracking/>
-				</Route>
+					<!-- Router : Campaign -->
+					<Route path="/campaign" primary={false}>
+						<Campaign/>
+					</Route>
 
-				<!-- Router : Landing -->
-				<Route path="/landing" primary={false}>
-					<Landing/>
-				</Route>
+					<!-- Router : Campaign Info -->
+					<Route path="/campaign-info" primary={false}>
+						<CampaignInfo/>
+					</Route>
 
-				<!-- Router : Campaign -->
-				<Route path="/campaign" primary={false}>
-					<Campaign/>
-				</Route>
+					<!-- Router : Fraud -->
+					<Route path="/fraud" primary={false}>
+						<Fraud/>
+					</Route>
 
-				<!-- Router : Campaign Info -->
-				<Route path="/campaign-info" primary={false}>
-					<CampaignInfo/>
-				</Route>
+					<!-- Router : Attribution Model -->
+					<Route path="/attr" primary={false}>
+						<Attr/>
+					</Route>
 
-				<!-- Router : Fraud -->
-				<Route path="/fraud" primary={false}>
-					<Fraud/>
-				</Route>
+					<!-- Router : Partner -->
+					<Route path="/partner" primary={false}>
+						<Partner/>
+					</Route>
+				</Router>
+			</div>
 
-				<!-- Router : Attribution Model -->
-				<Route path="/attr" primary={false}>
-					<Attr/>
-				</Route>
-
-				<!-- Router : Partner -->
-				<Route path="/partner" primary={false}>
-					<Partner/>
-				</Route>
-		 
-
-			</Router>
+			
 		</div>
 
-		
-	</div>
 </main>
 
 

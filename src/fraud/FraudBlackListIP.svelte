@@ -59,3 +59,36 @@
 </table>
 <button type="button" class="btn btn-primary" on:click={signupIP} data-dismiss="modal">등록</button>
 <FraudBlackListIPSignUp/>
+<style>
+    table.fraud{
+        margin-top:20px;
+        width:1200px;
+        margin-bottom:50px;
+    } 
+    table.fraud thead td.ip{
+        width:160px;
+    }
+    table.fraud thead td.datetime{
+        width:200px;
+    }
+    table.fraud thead td{
+        background-color:#f9f9f9;
+        height:37px;
+        font-size:18px;
+        font-weight:600;
+        padding-left:10px;
+    }
+
+    table.fraud tbody tr{
+        border-bottom:1px dotted #ececec;
+        height:45px;
+    }
+
+    table.fraud tbody tr td{
+        padding-left:10px;
+    }
+
+    table.fraud tbody tr:last-of-type{
+        border-bottom: none;
+}
+</style>

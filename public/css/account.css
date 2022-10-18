@@ -31,4 +31,35 @@
 
 .account-cont .item .app-desc{
     display:inline-block;
+
+}
+
+
+table.app-signup tbody tr{
+    height:50px;
+}
+
+table.app-signup tbody tr td input[type=radio]{
+    margin-right:8px;
+    cursor:pointer;
+}
+
+table.app-signup tbody tr td input[type=radio]:last-of-type{
+    margin-left:25px;
+}
+
+table.app-signup tbody tr td input[type=text]{
+    padding-left:7px;
+    width:250px;
+}
+
+table.app-signup tbody tr td.label{
+    text-align:left;
+    width:150px;
+    font-weight:600;
+}
+
+table.app-signup{
+    margin-top:35px;
+    margin-bottom:36px;
 }

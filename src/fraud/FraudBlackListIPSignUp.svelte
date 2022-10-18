@@ -28,3 +28,53 @@
     </div>
 </div>
 
+<style>
+
+.modal.fraud .modal-content{
+    border:none;
+    width:650px;
+}
+
+.modal.fraud .modal-header{
+    background-color:#00264d;
+    color:white;
+}
+
+.modal.fraud .modal-header .close{
+    color:white;
+}
+
+.modal.fraud .modal-body{
+    padding:30px 39px;
+}
+
+.modal.fraud .modal-body .label:first-of-type{
+    font-size:18px;
+    color:#404040;
+    margin-top:0px;
+}
+.modal.fraud .modal-body .label{
+    margin-top:40px;
+}
+.modal.fraud .modal-body .text{
+    margin-top:7px;
+    margin-bottom:7px;
+}
+
+.modal.fraud .modal-body .text textarea{
+    width:550px;
+    border-radius:6px;
+    cursor:pointer;
+    height:150px;
+}
+
+.modal.fraud .modal-body .text input[type=textbox]{
+    width:550px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+.modal.fraud .modal-body .text input[type=textbox]:hover{
+    border:1px solid blue;
+}
+</style>

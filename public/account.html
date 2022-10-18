@@ -6,109 +6,96 @@
 	<link rel='stylesheet' href='/css/index.css'>
     <link rel='stylesheet' href='/css/account.css'>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
 	<title>페트리</title>
 </head>
 
+<script>
+
+    let appList = []
+    let currentURL = new URL(window.location.href)
+    let accountId   = currentURL.searchParams.get("account_id")
+
+    fetch("http://test.adrunner.co.kr:8083/app/list?account_id="+accountId)
+        .then(response => response.json())
+            .then(data =>{    
+                appList = data
+                for (var key of appList){
+                    let plt  = false
+                    if(key.platform == false)
+                        plt = "안드로이드"
+                    else plt = "iOS"
+                    $('#app-list').append("<tr><td>" 
+                    +key.id+"</td><td>" 
+                    +key.name+ "</td><td>" 
+                    +key.bundleId+ "</td><td>" 
+                    +plt+"</td><td>"
+                    +key.updatetime+"</td><td>"
+                    +key.createtime+"</td>"
+                    +"<td><a href='../campaign?app_id="
+                        +key.id+"'>상세 보기</a></td><td><span class='remove-btn' onclick='remove("+key.id+")'>삭제</span></td></tr>")
+                        
+                    console.log(key)
+                }
+                
+            });
+ 
+
+    function remove(appId){
+        if(confirm("[주의]선택한 앱을 정말로 삭제하시겠습니까?")){
+            fetch("http://test.adrunner.co.kr:8083/app/delete?app_id="+appId, {
+                    method:'DELETE'
+                }).then(success => {
+                    alert("앱이 정상적으로 삭제되었습니다.")
+                    location.reload()
+                })
+
+ 
+        }
+    }
+
+    function logout(){
+        location.replace('../index.html')
+    }
+
+    function appSignUp(){
+        location.replace('../app-signup.html?account_id='+accountId)
+    }
+</script>
 <body>
     <div class="cont">
 		<div class='login-cont'>
+            <table class='app-table'>
+                <thead>
+                    <td>앱 번호</td>
+                    <td class='name'>앱 이름</td>
+                    <td class='bundle-id'>앱 번들 아이디</td>
+                    <td>플랫폼</td>
+                    <td class='datetime'>수정 날짜/시각</td>
+                    <td class='datetime'>삽입 날짜/시각</td>
+                    <td class='view'></td>
+                    <td class='remove'></td>
+                </thead>
+                <tbody id='app-list'>
+                    
+                </tbody>
+            </table> 
             <div class='account-cont'>
-                <div class='row'>
-                    <a href="../dashboard">
-                        <div class='item'>
-                            <div class='app-icon'><img src='../favicon.png' width=35></div>
-                            <div class='app-desc'>
-                                <div><b>Bithumb</b></div>
-                                <div>com.android.bithumb</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="../dashboard">
-                        <div class='item'>
-                            <div class='app-icon'><img src='../favicon.png' width=35></div>
-                            <div class='app-desc'>
-                                <div><b>Coinone</b></div>
-                                <div>com.android.coinone</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="../dashboard">
-                        <div class='item'>
-                            <div class='app-icon'><img src='../favicon.png' width=35></div>
-                            <div class='app-desc'>
-                                <div><b>Bithumb</b></div>
-                                <div>com.android.bithumb</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
             </div>
-            <div class='account-cont'>
-                <div class='row'>
-                    <a href="../dashboard">
-                        <div class='item'>
-                            <div class='app-icon'><img src='../favicon.png' width=35></div>
-                            <div class='app-desc'>
-                                <div><b>Bithumb</b></div>
-                                <div>com.android.bithumb</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="../dashboard">
-                        <div class='item'>
-                            <div class='app-icon'><img src='../favicon.png' width=35></div>
-                            <div class='app-desc'>
-                                <div><b>Bithumb</b></div>
-                                <div>com.android.bithumb</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="../dashboard">
-                        <div class='item'>
-                            <div class='app-icon'><img src='../favicon.png' width=35></div>
-                            <div class='app-desc'>
-                                <div><b>Bithumb</b></div>
-                                <div>com.android.bithumb</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class='account-cont'>
-                <div class='row'>
-                    <a href="../dashboard">
-                        <div class='item'>
-                            <div class='app-icon'><img src='../favicon.png' width=35></div>
-                            <div class='app-desc'>
-                                <div><b>Bithumb</b></div>
-                                <div>com.android.bithumb</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="../dashboard">
-                        <div class='item'>
-                            <div class='app-icon'><img src='../favicon.png' width=35></div>
-                            <div class='app-desc'>
-                                <div><b>Bithumb</b></div>
-                                <div>com.android.bithumb</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="../dashboard">
-                        <div class='item'>
-                            <div class='app-icon'><img src='../favicon.png' width=35></div>
-                            <div class='app-desc'>
-                                <div><b>Bithumb</b></div>
-                                <div>com.android.bithumb</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            <button type="button" class="btn btn-secondary logout" onclick="logout()">로그아웃</button>
+            <button type="button" class="btn btn-primary" onclick="appSignUp()">앱 등록</button>
 		</div>
 		<div class='copyright-text'>@ 2022 GnM Performance. Inc All rights reserved.</div>
 	</div>
- 
 </body>
 
  

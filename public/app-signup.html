@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
+	<link rel='stylesheet' href='/css/index.css'>
+    <link rel='stylesheet' href='/css/account.css'>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+	<title>페트리</title>
+</head>
+
+<script>
+
+    let currentURL = new URL(window.location.href)
+    let accountId = currentURL.searchParams.get("account_id")
+    
+    function signup(){
+        let name = $('#app-name').val()
+        let bundleId = $('#app-bundle-id').val()
+        let platform = true;
+
+        if($('#app-platform-android').prop('checked')){
+            platform = false;
+        }else platform = true;
+
+        let payload = {
+            "name":name,
+            "bundleId":bundleId,
+            "platform":platform,
+            "accountId":accountId
+        }
+
+        if(confirm("앱을 신규로 등록하시겠습니까?")){
+
+
+            // 캠페인 신규로 등록
+            fetch("http://test.adrunner.co.kr:8083/app/create", {
+                    method:'POST',   
+                    body:JSON.stringify( payload ),
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'token' : sessionStorage.getItem("token")
+                    }
+                }).then(success => {
+                    alert("앱을 신규로 등록하였습니다.")
+                    location.replace('../account.html?account_id='+accountId)
+                })
+            
+        }
+    }
+ 
+    function goBack(){
+        location.replace('../account.html?account_id='+accountId)
+    }
+
+    function checkAndroid(){
+        $('#app-platform-ios').prop('checked',false)
+    }
+
+    function checkIOS(){
+        $('#app-platform-android').prop('checked',false)
+    }
+
+</script>
+<body>
+    <div class="cont">
+        <h3>앱 등록</h3>
+		<div class='login-cont'>
+            <table class='app-signup'>
+                <tbody>
+                    <tr>
+                        <td class='label'>앱 이름</td>
+                        <td><input type='text' id='app-name' placeholder='pettri'/></td>
+                    </tr>
+                    <tr>
+                        <td class='label'>앱 번들 아이디</td>
+                        <td><input type='text' id='app-bundle-id' placeholder='com.android.pettri'/></td>
+                    </tr>
+                    <tr>
+                        <td class='label'>앱 플랫폼</td>
+                        <td>
+                            <input type='radio' id='app-platform-android' onclick='checkAndroid()' checked>안드로이드
+                            <input type='radio' id='app-platform-ios' onclick='checkIOS()'>iOS
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+     
+            <button type="button" class="btn btn-secondary logout" onclick="goBack()">뒤로 가기</button>
+            <button type="button" class="btn btn-primary" onclick="signup()">신규 등록</button>
+		</div>
+		<div class='copyright-text'>@ 2022 GnM Performance. Inc All rights reserved.</div>
+	</div>
+</body>
+
+ 
+</html>
+
