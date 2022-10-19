@@ -257,7 +257,7 @@ table.app-table thead{
 table.app-table tbody tr{
     height:30px;
     font-family: 'calibri', monospace;
-    font-size:13px;
+    font-size:15px;
 }
 
 table.app-table tbody tr:hover{

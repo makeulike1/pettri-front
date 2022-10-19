@@ -3645,11 +3645,13 @@ var app = (function () {
 
     function create_fragment$g(ctx) {
     	let h3;
+    	let t1;
 
     	const block = {
     		c: function create() {
     			h3 = element("h3");
     			h3.textContent = "대시보드";
+    			t1 = text("\n리포트에 있는 대시보드와 위젯 그대로 가져올 예정");
     			add_location(h3, file$g, 4, 0, 25);
     		},
     		l: function claim(nodes) {
@@ -3657,12 +3659,14 @@ var app = (function () {
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, h3, anchor);
+    			insert_dev(target, t1, anchor);
     		},
     		p: noop,
     		i: noop,
     		o: noop,
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(h3);
+    			if (detaching) detach_dev(t1);
     		}
     	};
 
@@ -3963,7 +3967,7 @@ var app = (function () {
     const file$b = "src/CampaignInfo.svelte";
 
     // (18:6) <Link href="/campaign-info/cpd" class="nav-link campaign active">
-    function create_default_slot_10$1(ctx) {
+    function create_default_slot_10(ctx) {
     	let t;
 
     	const block = {
@@ -3980,7 +3984,7 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_10$1.name,
+    		id: create_default_slot_10.name,
     		type: "slot",
     		source: "(18:6) <Link href=\\\"/campaign-info/cpd\\\" class=\\\"nav-link campaign active\\\">",
     		ctx
@@ -4474,7 +4478,7 @@ var app = (function () {
     			props: {
     				href: "/campaign-info/cpd",
     				class: "nav-link campaign active",
-    				$$slots: { default: [create_default_slot_10$1] },
+    				$$slots: { default: [create_default_slot_10] },
     				$$scope: { ctx }
     			},
     			$$inline: true
@@ -10050,7 +10054,7 @@ var app = (function () {
     const file = "src/App.svelte";
 
     // (28:5) <Link href ="/campaign?app_id={appId}">
-    function create_default_slot_10(ctx) {
+    function create_default_slot_9(ctx) {
     	let ul;
     	let i;
     	let t;
@@ -10060,7 +10064,7 @@ var app = (function () {
     			ul = element("ul");
     			i = element("i");
     			t = text("캠페인");
-    			attr_dev(i, "class", "bi bi-globe nav-icon svelte-9pb4iy");
+    			attr_dev(i, "class", "bi bi-globe nav-icon svelte-1nitanl");
     			add_location(i, file, 27, 68, 919);
     			attr_dev(ul, "class", "nav-link-li");
     			add_location(ul, file, 27, 44, 895);
@@ -10078,47 +10082,9 @@ var app = (function () {
 
     	dispatch_dev("SvelteRegisterBlock", {
     		block,
-    		id: create_default_slot_10.name,
-    		type: "slot",
-    		source: "(28:5) <Link href =\\\"/campaign?app_id={appId}\\\">",
-    		ctx
-    	});
-
-    	return block;
-    }
-
-    // (29:5) <Link href ="/partner?app_id={appId}">
-    function create_default_slot_9(ctx) {
-    	let ul;
-    	let i;
-    	let t;
-
-    	const block = {
-    		c: function create() {
-    			ul = element("ul");
-    			i = element("i");
-    			t = text("광고 파트너");
-    			attr_dev(i, "class", "bi bi-person nav-icon svelte-9pb4iy");
-    			add_location(i, file, 28, 67, 1038);
-    			attr_dev(ul, "class", "nav-link-li");
-    			add_location(ul, file, 28, 43, 1014);
-    		},
-    		m: function mount(target, anchor) {
-    			insert_dev(target, ul, anchor);
-    			append_dev(ul, i);
-    			append_dev(ul, t);
-    		},
-    		p: noop,
-    		d: function destroy(detaching) {
-    			if (detaching) detach_dev(ul);
-    		}
-    	};
-
-    	dispatch_dev("SvelteRegisterBlock", {
-    		block,
     		id: create_default_slot_9.name,
     		type: "slot",
-    		source: "(29:5) <Link href =\\\"/partner?app_id={appId}\\\">",
+    		source: "(28:5) <Link href =\\\"/campaign?app_id={appId}\\\">",
     		ctx
     	});
 
@@ -10136,10 +10102,10 @@ var app = (function () {
     			ul = element("ul");
     			i = element("i");
     			t = text("랜딩 설정");
-    			attr_dev(i, "class", "bi bi-gear nav-icon svelte-9pb4iy");
-    			add_location(i, file, 29, 67, 1161);
+    			attr_dev(i, "class", "bi bi-gear nav-icon svelte-1nitanl");
+    			add_location(i, file, 29, 67, 1168);
     			attr_dev(ul, "class", "nav-link-li");
-    			add_location(ul, file, 29, 43, 1137);
+    			add_location(ul, file, 29, 43, 1144);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
@@ -10673,8 +10639,6 @@ var app = (function () {
     	let t6;
     	let link1;
     	let t7;
-    	let link2;
-    	let t8;
     	let div6;
     	let div5;
     	let router;
@@ -10683,22 +10647,13 @@ var app = (function () {
     	link0 = new Link({
     			props: {
     				href: "/campaign?app_id=" + /*appId*/ ctx[0],
-    				$$slots: { default: [create_default_slot_10] },
-    				$$scope: { ctx }
-    			},
-    			$$inline: true
-    		});
-
-    	link1 = new Link({
-    			props: {
-    				href: "/partner?app_id=" + /*appId*/ ctx[0],
     				$$slots: { default: [create_default_slot_9] },
     				$$scope: { ctx }
     			},
     			$$inline: true
     		});
 
-    	link2 = new Link({
+    	link1 = new Link({
     			props: {
     				href: "/landing?app_id=" + /*appId*/ ctx[0],
     				$$slots: { default: [create_default_slot_8] },
@@ -10737,38 +10692,36 @@ var app = (function () {
     			t6 = space();
     			create_component(link1.$$.fragment);
     			t7 = space();
-    			create_component(link2.$$.fragment);
-    			t8 = space();
     			div6 = element("div");
     			div5 = element("div");
     			create_component(router.$$.fragment);
-    			attr_dev(span, "class", "nav-open-menu svelte-9pb4iy");
+    			attr_dev(span, "class", "nav-open-menu svelte-1nitanl");
     			attr_dev(span, "id", "open-menu");
     			attr_dev(span, "onclick", "openMenu()");
     			add_location(span, file, 17, 23, 523);
-    			attr_dev(div0, "class", "top-cont svelte-9pb4iy");
+    			attr_dev(div0, "class", "top-cont svelte-1nitanl");
     			add_location(div0, file, 17, 1, 501);
-    			attr_dev(div1, "class", "nav-logout svelte-9pb4iy");
+    			attr_dev(div1, "class", "nav-logout svelte-1nitanl");
     			add_location(div1, file, 22, 28, 698);
     			attr_dev(a, "href", "../index.html");
     			add_location(a, file, 22, 4, 674);
-    			attr_dev(div2, "class", "nav-close-out svelte-9pb4iy");
+    			attr_dev(div2, "class", "nav-close-out svelte-1nitanl");
     			attr_dev(div2, "onclick", "closeMenu()");
     			add_location(div2, file, 23, 4, 741);
-    			attr_dev(div3, "class", "top-nav svelte-9pb4iy");
+    			attr_dev(div3, "class", "top-nav svelte-1nitanl");
     			add_location(div3, file, 21, 3, 648);
     			add_location(li, file, 26, 4, 846);
-    			attr_dev(ul, "class", "nav-no-bullets svelte-9pb4iy");
+    			attr_dev(ul, "class", "nav-no-bullets svelte-1nitanl");
     			add_location(ul, file, 25, 3, 814);
-    			attr_dev(div4, "class", "nav svelte-9pb4iy");
+    			attr_dev(div4, "class", "nav svelte-1nitanl");
     			attr_dev(div4, "id", "left-menu");
     			add_location(div4, file, 20, 2, 612);
-    			attr_dev(div5, "class", "mid-cont svelte-9pb4iy");
-    			add_location(div5, file, 39, 3, 1665);
-    			attr_dev(div6, "class", "cont svelte-9pb4iy");
+    			attr_dev(div5, "class", "mid-cont svelte-1nitanl");
+    			add_location(div5, file, 39, 3, 1672);
+    			attr_dev(div6, "class", "cont svelte-1nitanl");
     			attr_dev(div6, "id", "main");
-    			add_location(div6, file, 36, 2, 1628);
-    			attr_dev(main, "class", "svelte-9pb4iy");
+    			add_location(div6, file, 36, 2, 1635);
+    			attr_dev(main, "class", "svelte-1nitanl");
     			add_location(main, file, 15, 0, 492);
     		},
     		l: function claim(nodes) {
@@ -10791,9 +10744,7 @@ var app = (function () {
     			mount_component(link0, li, null);
     			append_dev(li, t6);
     			mount_component(link1, li, null);
-    			append_dev(li, t7);
-    			mount_component(link2, li, null);
-    			append_dev(main, t8);
+    			append_dev(main, t7);
     			append_dev(main, div6);
     			append_dev(div6, div5);
     			mount_component(router, div5, null);
@@ -10814,13 +10765,6 @@ var app = (function () {
     			}
 
     			link1.$set(link1_changes);
-    			const link2_changes = {};
-
-    			if (dirty & /*$$scope*/ 4) {
-    				link2_changes.$$scope = { dirty, ctx };
-    			}
-
-    			link2.$set(link2_changes);
     			const router_changes = {};
 
     			if (dirty & /*$$scope*/ 4) {
@@ -10833,14 +10777,12 @@ var app = (function () {
     			if (current) return;
     			transition_in(link0.$$.fragment, local);
     			transition_in(link1.$$.fragment, local);
-    			transition_in(link2.$$.fragment, local);
     			transition_in(router.$$.fragment, local);
     			current = true;
     		},
     		o: function outro(local) {
     			transition_out(link0.$$.fragment, local);
     			transition_out(link1.$$.fragment, local);
-    			transition_out(link2.$$.fragment, local);
     			transition_out(router.$$.fragment, local);
     			current = false;
     		},
@@ -10848,7 +10790,6 @@ var app = (function () {
     			if (detaching) detach_dev(main);
     			destroy_component(link0);
     			destroy_component(link1);
-    			destroy_component(link2);
     			destroy_component(router);
     		}
     	};

@@ -17,6 +17,10 @@ body{
 
 .nav-link.campaign{
     display:inline-block;
+    font-size:22px;
+    padding-left:0px !important;
+    margin-right:50px;
+    margin-bottom:30px;
 }
 
 
