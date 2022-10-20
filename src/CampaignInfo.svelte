@@ -5,9 +5,11 @@
   import CPK    from "./campaign/KPI.svelte"
   import CPP    from "./campaign/Postback.svelte"
   import CPF    from "./campaign/Fraud.svelte"
+  import CCTL   from "./campaign/CreateTrackingLink.svelte"
 
-   let currentURL = new URL(window.location.href)
-   let appId       = currentURL.searchParams.get("app_id")
+   let currentURL   = new URL(window.location.href)
+   let appId        = currentURL.searchParams.get("app_id")
+   let campaignId   = currentURL.searchParams.get("campaign_id")
    
 
  </script>
@@ -22,17 +24,21 @@
       <Link href="/campaign-info/cpf" class="nav-link campaign active">프로드 설정</Link>
       <br>  
       <Router>
-          <Route path="/cpd"><CPD/></Route>
-          <Route path="/cpt"><CPT/></Route>
-          <Route path="/cpk"><CPK/></Route>
-          <Route path="/cpp"><CPP/></Route>
-          <Route path="/cpf"><CPF/></Route>
+          <Route path="/cpd"><CPD appId={appId} campaignId={campaignId}/></Route>
+          <Route path="/cpt"><CPT appId={appId} campaignId={campaignId}/></Route>
+          <Route path="/cpk"><CPK appId={appId} campaignId={campaignId}/></Route>
+          <Route path="/cpp"><CPP appId={appId} campaignId={campaignId}/></Route>
+          <Route path="/cpf"><CPF appId={appId} campaignId={campaignId}/></Route>
+          <Route path="/cctl"><CCTL appId={appId} campaignId={campaignId}/></Route>
       </Router>
       
      
   </li>
 </ul>
 
+
+
 <style>
+
  
 </style>

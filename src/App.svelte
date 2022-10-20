@@ -29,8 +29,8 @@
 					<!-- Link href ="/partner?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-person nav-icon"></i>광고 파트너</ul></Link -->
 					<Link href ="/landing?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-gear nav-icon"></i>랜딩 설정</ul></Link>
 					<!-- Link href ="/tracking?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-share nav-icon"></i>트래킹 링크</ul></Link>
-					<Link href ="/fraud?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-emoji-smile-fill nav-icon"></i>프로드 방지</ul></Link>
-					<Link href ="/attr?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-bar-chart nav-icon"></i>측정 모델 </ul></Link -->
+					<Link href ="/fraud?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-emoji-smile-fill nav-icon"></i>프로드 방지</ul></Link -->
+					<Link href ="/attr?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-bar-chart nav-icon"></i>측정 모델 </ul></Link>
 				</li>
 			</ul>
 		</div>

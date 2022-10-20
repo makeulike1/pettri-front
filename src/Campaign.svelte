@@ -1,12 +1,12 @@
 <script>
+
     import { Link} 			from "yrv";
     let currentURL = new URL(window.location.href)
     let appId       = currentURL.searchParams.get("app_id")
     let cpList      = []
 
     fetch(serverURL + "/campaign/list?app_id="+appId, {
-            method: 'GET', 
-            headers: new Headers({'token': sessionStorage.getItem("token")})
+            method: 'GET'
         }).then(response => response.json())
             .then(success =>{
             cpList = success
@@ -34,7 +34,7 @@
                 <td>{it.name}</td>
                 <td>{it.updatetime}</td>
                 <td>{it.createtime}</td>
-                <td><Link href="/campaign-info?app_id={appId}">상세 보기</Link>
+                <td><Link href="/campaign-info?app_id={appId}&campaign_id={it.id}">상세 보기</Link>
             </tr>
         {/each}
     </tbody>

@@ -48,8 +48,7 @@
                     method:'POST',   
                     body:JSON.stringify( payload ),
                     headers: {
-                        'Content-Type': 'application/json',
-                        'token' : sessionStorage.getItem("token")
+                        'Content-Type': 'application/json'
                     }
                 }).then(success => {
                     alert("앱을 신규로 등록하였습니다.")
