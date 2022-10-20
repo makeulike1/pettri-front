@@ -20,6 +20,11 @@
 
 
 
+    function showPopup(clickURL, impURL){
+        window.$('#trk-popup').modal('show')
+        window.$('#click-url').text(clickURL)
+        window.$('#imp-url').text(impURL)
+    }
 
     function updateStatus(trkId, status){
 
@@ -88,76 +93,77 @@
 <h3>트래킹 링크</h3>
 
 <table class='trk-list'>
+    <thead>
+        <td class='number'>번호</td>
+        <td class='name'>이름</td>
+        <td class='tracking-id'>트래킹ID</td>
+        <td class='status'>상태</td>
+        <td></td>
+        <td></td>
+    </thead>
     <tbody>
         {#each rows as it}
-            <tr>
+            <tr class='row-1'>
+                <td>{it.id}</td>
+                <td><input type='text' id='trk-name-{it.id}' value={it.name}/></td>
+                <td>{it.trackingId}</td>
                 <td>
-                    <b> 트래킹 번호 :</b>&nbsp;{it.id}
-                    <br>
-                    <b> 트래킹 이름 :</b>&nbsp;<input type='text' id='trk-name-{it.id}' value={it.name}/>
-                    <br>
-                    <b> 트래킹 ID : </b>&nbsp;{it.trackingId}
-                    <br>
-                    <br>
-                    <b> 트래킹 상태 : </b>&nbsp;
-
                     {#if it.status == 0}
                     활성화
                     {:else if it.status == 1}
                     중지
                     {:else if it.status == 2}
                     보류됨
-                    {/if}
-
-                    <br>
-                    <br>
-                    <b>딥링킹 경로</b>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>iOS 경로</td>
-                                <td><input type='text' id='deep-ios-path-{it.id}' value={it.deepPath1}/></td>
-                            </tr>
-                            <tr>
-                                <td>안드로이드 경로</td>
-                                <td><input type='text' id='deep-android-path-{it.id}' value={it.deepPath2}/></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <br>
-
-                    <b>스토어 경로</b>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>iOS 경로</td>
-                                <td><input type='text' id='store-ios-path-{it.id}' value={it.storePath1}/></td>
-                            </tr>
-                            <tr>
-                                <td>안드로이드 경로</td>
-                                <td><input type='text' id='store-android-path-{it.id}' value={it.storePath2}/></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <br>
-                    <b> 웹 경로 : </b>&nbsp;<input type='text' id='web-path-{it.id}' value={it.webPath}/>
-                    <br>
-                    수정 날짜/시각 : {it.updatetime}
-                    <br>
-                    삽입 날짜/시각 : {it.createtime}
-                    <br>
-                    <br>
-                    <div class='table-footer'>
-                        <button type="button" class="btn btn-primary" on:click={()=>modify(it.id)}>수정</button>
+                    {/if}</td>
+                    <td>
+                        <b>딥링크 경로</b>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class='path'>iOS 경로</td>
+                                    <td class='textbox'><input type='text' id='deep-ios-path-{it.id}' value={it.deepPath1}/></td>
+                                </tr>
+                                <tr>
+                                    <td class='path'>안드로이드 경로</td>
+                                    <td class='textbox'><input type='text' id='deep-android-path-{it.id}' value={it.deepPath2}/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>    
+                        <b>스토어 경로</b>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td class='path'>iOS 경로</td>
+                                    <td class='textbox'><input type='text' id='store-ios-path-{it.id}' value={it.storePath1}/></td>
+                                </tr>
+                                <tr>
+                                    <td class='path'>안드로이드 경로</td>
+                                    <td class='textbox'><input type='text' id='store-android-path-{it.id}' value={it.storePath2}/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <br>
+                        <div class='web-path'>웹 경로</div>
+                        <input type='text' class='web-path-textbox' id='web-path-{it.id}' value={it.webPath}/>
+                    </td>
+                    <td>
+                            <button type="button" class="btn btn-primary" on:click={()=>modify(it.id)}>수정</button>
                         {#if it.status == 0}
-                        <button type="button" class="btn btn-secondary" on:click={()=>updateStatus(it.id, 1)}>트래킹 중지</button>
+                            <button type="button" class="btn btn-secondary" on:click={()=>updateStatus(it.id, 1)}>트래킹 중지</button>
                         {:else if it.status == 1}
-                        <button type="button" class="btn btn-secondary" on:click={()=>updateStatus(it.id, 0)}>트래킹 재개</button>
-                        <button type="button" class="btn btn-secondary" on:click={()=>updateStatus(it.id, 2)}>트래킹 보류</button>
+                            <button type="button" class="btn btn-secondary" on:click={()=>updateStatus(it.id, 0)}>트래킹 재개</button>
+                            <button type="button" class="btn btn-secondary" on:click={()=>updateStatus(it.id, 2)}>트래킹 보류</button>
                         {/if}
-                    </div>
-                </td>
+                        <br>
+                        수정 날짜/시각 : {it.updatetime}
+                        <br>
+                        생성 날짜/시각 : {it.createtime}
+                        <br>
+                        <div class='td-footer'>
+                            <span class='show-popup' on:click={()=>showPopup(it.clickUrl, it.impUrl)}>링크 보기</span>
+                        </div>
+                    </td>
             </tr>
         {/each}
     </tbody>
@@ -168,15 +174,108 @@
     <Link href="/campaign-info/cctl?app_id={appId}&campaign_id={campaignId}">링크 신규 생성</Link>
 </div>    
 
+<div class="modal trk-link" tabindex="-1" role="dialog" id='trk-popup'>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">트래킹 링크</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <br>
+            <b>클릭 URL</b>
+            <br>
+            <span id='click-url'></span>
+            <br>
+            <br>
+            <br>
+            <b>노출 URL</b>
+            <br>
+            <span id='imp-url'></span>
+            <br>
+            <br>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+        </div>
+      </div>
+    </div>
+</div>
+
 <style>
-    .table-footer{ 
-        border-bottom: 1px dotted gray;
-        padding-bottom: 35px;
+
+    .td-footer{
+        margin-top:20px;
+    }
+
+    span.show-popup{
+        cursor:pointer;
+        color:blue;
+    }
+    span.show-popup:hover{
+        text-decoration: underline;
+    }
+ 
+    .modal.trk-link .modal-dialog{
+        max-width:800px;
+    }
+
+    .modal.trk-link .modal-header{
+        background-color:#00264d;
+        color:white;
+        font-weight:600;
     }
 
     .footer{
         margin-top:75px;
     }
+    
+    table.trk-list table td input[type=text]{
+        width:300px;
+    }
+    table.trk-list table td.path{
+        width:150px;
+    }
+    table.trk-list table td.textbox{
+        width:350px;
+    }
 
+    .web-path{
+        width:150px;
+        display:inline-block;
+        font-weight:600;
+    }
+    .web-path-textbox{
+        width:300px;
+    }
+
+    table.trk-list thead td.number{
+        width:70px;
+    }
+    table.trk-list thead td.name{
+        width:250px;
+    }
+    table.trk-list thead td.tracking-id{
+        width:120px;
+    }
+    table.trk-list thead td.status{
+        width:80px;
+    }
+
+    table.trk-list tr.row-1{
+        border-bottom: 1px dotted gray;
+        height: 350px;
+    }
+    table.trk-list tr.row-1:last-of-type{
+        border-bottom:none;
+    }
+
+    table thead{
+        background-color:#00264d;
+        color:white;
+        height:30px;
+    }
     
 </style>
