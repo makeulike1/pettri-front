@@ -8,10 +8,8 @@
             "appId":appId,
             "campaignId":campaignId,
             "name":window.$('#name').val(),
-            "deepPath1":window.$('#deep-path-1').val(),
-            "deepPath2":window.$('#deep-path-2').val(),
-            "storePath1":window.$('#store-path-1').val(),
-            "storePath2":window.$('#store-path-2').val(),
+            "deepPath":window.$('#deep-path').val(),
+            "storePath":window.$('#store-path').val(),
             "webPath":window.$('#web-path').val(),
         }
         if(confirm("트래킹 링크를 신규로 생성하시겠습니까?")){
@@ -35,20 +33,12 @@
         <tr>
             <td rowspan="2" class='label'>딥링킹 경로</td>
             <td><b>안드로이드 : </b></td>
-            <td><input type='text' id='deep-path-1' placeholder='coinoneapp://Path'></td>
-        </tr>
-        <tr>
-            <td><b>iOS : </b></td>
-            <td><input type='text' id='deep-path-2' placeholder='coinoneapp://Path'></td>
+            <td><input type='text' id='deep-path' placeholder='coinoneapp://Path'></td>
         </tr>
         <tr>
             <td rowspan="2" class='label'>스토어 경로</td>
             <td><b>안드로이드 : </b></td>
-            <td><input type='text' id='store-path-1' placeholder='coinone.co.kr.official'></td>
-        </tr>
-        <tr>
-            <td><b>iOS : </b></td>
-            <td><input type='text' id='store-path-2' placeholder='1326526995'></td>
+            <td><input type='text' id='store-path' placeholder='coinone.co.kr.official'></td>
         </tr>
         <tr>
             <td class='label'>웹 경로</td>
