@@ -62,10 +62,8 @@
         let payload={
             "id":id,
             "name":window.$('#trk-name-'+id).val(),
-            "deepPath1":window.$('#deep-ios-path-'+id).val(),
-            "deepPath2":window.$('#deep-android-path-'+id).val(),
-            "storePath1":window.$('#store-ios-path-'+id).val(),
-            "storePath2":window.$('#store-android-path-'+id).val(),
+            "deepPath":window.$('#deep-path-'+id).val(),
+            "storePath":window.$('#store-path-'+id).val(),
             "webPath":window.$('#web-path-'+id).val()
         }
 
@@ -120,12 +118,8 @@
                         <table>
                             <tbody>
                                 <tr>
-                                    <td class='path'>iOS 경로</td>
-                                    <td class='textbox'><input type='text' id='deep-ios-path-{it.id}' value={it.deepPath1}/></td>
-                                </tr>
-                                <tr>
-                                    <td class='path'>안드로이드 경로</td>
-                                    <td class='textbox'><input type='text' id='deep-android-path-{it.id}' value={it.deepPath2}/></td>
+                                    <td class='path'>경로</td>
+                                    <td class='textbox'><input type='text' id='deep-path-{it.id}' value={it.deepPath}/></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -134,12 +128,8 @@
                         <table>
                             <tbody>
                                 <tr>
-                                    <td class='path'>iOS 경로</td>
-                                    <td class='textbox'><input type='text' id='store-ios-path-{it.id}' value={it.storePath1}/></td>
-                                </tr>
-                                <tr>
-                                    <td class='path'>안드로이드 경로</td>
-                                    <td class='textbox'><input type='text' id='store-android-path-{it.id}' value={it.storePath2}/></td>
+                                    <td class='path'>경로</td>
+                                    <td class='textbox'><input type='text' id='store-path-{it.id}' value={it.storePath}/></td>
                                 </tr>
                             </tbody>
                         </table>
