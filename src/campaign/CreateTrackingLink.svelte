@@ -31,26 +31,20 @@
 <table>
     <tbody>
         <tr>
-            <td rowspan="2" class='label'>딥링킹 경로</td>
-            <td><b>안드로이드 : </b></td>
+            <td class='label'>딥링킹 경로</td>
             <td><input type='text' id='deep-path' placeholder='coinoneapp://Path'></td>
         </tr>
         <tr>
-            <td rowspan="2" class='label'>스토어 경로</td>
-            <td><b>안드로이드 : </b></td>
+            <td class='label'>스토어 경로</td>
             <td><input type='text' id='store-path' placeholder='coinone.co.kr.official'></td>
         </tr>
         <tr>
             <td class='label'>웹 경로</td>
-            <td col=2>
-                <input type='text' id='web-path' placeholder='https://coinone.co.kr/'>
-            </td>
+            <td><input type='text' id='web-path' placeholder='https://coinone.co.kr/'></td>
         </tr>
         <tr>
             <td class='label'>이름</td>
-            <td col=2>
-                <input type='text' id='name' placeholder='트래킹 링크'>
-            </td>
+            <td><input type='text' id='name' placeholder='트래킹 링크'></td>
         </tr>
     </tbody>
 </table>
