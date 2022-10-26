@@ -1,5 +1,43 @@
 <html>
-        <head></head>
+        <head>
+            <meta charset='utf-8'>
+            <meta name='viewport' content='width=device-width,initial-scale=1'>
+  
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+        
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+         
+        </head>
+        <script>
+
+            let ck = uuidv4()
+            let TRACKING_IMP_URL    = 'http://test.adrunner.co.kr:8083/api/v1/imp/a1/f3b4c6c04?click_key='+ck;
+            let TRACKING_CLICK_URL  = 'http://test.adrunner.co.kr:8083/api/v1/click/a1/f3b4c6c04?click_key='+ck;
+
+            fetch(TRACKING_IMP_URL, {
+                    method: 'GET'
+                }).then(success =>{
+                }).catch(error => {
+                    console.log(error);
+                    return [];
+                })
+
+
+                
+            function uuidv4() {
+                return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+                    (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+                )
+            }
+
+            function downloadApp(){
+                location.replace(TRACKING_CLICK_URL);
+            }
+
+        </script>
         <style>
 
             .banner{
@@ -17,7 +55,7 @@
                 margin-top:100px; display:block;
             }
 
-            .download-btn a.trk-link{
+            .download-btn span.trk-link{
                 border:1px solid blue; 
                 padding:20px 40px; 
                 display:block; 
@@ -38,7 +76,7 @@
                     <br>
 
                     <div class='download-btn'>
-                        <a href="http://test.adrunner.co.kr:8083/api/v1/click/a1/f3b4c6c04?click_key=abcd" class='trk-link'>앱 다운로드</a>
+                        <span class='trk-link' onclick='downloadApp()'>앱 다운로드</span>
                     </div>
                 </div>
                 

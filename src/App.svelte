@@ -7,6 +7,7 @@
 	import Fraud 						from "./Fraud.svelte"
 	import Tracking 					from "./Tracking.svelte"
 	import Attr 						from "./Attr.svelte"
+	import Dashboard  					from "./Dashboard.svelte"
 	
 	let currentURL = new URL(window.location.href)
 	let appId   = currentURL.searchParams.get("app_id")
@@ -25,6 +26,7 @@
 			</div>
 			<ul class='nav-no-bullets'>
 				<li>
+					<Link href ="/dashboard?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-file-bar-graph nav-icon"></i>대시보드</ul></Link>
 					<Link href ="/campaign?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-globe nav-icon"></i>캠페인</ul></Link>
 					<!-- Link href ="/partner?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-person nav-icon"></i>광고 파트너</ul></Link -->
 					<Link href ="/landing?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-gear nav-icon"></i>랜딩 설정</ul></Link>
@@ -39,6 +41,11 @@
 
 			<div class='mid-cont'>
 				<Router>
+					<!-- Router : Tracking Link -->
+					<Route path="/dashboard" primary={false}>
+						<Dashboard/>
+					</Route>
+
 					<!-- Router : Tracking Link -->
 					<Route path="/tracking" primary={false}>
 						<Tracking/>
