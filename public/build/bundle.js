@@ -11322,63 +11322,71 @@ var app = (function () {
 
     function get_each_context(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
+    	child_ctx[9] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_1(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[10] = list[i];
+    	child_ctx[12] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_2(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
+    	child_ctx[9] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[10] = list[i];
+    	child_ctx[12] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
+    	child_ctx[9] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_5(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[10] = list[i];
+    	child_ctx[12] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_6(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
+    	child_ctx[9] = list[i];
     	return child_ctx;
     }
 
     function get_each_context_7(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[7] = list[i];
+    	child_ctx[9] = list[i];
     	return child_ctx;
     }
 
-    // (86:8) {#each rows5 as it}
+    // (109:8) {#each rows5 as it}
     function create_each_block_7(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*it*/ ctx[7].createtime + "";
+    	let t0_value = /*it*/ ctx[9].createtime + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*it*/ ctx[7].clickKey + "";
+    	let t2_value = /*it*/ ctx[9].campaignId + "";
     	let t2;
     	let t3;
+    	let td2;
+    	let t4_value = /*it*/ ctx[9].trackingId + "";
+    	let t4;
+    	let t5;
+    	let td3;
+    	let t6_value = /*it*/ ctx[9].clickKey + "";
+    	let t6;
+    	let t7;
 
     	const block = {
     		c: function create() {
@@ -11389,11 +11397,21 @@ var app = (function () {
     			td1 = element("td");
     			t2 = text(t2_value);
     			t3 = space();
-    			attr_dev(td0, "class", "svelte-1qqfaaw");
-    			add_location(td0, file$1, 87, 16, 2033);
-    			attr_dev(td1, "class", "svelte-1qqfaaw");
-    			add_location(td1, file$1, 88, 16, 2074);
-    			add_location(tr, file$1, 86, 12, 2012);
+    			td2 = element("td");
+    			t4 = text(t4_value);
+    			t5 = space();
+    			td3 = element("td");
+    			t6 = text(t6_value);
+    			t7 = space();
+    			attr_dev(td0, "class", "svelte-g79d06");
+    			add_location(td0, file$1, 110, 16, 2657);
+    			attr_dev(td1, "class", "svelte-g79d06");
+    			add_location(td1, file$1, 111, 16, 2698);
+    			attr_dev(td2, "class", "svelte-g79d06");
+    			add_location(td2, file$1, 112, 16, 2739);
+    			attr_dev(td3, "class", "svelte-g79d06");
+    			add_location(td3, file$1, 113, 16, 2780);
+    			add_location(tr, file$1, 109, 12, 2636);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11403,10 +11421,18 @@ var app = (function () {
     			append_dev(tr, td1);
     			append_dev(td1, t2);
     			append_dev(tr, t3);
+    			append_dev(tr, td2);
+    			append_dev(td2, t4);
+    			append_dev(tr, t5);
+    			append_dev(tr, td3);
+    			append_dev(td3, t6);
+    			append_dev(tr, t7);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*rows5*/ 16 && t0_value !== (t0_value = /*it*/ ctx[7].createtime + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*rows5*/ 16 && t2_value !== (t2_value = /*it*/ ctx[7].clickKey + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*rows5*/ 16 && t0_value !== (t0_value = /*it*/ ctx[9].createtime + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*rows5*/ 16 && t2_value !== (t2_value = /*it*/ ctx[9].campaignId + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*rows5*/ 16 && t4_value !== (t4_value = /*it*/ ctx[9].trackingId + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*rows5*/ 16 && t6_value !== (t6_value = /*it*/ ctx[9].clickKey + "")) set_data_dev(t6, t6_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
@@ -11417,24 +11443,32 @@ var app = (function () {
     		block,
     		id: create_each_block_7.name,
     		type: "each",
-    		source: "(86:8) {#each rows5 as it}",
+    		source: "(109:8) {#each rows5 as it}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (104:8) {#each rows4 as it}
+    // (131:8) {#each rows4 as it}
     function create_each_block_6(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*it*/ ctx[7].createtime + "";
+    	let t0_value = /*it*/ ctx[9].createtime + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*it*/ ctx[7].clickKey + "";
+    	let t2_value = /*it*/ ctx[9].campaignId + "";
     	let t2;
     	let t3;
+    	let td2;
+    	let t4_value = /*it*/ ctx[9].trackingId + "";
+    	let t4;
+    	let t5;
+    	let td3;
+    	let t6_value = /*it*/ ctx[9].clickKey + "";
+    	let t6;
+    	let t7;
 
     	const block = {
     		c: function create() {
@@ -11445,11 +11479,21 @@ var app = (function () {
     			td1 = element("td");
     			t2 = text(t2_value);
     			t3 = space();
-    			attr_dev(td0, "class", "svelte-1qqfaaw");
-    			add_location(td0, file$1, 105, 16, 2352);
-    			attr_dev(td1, "class", "svelte-1qqfaaw");
-    			add_location(td1, file$1, 106, 16, 2393);
-    			add_location(tr, file$1, 104, 12, 2331);
+    			td2 = element("td");
+    			t4 = text(t4_value);
+    			t5 = space();
+    			td3 = element("td");
+    			t6 = text(t6_value);
+    			t7 = space();
+    			attr_dev(td0, "class", "svelte-g79d06");
+    			add_location(td0, file$1, 132, 16, 3138);
+    			attr_dev(td1, "class", "svelte-g79d06");
+    			add_location(td1, file$1, 133, 16, 3179);
+    			attr_dev(td2, "class", "svelte-g79d06");
+    			add_location(td2, file$1, 134, 16, 3220);
+    			attr_dev(td3, "class", "svelte-g79d06");
+    			add_location(td3, file$1, 135, 16, 3261);
+    			add_location(tr, file$1, 131, 12, 3117);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11459,10 +11503,18 @@ var app = (function () {
     			append_dev(tr, td1);
     			append_dev(td1, t2);
     			append_dev(tr, t3);
+    			append_dev(tr, td2);
+    			append_dev(td2, t4);
+    			append_dev(tr, t5);
+    			append_dev(tr, td3);
+    			append_dev(td3, t6);
+    			append_dev(tr, t7);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*rows4*/ 8 && t0_value !== (t0_value = /*it*/ ctx[7].createtime + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*rows4*/ 8 && t2_value !== (t2_value = /*it*/ ctx[7].clickKey + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*rows4*/ 8 && t0_value !== (t0_value = /*it*/ ctx[9].createtime + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*rows4*/ 8 && t2_value !== (t2_value = /*it*/ ctx[9].campaignId + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*rows4*/ 8 && t4_value !== (t4_value = /*it*/ ctx[9].trackingId + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*rows4*/ 8 && t6_value !== (t6_value = /*it*/ ctx[9].clickKey + "")) set_data_dev(t6, t6_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
@@ -11473,22 +11525,22 @@ var app = (function () {
     		block,
     		id: create_each_block_6.name,
     		type: "each",
-    		source: "(104:8) {#each rows4 as it}",
+    		source: "(131:8) {#each rows4 as it}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (136:28) {#each it.prop as it1}
+    // (165:28) {#each it.prop as it1}
     function create_each_block_5(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*it1*/ ctx[10].key + "";
+    	let t0_value = /*it1*/ ctx[12].key + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*it1*/ ctx[10].value + "";
+    	let t2_value = /*it1*/ ctx[12].value + "";
     	let t2;
     	let t3;
 
@@ -11501,12 +11553,12 @@ var app = (function () {
     			td1 = element("td");
     			t2 = text(t2_value);
     			t3 = space();
-    			attr_dev(td0, "class", "svelte-1qqfaaw");
-    			add_location(td0, file$1, 137, 36, 3117);
-    			attr_dev(td1, "class", "svelte-1qqfaaw");
-    			add_location(td1, file$1, 138, 36, 3172);
-    			attr_dev(tr, "class", "svelte-1qqfaaw");
-    			add_location(tr, file$1, 136, 32, 3076);
+    			attr_dev(td0, "class", "svelte-g79d06");
+    			add_location(td0, file$1, 166, 36, 3985);
+    			attr_dev(td1, "class", "svelte-g79d06");
+    			add_location(td1, file$1, 167, 36, 4040);
+    			attr_dev(tr, "class", "svelte-g79d06");
+    			add_location(tr, file$1, 165, 32, 3944);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11518,8 +11570,8 @@ var app = (function () {
     			append_dev(tr, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*rows1*/ 1 && t0_value !== (t0_value = /*it1*/ ctx[10].key + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*rows1*/ 1 && t2_value !== (t2_value = /*it1*/ ctx[10].value + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*rows1*/ 1 && t0_value !== (t0_value = /*it1*/ ctx[12].key + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*rows1*/ 1 && t2_value !== (t2_value = /*it1*/ ctx[12].value + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
@@ -11530,37 +11582,37 @@ var app = (function () {
     		block,
     		id: create_each_block_5.name,
     		type: "each",
-    		source: "(136:28) {#each it.prop as it1}",
+    		source: "(165:28) {#each it.prop as it1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (127:8) {#each rows1 as it}
+    // (156:8) {#each rows1 as it}
     function create_each_block_4(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*it*/ ctx[7].createtime + "";
+    	let t0_value = /*it*/ ctx[9].createtime + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*it*/ ctx[7].trkId + "";
+    	let t2_value = /*it*/ ctx[9].trkId + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*it*/ ctx[7].attrId + "";
+    	let t4_value = /*it*/ ctx[9].attrId + "";
     	let t4;
     	let t5;
     	let td3;
-    	let t6_value = /*it*/ ctx[7].ck + "";
+    	let t6_value = /*it*/ ctx[9].ck + "";
     	let t6;
     	let t7;
     	let td4;
     	let table;
     	let tbody;
     	let t8;
-    	let each_value_5 = /*it*/ ctx[7].prop;
+    	let each_value_5 = /*it*/ ctx[9].prop;
     	validate_each_argument(each_value_5);
     	let each_blocks = [];
 
@@ -11592,21 +11644,21 @@ var app = (function () {
     			}
 
     			t8 = space();
-    			attr_dev(td0, "class", "svelte-1qqfaaw");
-    			add_location(td0, file$1, 128, 16, 2781);
-    			attr_dev(td1, "class", "svelte-1qqfaaw");
-    			add_location(td1, file$1, 129, 16, 2822);
-    			attr_dev(td2, "class", "svelte-1qqfaaw");
-    			add_location(td2, file$1, 130, 16, 2858);
-    			attr_dev(td3, "class", "svelte-1qqfaaw");
-    			add_location(td3, file$1, 131, 16, 2895);
-    			add_location(tbody, file$1, 134, 24, 2985);
-    			attr_dev(table, "class", "svelte-1qqfaaw");
-    			add_location(table, file$1, 133, 20, 2953);
-    			attr_dev(td4, "class", "svelte-1qqfaaw");
-    			add_location(td4, file$1, 132, 16, 2928);
-    			attr_dev(tr, "class", "svelte-1qqfaaw");
-    			add_location(tr, file$1, 127, 12, 2760);
+    			attr_dev(td0, "class", "svelte-g79d06");
+    			add_location(td0, file$1, 157, 16, 3649);
+    			attr_dev(td1, "class", "svelte-g79d06");
+    			add_location(td1, file$1, 158, 16, 3690);
+    			attr_dev(td2, "class", "svelte-g79d06");
+    			add_location(td2, file$1, 159, 16, 3726);
+    			attr_dev(td3, "class", "svelte-g79d06");
+    			add_location(td3, file$1, 160, 16, 3763);
+    			add_location(tbody, file$1, 163, 24, 3853);
+    			attr_dev(table, "class", "svelte-g79d06");
+    			add_location(table, file$1, 162, 20, 3821);
+    			attr_dev(td4, "class", "svelte-g79d06");
+    			add_location(td4, file$1, 161, 16, 3796);
+    			attr_dev(tr, "class", "svelte-g79d06");
+    			add_location(tr, file$1, 156, 12, 3628);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11633,13 +11685,13 @@ var app = (function () {
     			append_dev(tr, t8);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*rows1*/ 1 && t0_value !== (t0_value = /*it*/ ctx[7].createtime + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*rows1*/ 1 && t2_value !== (t2_value = /*it*/ ctx[7].trkId + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*rows1*/ 1 && t4_value !== (t4_value = /*it*/ ctx[7].attrId + "")) set_data_dev(t4, t4_value);
-    			if (dirty & /*rows1*/ 1 && t6_value !== (t6_value = /*it*/ ctx[7].ck + "")) set_data_dev(t6, t6_value);
+    			if (dirty & /*rows1*/ 1 && t0_value !== (t0_value = /*it*/ ctx[9].createtime + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*rows1*/ 1 && t2_value !== (t2_value = /*it*/ ctx[9].trkId + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*rows1*/ 1 && t4_value !== (t4_value = /*it*/ ctx[9].attrId + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*rows1*/ 1 && t6_value !== (t6_value = /*it*/ ctx[9].ck + "")) set_data_dev(t6, t6_value);
 
     			if (dirty & /*rows1*/ 1) {
-    				each_value_5 = /*it*/ ctx[7].prop;
+    				each_value_5 = /*it*/ ctx[9].prop;
     				validate_each_argument(each_value_5);
     				let i;
 
@@ -11672,22 +11724,22 @@ var app = (function () {
     		block,
     		id: create_each_block_4.name,
     		type: "each",
-    		source: "(127:8) {#each rows1 as it}",
+    		source: "(156:8) {#each rows1 as it}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (174:28) {#each it.prop as it1}
+    // (199:28) {#each it.prop as it1}
     function create_each_block_3(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*it1*/ ctx[10].key + "";
+    	let t0_value = /*it1*/ ctx[12].key + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*it1*/ ctx[10].value + "";
+    	let t2_value = /*it1*/ ctx[12].value + "";
     	let t2;
     	let t3;
 
@@ -11700,12 +11752,12 @@ var app = (function () {
     			td1 = element("td");
     			t2 = text(t2_value);
     			t3 = space();
-    			attr_dev(td0, "class", "svelte-1qqfaaw");
-    			add_location(td0, file$1, 175, 36, 4156);
-    			attr_dev(td1, "class", "svelte-1qqfaaw");
-    			add_location(td1, file$1, 176, 36, 4211);
-    			attr_dev(tr, "class", "svelte-1qqfaaw");
-    			add_location(tr, file$1, 174, 32, 4115);
+    			attr_dev(td0, "class", "svelte-g79d06");
+    			add_location(td0, file$1, 200, 36, 4872);
+    			attr_dev(td1, "class", "svelte-g79d06");
+    			add_location(td1, file$1, 201, 36, 4927);
+    			attr_dev(tr, "class", "svelte-g79d06");
+    			add_location(tr, file$1, 199, 32, 4831);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11717,8 +11769,8 @@ var app = (function () {
     			append_dev(tr, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*rows2*/ 2 && t0_value !== (t0_value = /*it1*/ ctx[10].key + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*rows2*/ 2 && t2_value !== (t2_value = /*it1*/ ctx[10].value + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*rows2*/ 2 && t0_value !== (t0_value = /*it1*/ ctx[12].key + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*rows2*/ 2 && t2_value !== (t2_value = /*it1*/ ctx[12].value + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
@@ -11729,41 +11781,33 @@ var app = (function () {
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(174:28) {#each it.prop as it1}",
+    		source: "(199:28) {#each it.prop as it1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (164:8) {#each rows2 as it}
+    // (191:8) {#each rows2 as it}
     function create_each_block_2(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*it*/ ctx[7].createtime + "";
+    	let t0_value = /*it*/ ctx[9].createtime + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*it*/ ctx[7].cpId + "";
+    	let t2_value = /*it*/ ctx[9].attrId + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*it*/ ctx[7].trkId + "";
+    	let t4_value = /*it*/ ctx[9].userId + "";
     	let t4;
     	let t5;
     	let td3;
-    	let t6_value = /*it*/ ctx[7].attrId + "";
-    	let t6;
-    	let t7;
-    	let td4;
-    	let t8_value = /*it*/ ctx[7].userId + "";
-    	let t8;
-    	let t9;
-    	let td5;
     	let table;
     	let tbody;
-    	let t10;
-    	let each_value_3 = /*it*/ ctx[7].prop;
+    	let t6;
+    	let each_value_3 = /*it*/ ctx[9].prop;
     	validate_each_argument(each_value_3);
     	let each_blocks = [];
 
@@ -11784,12 +11828,6 @@ var app = (function () {
     			t4 = text(t4_value);
     			t5 = space();
     			td3 = element("td");
-    			t6 = text(t6_value);
-    			t7 = space();
-    			td4 = element("td");
-    			t8 = text(t8_value);
-    			t9 = space();
-    			td5 = element("td");
     			table = element("table");
     			tbody = element("tbody");
 
@@ -11797,24 +11835,20 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			t10 = space();
-    			attr_dev(td0, "class", "svelte-1qqfaaw");
-    			add_location(td0, file$1, 165, 16, 3763);
-    			attr_dev(td1, "class", "svelte-1qqfaaw");
-    			add_location(td1, file$1, 166, 16, 3804);
-    			attr_dev(td2, "class", "svelte-1qqfaaw");
-    			add_location(td2, file$1, 167, 16, 3839);
-    			attr_dev(td3, "class", "svelte-1qqfaaw");
-    			add_location(td3, file$1, 168, 16, 3875);
-    			attr_dev(td4, "class", "svelte-1qqfaaw");
-    			add_location(td4, file$1, 169, 16, 3912);
-    			add_location(tbody, file$1, 172, 24, 4024);
-    			attr_dev(table, "class", "user-prop svelte-1qqfaaw");
-    			add_location(table, file$1, 171, 20, 3974);
-    			attr_dev(td5, "class", "svelte-1qqfaaw");
-    			add_location(td5, file$1, 170, 16, 3949);
-    			attr_dev(tr, "class", "svelte-1qqfaaw");
-    			add_location(tr, file$1, 164, 12, 3742);
+    			t6 = space();
+    			attr_dev(td0, "class", "svelte-g79d06");
+    			add_location(td0, file$1, 192, 16, 4550);
+    			attr_dev(td1, "class", "svelte-g79d06");
+    			add_location(td1, file$1, 193, 16, 4591);
+    			attr_dev(td2, "class", "svelte-g79d06");
+    			add_location(td2, file$1, 194, 16, 4628);
+    			add_location(tbody, file$1, 197, 24, 4740);
+    			attr_dev(table, "class", "user-prop svelte-g79d06");
+    			add_location(table, file$1, 196, 20, 4690);
+    			attr_dev(td3, "class", "svelte-g79d06");
+    			add_location(td3, file$1, 195, 16, 4665);
+    			attr_dev(tr, "class", "svelte-g79d06");
+    			add_location(tr, file$1, 191, 12, 4529);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11828,30 +11862,22 @@ var app = (function () {
     			append_dev(td2, t4);
     			append_dev(tr, t5);
     			append_dev(tr, td3);
-    			append_dev(td3, t6);
-    			append_dev(tr, t7);
-    			append_dev(tr, td4);
-    			append_dev(td4, t8);
-    			append_dev(tr, t9);
-    			append_dev(tr, td5);
-    			append_dev(td5, table);
+    			append_dev(td3, table);
     			append_dev(table, tbody);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(tbody, null);
     			}
 
-    			append_dev(tr, t10);
+    			append_dev(tr, t6);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*rows2*/ 2 && t0_value !== (t0_value = /*it*/ ctx[7].createtime + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*rows2*/ 2 && t2_value !== (t2_value = /*it*/ ctx[7].cpId + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*rows2*/ 2 && t4_value !== (t4_value = /*it*/ ctx[7].trkId + "")) set_data_dev(t4, t4_value);
-    			if (dirty & /*rows2*/ 2 && t6_value !== (t6_value = /*it*/ ctx[7].attrId + "")) set_data_dev(t6, t6_value);
-    			if (dirty & /*rows2*/ 2 && t8_value !== (t8_value = /*it*/ ctx[7].userId + "")) set_data_dev(t8, t8_value);
+    			if (dirty & /*rows2*/ 2 && t0_value !== (t0_value = /*it*/ ctx[9].createtime + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*rows2*/ 2 && t2_value !== (t2_value = /*it*/ ctx[9].attrId + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*rows2*/ 2 && t4_value !== (t4_value = /*it*/ ctx[9].userId + "")) set_data_dev(t4, t4_value);
 
     			if (dirty & /*rows2*/ 2) {
-    				each_value_3 = /*it*/ ctx[7].prop;
+    				each_value_3 = /*it*/ ctx[9].prop;
     				validate_each_argument(each_value_3);
     				let i;
 
@@ -11884,22 +11910,22 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(164:8) {#each rows2 as it}",
+    		source: "(191:8) {#each rows2 as it}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (215:28) {#each it.prop as it1}
+    // (234:28) {#each it.prop as it1}
     function create_each_block_1(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*it1*/ ctx[10].key + "";
+    	let t0_value = /*it1*/ ctx[12].key + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*it1*/ ctx[10].value + "";
+    	let t2_value = /*it1*/ ctx[12].value + "";
     	let t2;
     	let t3;
 
@@ -11912,11 +11938,11 @@ var app = (function () {
     			td1 = element("td");
     			t2 = text(t2_value);
     			t3 = space();
-    			attr_dev(td0, "class", "svelte-1qqfaaw");
-    			add_location(td0, file$1, 216, 36, 5285);
-    			attr_dev(td1, "class", "svelte-1qqfaaw");
-    			add_location(td1, file$1, 217, 36, 5340);
-    			add_location(tr, file$1, 215, 32, 5244);
+    			attr_dev(td0, "class", "svelte-g79d06");
+    			add_location(td0, file$1, 235, 36, 5806);
+    			attr_dev(td1, "class", "svelte-g79d06");
+    			add_location(td1, file$1, 236, 36, 5861);
+    			add_location(tr, file$1, 234, 32, 5765);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11928,8 +11954,8 @@ var app = (function () {
     			append_dev(tr, t3);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*rows3*/ 4 && t0_value !== (t0_value = /*it1*/ ctx[10].key + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*rows3*/ 4 && t2_value !== (t2_value = /*it1*/ ctx[10].value + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*rows3*/ 4 && t0_value !== (t0_value = /*it1*/ ctx[12].key + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*rows3*/ 4 && t2_value !== (t2_value = /*it1*/ ctx[12].value + "")) set_data_dev(t2, t2_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
@@ -11940,49 +11966,37 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(215:28) {#each it.prop as it1}",
+    		source: "(234:28) {#each it.prop as it1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (203:8) {#each rows3 as it}
+    // (225:8) {#each rows3 as it}
     function create_each_block(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*it*/ ctx[7].createtime + "";
+    	let t0_value = /*it*/ ctx[9].createtime + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*it*/ ctx[7].appId + "";
+    	let t2_value = /*it*/ ctx[9].attrId + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*it*/ ctx[7].cpId + "";
+    	let t4_value = /*it*/ ctx[9].name + "";
     	let t4;
     	let t5;
     	let td3;
-    	let t6_value = /*it*/ ctx[7].trkId + "";
+    	let t6_value = /*it*/ ctx[9].userId + "";
     	let t6;
     	let t7;
     	let td4;
-    	let t8_value = /*it*/ ctx[7].attrId + "";
-    	let t8;
-    	let t9;
-    	let td5;
-    	let t10_value = /*it*/ ctx[7].name + "";
-    	let t10;
-    	let t11;
-    	let td6;
-    	let t12_value = /*it*/ ctx[7].userId + "";
-    	let t12;
-    	let t13;
-    	let td7;
     	let table;
     	let tbody;
-    	let t14;
-    	let each_value_1 = /*it*/ ctx[7].prop;
+    	let t8;
+    	let each_value_1 = /*it*/ ctx[9].prop;
     	validate_each_argument(each_value_1);
     	let each_blocks = [];
 
@@ -12006,15 +12020,6 @@ var app = (function () {
     			t6 = text(t6_value);
     			t7 = space();
     			td4 = element("td");
-    			t8 = text(t8_value);
-    			t9 = space();
-    			td5 = element("td");
-    			t10 = text(t10_value);
-    			t11 = space();
-    			td6 = element("td");
-    			t12 = text(t12_value);
-    			t13 = space();
-    			td7 = element("td");
     			table = element("table");
     			tbody = element("tbody");
 
@@ -12022,27 +12027,21 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			t14 = space();
-    			attr_dev(td0, "class", "svelte-1qqfaaw");
-    			add_location(td0, file$1, 204, 16, 4821);
-    			attr_dev(td1, "class", "svelte-1qqfaaw");
-    			add_location(td1, file$1, 205, 16, 4862);
-    			attr_dev(td2, "class", "svelte-1qqfaaw");
-    			add_location(td2, file$1, 206, 16, 4898);
-    			attr_dev(td3, "class", "svelte-1qqfaaw");
-    			add_location(td3, file$1, 207, 16, 4933);
-    			attr_dev(td4, "class", "svelte-1qqfaaw");
-    			add_location(td4, file$1, 208, 16, 4969);
-    			attr_dev(td5, "class", "svelte-1qqfaaw");
-    			add_location(td5, file$1, 209, 16, 5006);
-    			attr_dev(td6, "class", "svelte-1qqfaaw");
-    			add_location(td6, file$1, 210, 16, 5041);
-    			add_location(tbody, file$1, 213, 24, 5153);
-    			attr_dev(table, "class", "user-prop svelte-1qqfaaw");
-    			add_location(table, file$1, 212, 20, 5103);
-    			attr_dev(td7, "class", "svelte-1qqfaaw");
-    			add_location(td7, file$1, 211, 16, 5078);
-    			add_location(tr, file$1, 203, 12, 4800);
+    			t8 = space();
+    			attr_dev(td0, "class", "svelte-g79d06");
+    			add_location(td0, file$1, 226, 16, 5449);
+    			attr_dev(td1, "class", "svelte-g79d06");
+    			add_location(td1, file$1, 227, 16, 5490);
+    			attr_dev(td2, "class", "svelte-g79d06");
+    			add_location(td2, file$1, 228, 16, 5527);
+    			attr_dev(td3, "class", "svelte-g79d06");
+    			add_location(td3, file$1, 229, 16, 5562);
+    			add_location(tbody, file$1, 232, 24, 5674);
+    			attr_dev(table, "class", "user-prop svelte-g79d06");
+    			add_location(table, file$1, 231, 20, 5624);
+    			attr_dev(td4, "class", "svelte-g79d06");
+    			add_location(td4, file$1, 230, 16, 5599);
+    			add_location(tr, file$1, 225, 12, 5428);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12059,35 +12058,23 @@ var app = (function () {
     			append_dev(td3, t6);
     			append_dev(tr, t7);
     			append_dev(tr, td4);
-    			append_dev(td4, t8);
-    			append_dev(tr, t9);
-    			append_dev(tr, td5);
-    			append_dev(td5, t10);
-    			append_dev(tr, t11);
-    			append_dev(tr, td6);
-    			append_dev(td6, t12);
-    			append_dev(tr, t13);
-    			append_dev(tr, td7);
-    			append_dev(td7, table);
+    			append_dev(td4, table);
     			append_dev(table, tbody);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(tbody, null);
     			}
 
-    			append_dev(tr, t14);
+    			append_dev(tr, t8);
     		},
     		p: function update(ctx, dirty) {
-    			if (dirty & /*rows3*/ 4 && t0_value !== (t0_value = /*it*/ ctx[7].createtime + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*rows3*/ 4 && t2_value !== (t2_value = /*it*/ ctx[7].appId + "")) set_data_dev(t2, t2_value);
-    			if (dirty & /*rows3*/ 4 && t4_value !== (t4_value = /*it*/ ctx[7].cpId + "")) set_data_dev(t4, t4_value);
-    			if (dirty & /*rows3*/ 4 && t6_value !== (t6_value = /*it*/ ctx[7].trkId + "")) set_data_dev(t6, t6_value);
-    			if (dirty & /*rows3*/ 4 && t8_value !== (t8_value = /*it*/ ctx[7].attrId + "")) set_data_dev(t8, t8_value);
-    			if (dirty & /*rows3*/ 4 && t10_value !== (t10_value = /*it*/ ctx[7].name + "")) set_data_dev(t10, t10_value);
-    			if (dirty & /*rows3*/ 4 && t12_value !== (t12_value = /*it*/ ctx[7].userId + "")) set_data_dev(t12, t12_value);
+    			if (dirty & /*rows3*/ 4 && t0_value !== (t0_value = /*it*/ ctx[9].createtime + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*rows3*/ 4 && t2_value !== (t2_value = /*it*/ ctx[9].attrId + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*rows3*/ 4 && t4_value !== (t4_value = /*it*/ ctx[9].name + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*rows3*/ 4 && t6_value !== (t6_value = /*it*/ ctx[9].userId + "")) set_data_dev(t6, t6_value);
 
     			if (dirty & /*rows3*/ 4) {
-    				each_value_1 = /*it*/ ctx[7].prop;
+    				each_value_1 = /*it*/ ctx[9].prop;
     				validate_each_argument(each_value_1);
     				let i;
 
@@ -12120,7 +12107,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(203:8) {#each rows3 as it}",
+    		source: "(225:8) {#each rows3 as it}",
     		ctx
     	});
 
@@ -12130,80 +12117,89 @@ var app = (function () {
     function create_fragment$1(ctx) {
     	let h1;
     	let t1;
-    	let h40;
+    	let div;
+    	let span0;
+    	let t2;
     	let t3;
+    	let t4;
+    	let br;
+    	let t5;
+    	let span1;
+    	let t6;
+    	let t7;
+    	let t8;
+    	let h40;
+    	let t10;
     	let table0;
     	let thead0;
     	let td0;
-    	let t5;
+    	let t12;
     	let td1;
-    	let t7;
+    	let t14;
+    	let td2;
+    	let t16;
+    	let td3;
+    	let t18;
     	let tbody0;
-    	let t8;
+    	let t19;
     	let h41;
-    	let t10;
+    	let t21;
     	let table1;
     	let thead1;
-    	let td2;
-    	let t12;
-    	let td3;
-    	let t14;
+    	let td4;
+    	let t23;
+    	let td5;
+    	let t25;
+    	let td6;
+    	let t27;
+    	let td7;
+    	let t29;
     	let tbody1;
-    	let t15;
+    	let t30;
     	let h42;
-    	let t17;
+    	let t32;
     	let table2;
     	let thead2;
-    	let td4;
-    	let t19;
-    	let td5;
-    	let t21;
-    	let td6;
-    	let t23;
-    	let td7;
-    	let t25;
     	let td8;
-    	let t27;
+    	let t34;
+    	let td9;
+    	let t36;
+    	let td10;
+    	let t38;
+    	let td11;
+    	let t40;
+    	let td12;
+    	let t42;
     	let tbody2;
-    	let t28;
+    	let t43;
     	let h43;
-    	let t30;
+    	let t45;
     	let table3;
     	let thead3;
-    	let td9;
-    	let t32;
-    	let td10;
-    	let t34;
-    	let td11;
-    	let t36;
-    	let td12;
-    	let t38;
     	let td13;
-    	let t40;
+    	let t47;
     	let td14;
-    	let t42;
+    	let t49;
+    	let td15;
+    	let t51;
+    	let td16;
+    	let t53;
     	let tbody3;
-    	let t43;
+    	let t54;
     	let h44;
-    	let t45;
+    	let t56;
     	let table4;
     	let thead4;
-    	let td15;
-    	let t47;
-    	let td16;
-    	let t49;
     	let td17;
-    	let t51;
+    	let t58;
     	let td18;
-    	let t53;
+    	let t60;
     	let td19;
-    	let t55;
+    	let t62;
     	let td20;
-    	let t57;
+    	let t64;
     	let td21;
-    	let t59;
-    	let td22;
-    	let t61;
+    	let t66;
     	let tbody4;
     	let each_value_7 = /*rows5*/ ctx[4];
     	validate_each_argument(each_value_7);
@@ -12249,217 +12245,230 @@ var app = (function () {
     		c: function create() {
     			h1 = element("h1");
     			h1.textContent = "대시보드";
-    			t1 = text("\n리포트에 있는 대시보드와 위젯 그대로 가져올 예정\n\n");
+    			t1 = text("\n리포트에 있는 대시보드와 위젯 그대로 가져올 예정\n\n\n");
+    			div = element("div");
+    			span0 = element("span");
+    			t2 = text("광고 노출 수 : ");
+    			t3 = text(/*totalImp*/ ctx[6]);
+    			t4 = space();
+    			br = element("br");
+    			t5 = space();
+    			span1 = element("span");
+    			t6 = text("앱 설치 수 : ");
+    			t7 = text(/*totalInstall*/ ctx[5]);
+    			t8 = space();
     			h40 = element("h4");
     			h40.textContent = "노출 로그";
-    			t3 = space();
+    			t10 = space();
     			table0 = element("table");
     			thead0 = element("thead");
     			td0 = element("td");
     			td0.textContent = "클릭 날짜/시각";
-    			t5 = space();
+    			t12 = space();
     			td1 = element("td");
-    			td1.textContent = "매체사 클릭키";
-    			t7 = space();
+    			td1.textContent = "캠페인 항목번호";
+    			t14 = space();
+    			td2 = element("td");
+    			td2.textContent = "트래킹 아이디";
+    			t16 = space();
+    			td3 = element("td");
+    			td3.textContent = "매체사 클릭키";
+    			t18 = space();
     			tbody0 = element("tbody");
 
     			for (let i = 0; i < each_blocks_4.length; i += 1) {
     				each_blocks_4[i].c();
     			}
 
-    			t8 = space();
+    			t19 = space();
     			h41 = element("h4");
     			h41.textContent = "트래킹 링크 클릭 로그";
-    			t10 = space();
+    			t21 = space();
     			table1 = element("table");
     			thead1 = element("thead");
-    			td2 = element("td");
-    			td2.textContent = "클릭 날짜/시각";
-    			t12 = space();
-    			td3 = element("td");
-    			td3.textContent = "매체사 클릭키";
-    			t14 = space();
+    			td4 = element("td");
+    			td4.textContent = "클릭 날짜/시각";
+    			t23 = space();
+    			td5 = element("td");
+    			td5.textContent = "캠페인 항목번호";
+    			t25 = space();
+    			td6 = element("td");
+    			td6.textContent = "트래킹 아이디";
+    			t27 = space();
+    			td7 = element("td");
+    			td7.textContent = "매체사 클릭키";
+    			t29 = space();
     			tbody1 = element("tbody");
 
     			for (let i = 0; i < each_blocks_3.length; i += 1) {
     				each_blocks_3[i].c();
     			}
 
-    			t15 = space();
+    			t30 = space();
     			h42 = element("h4");
     			h42.textContent = "인스톨 로그";
-    			t17 = space();
+    			t32 = space();
     			table2 = element("table");
     			thead2 = element("thead");
-    			td4 = element("td");
-    			td4.textContent = "설치 날짜/시각";
-    			t19 = space();
-    			td5 = element("td");
-    			td5.textContent = "트래킹 아이디";
-    			t21 = space();
-    			td6 = element("td");
-    			td6.textContent = "어트리뷰션 아이디";
-    			t23 = space();
-    			td7 = element("td");
-    			td7.textContent = "매체사 클릭키";
-    			t25 = space();
     			td8 = element("td");
-    			td8.textContent = "속성";
-    			t27 = space();
+    			td8.textContent = "설치 날짜/시각";
+    			t34 = space();
+    			td9 = element("td");
+    			td9.textContent = "트래킹 아이디";
+    			t36 = space();
+    			td10 = element("td");
+    			td10.textContent = "어트리뷰션 아이디";
+    			t38 = space();
+    			td11 = element("td");
+    			td11.textContent = "매체사 클릭키";
+    			t40 = space();
+    			td12 = element("td");
+    			td12.textContent = "속성";
+    			t42 = space();
     			tbody2 = element("tbody");
 
     			for (let i = 0; i < each_blocks_2.length; i += 1) {
     				each_blocks_2[i].c();
     			}
 
-    			t28 = space();
+    			t43 = space();
     			h43 = element("h4");
     			h43.textContent = "회원 데이터베이스";
-    			t30 = space();
+    			t45 = space();
     			table3 = element("table");
     			thead3 = element("thead");
-    			td9 = element("td");
-    			td9.textContent = "회원 생성 날짜/시각";
-    			t32 = space();
-    			td10 = element("td");
-    			td10.textContent = "캠페인 항목 번호";
-    			t34 = space();
-    			td11 = element("td");
-    			td11.textContent = "트래킹 아이디";
-    			t36 = space();
-    			td12 = element("td");
-    			td12.textContent = "어트리뷰션 아이디";
-    			t38 = space();
     			td13 = element("td");
-    			td13.textContent = "회원 아이디";
-    			t40 = space();
+    			td13.textContent = "회원 생성 날짜/시각";
+    			t47 = space();
     			td14 = element("td");
-    			td14.textContent = "속성";
-    			t42 = space();
+    			td14.textContent = "어트리뷰션 아이디";
+    			t49 = space();
+    			td15 = element("td");
+    			td15.textContent = "회원 아이디";
+    			t51 = space();
+    			td16 = element("td");
+    			td16.textContent = "속성";
+    			t53 = space();
     			tbody3 = element("tbody");
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].c();
     			}
 
-    			t43 = space();
+    			t54 = space();
     			h44 = element("h4");
     			h44.textContent = "이벤트 데이터베이스";
-    			t45 = space();
+    			t56 = space();
     			table4 = element("table");
     			thead4 = element("thead");
-    			td15 = element("td");
-    			td15.textContent = "이벤트 생성 날짜/시각";
-    			t47 = space();
-    			td16 = element("td");
-    			td16.textContent = "앱 아이디";
-    			t49 = space();
     			td17 = element("td");
-    			td17.textContent = "캠페인 아이디";
-    			t51 = space();
+    			td17.textContent = "이벤트 생성 날짜/시각";
+    			t58 = space();
     			td18 = element("td");
-    			td18.textContent = "트래킹 아이디";
-    			t53 = space();
+    			td18.textContent = "어트리뷰션 아이디";
+    			t60 = space();
     			td19 = element("td");
-    			td19.textContent = "어트리뷰션 아이디";
-    			t55 = space();
+    			td19.textContent = "이벤트 이름";
+    			t62 = space();
     			td20 = element("td");
-    			td20.textContent = "이벤트 이름";
-    			t57 = space();
+    			td20.textContent = "회원 아이디";
+    			t64 = space();
     			td21 = element("td");
-    			td21.textContent = "회원 아이디";
-    			t59 = space();
-    			td22 = element("td");
-    			td22.textContent = "속성";
-    			t61 = space();
+    			td21.textContent = "속성";
+    			t66 = space();
     			tbody4 = element("tbody");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			add_location(h1, file$1, 75, 0, 1801);
-    			attr_dev(h40, "class", "svelte-1qqfaaw");
-    			add_location(h40, file$1, 78, 0, 1844);
-    			attr_dev(td0, "class", "datetime svelte-1qqfaaw");
-    			add_location(td0, file$1, 81, 8, 1887);
-    			attr_dev(td1, "class", "svelte-1qqfaaw");
-    			add_location(td1, file$1, 82, 8, 1930);
-    			attr_dev(thead0, "class", "svelte-1qqfaaw");
-    			add_location(thead0, file$1, 80, 4, 1871);
-    			add_location(tbody0, file$1, 84, 4, 1964);
-    			attr_dev(table0, "class", "svelte-1qqfaaw");
-    			add_location(table0, file$1, 79, 0, 1859);
-    			attr_dev(h41, "class", "svelte-1qqfaaw");
-    			add_location(h41, file$1, 96, 0, 2156);
-    			attr_dev(td2, "class", "datetime svelte-1qqfaaw");
-    			add_location(td2, file$1, 99, 8, 2206);
-    			attr_dev(td3, "class", "svelte-1qqfaaw");
-    			add_location(td3, file$1, 100, 8, 2249);
-    			attr_dev(thead1, "class", "svelte-1qqfaaw");
-    			add_location(thead1, file$1, 98, 4, 2190);
-    			add_location(tbody1, file$1, 102, 4, 2283);
-    			attr_dev(table1, "class", "svelte-1qqfaaw");
-    			add_location(table1, file$1, 97, 0, 2178);
-    			attr_dev(h42, "class", "svelte-1qqfaaw");
-    			add_location(h42, file$1, 116, 0, 2477);
-    			attr_dev(td4, "class", "datetime svelte-1qqfaaw");
-    			add_location(td4, file$1, 119, 8, 2537);
-    			attr_dev(td5, "class", "trk-id svelte-1qqfaaw");
-    			add_location(td5, file$1, 120, 8, 2580);
-    			attr_dev(td6, "class", "svelte-1qqfaaw");
-    			add_location(td6, file$1, 121, 8, 2620);
-    			attr_dev(td7, "class", "ck svelte-1qqfaaw");
-    			add_location(td7, file$1, 122, 8, 2647);
-    			attr_dev(td8, "class", "svelte-1qqfaaw");
-    			add_location(td8, file$1, 123, 8, 2683);
-    			attr_dev(thead2, "class", "svelte-1qqfaaw");
-    			add_location(thead2, file$1, 118, 4, 2521);
-    			add_location(tbody2, file$1, 125, 4, 2712);
-    			attr_dev(table2, "class", "install svelte-1qqfaaw");
-    			add_location(table2, file$1, 117, 0, 2493);
-    			attr_dev(h43, "class", "svelte-1qqfaaw");
-    			add_location(h43, file$1, 152, 0, 3411);
-    			attr_dev(td9, "class", "datetime svelte-1qqfaaw");
-    			add_location(td9, file$1, 155, 8, 3471);
-    			attr_dev(td10, "class", "cp-id svelte-1qqfaaw");
-    			add_location(td10, file$1, 156, 8, 3517);
-    			attr_dev(td11, "class", "trk-id svelte-1qqfaaw");
-    			add_location(td11, file$1, 157, 8, 3558);
-    			attr_dev(td12, "class", "svelte-1qqfaaw");
-    			add_location(td12, file$1, 158, 8, 3598);
-    			attr_dev(td13, "class", "user-id svelte-1qqfaaw");
-    			add_location(td13, file$1, 159, 8, 3625);
-    			attr_dev(td14, "class", "svelte-1qqfaaw");
-    			add_location(td14, file$1, 160, 8, 3665);
-    			attr_dev(thead3, "class", "svelte-1qqfaaw");
-    			add_location(thead3, file$1, 154, 4, 3455);
-    			add_location(tbody3, file$1, 162, 4, 3694);
-    			attr_dev(table3, "class", "user svelte-1qqfaaw");
-    			add_location(table3, file$1, 153, 0, 3430);
-    			attr_dev(h44, "class", "svelte-1qqfaaw");
-    			add_location(h44, file$1, 189, 0, 4449);
-    			attr_dev(td15, "class", "datetime svelte-1qqfaaw");
-    			add_location(td15, file$1, 192, 8, 4497);
-    			attr_dev(td16, "class", "app-id svelte-1qqfaaw");
-    			add_location(td16, file$1, 193, 8, 4544);
-    			attr_dev(td17, "class", "svelte-1qqfaaw");
-    			add_location(td17, file$1, 194, 8, 4582);
-    			attr_dev(td18, "class", "svelte-1qqfaaw");
-    			add_location(td18, file$1, 195, 8, 4607);
-    			attr_dev(td19, "class", "svelte-1qqfaaw");
-    			add_location(td19, file$1, 196, 8, 4632);
-    			attr_dev(td20, "class", "svelte-1qqfaaw");
-    			add_location(td20, file$1, 197, 8, 4659);
-    			attr_dev(td21, "class", "user-id svelte-1qqfaaw");
-    			add_location(td21, file$1, 198, 8, 4683);
-    			attr_dev(td22, "class", "svelte-1qqfaaw");
-    			add_location(td22, file$1, 199, 8, 4723);
-    			attr_dev(thead4, "class", "svelte-1qqfaaw");
-    			add_location(thead4, file$1, 191, 4, 4481);
-    			add_location(tbody4, file$1, 201, 4, 4752);
-    			attr_dev(table4, "class", "svelte-1qqfaaw");
-    			add_location(table4, file$1, 190, 0, 4469);
+    			add_location(h1, file$1, 89, 0, 2190);
+    			attr_dev(span0, "class", "count svelte-g79d06");
+    			add_location(span0, file$1, 94, 4, 2257);
+    			add_location(br, file$1, 95, 4, 2309);
+    			attr_dev(span1, "class", "count svelte-g79d06");
+    			add_location(span1, file$1, 96, 4, 2318);
+    			attr_dev(div, "class", "stat svelte-g79d06");
+    			add_location(div, file$1, 93, 0, 2234);
+    			attr_dev(h40, "class", "svelte-g79d06");
+    			add_location(h40, file$1, 99, 0, 2377);
+    			attr_dev(td0, "class", "datetime svelte-g79d06");
+    			add_location(td0, file$1, 102, 8, 2420);
+    			attr_dev(td1, "class", "cp-id svelte-g79d06");
+    			add_location(td1, file$1, 103, 8, 2463);
+    			attr_dev(td2, "class", "trk-id svelte-g79d06");
+    			add_location(td2, file$1, 104, 8, 2503);
+    			attr_dev(td3, "class", "ck svelte-g79d06");
+    			add_location(td3, file$1, 105, 8, 2543);
+    			attr_dev(thead0, "class", "svelte-g79d06");
+    			add_location(thead0, file$1, 101, 4, 2404);
+    			add_location(tbody0, file$1, 107, 4, 2588);
+    			attr_dev(table0, "class", "svelte-g79d06");
+    			add_location(table0, file$1, 100, 0, 2392);
+    			attr_dev(h41, "class", "svelte-g79d06");
+    			add_location(h41, file$1, 121, 0, 2862);
+    			attr_dev(td4, "class", "datetime svelte-g79d06");
+    			add_location(td4, file$1, 124, 8, 2912);
+    			attr_dev(td5, "class", "cp-id svelte-g79d06");
+    			add_location(td5, file$1, 125, 8, 2955);
+    			attr_dev(td6, "class", "trk-id svelte-g79d06");
+    			add_location(td6, file$1, 126, 8, 2995);
+    			attr_dev(td7, "class", "svelte-g79d06");
+    			add_location(td7, file$1, 127, 8, 3035);
+    			attr_dev(thead1, "class", "svelte-g79d06");
+    			add_location(thead1, file$1, 123, 4, 2896);
+    			add_location(tbody1, file$1, 129, 4, 3069);
+    			attr_dev(table1, "class", "svelte-g79d06");
+    			add_location(table1, file$1, 122, 0, 2884);
+    			attr_dev(h42, "class", "svelte-g79d06");
+    			add_location(h42, file$1, 145, 0, 3345);
+    			attr_dev(td8, "class", "datetime svelte-g79d06");
+    			add_location(td8, file$1, 148, 8, 3405);
+    			attr_dev(td9, "class", "trk-id svelte-g79d06");
+    			add_location(td9, file$1, 149, 8, 3448);
+    			attr_dev(td10, "class", "svelte-g79d06");
+    			add_location(td10, file$1, 150, 8, 3488);
+    			attr_dev(td11, "class", "ck svelte-g79d06");
+    			add_location(td11, file$1, 151, 8, 3515);
+    			attr_dev(td12, "class", "svelte-g79d06");
+    			add_location(td12, file$1, 152, 8, 3551);
+    			attr_dev(thead2, "class", "svelte-g79d06");
+    			add_location(thead2, file$1, 147, 4, 3389);
+    			add_location(tbody2, file$1, 154, 4, 3580);
+    			attr_dev(table2, "class", "install svelte-g79d06");
+    			add_location(table2, file$1, 146, 0, 3361);
+    			attr_dev(h43, "class", "svelte-g79d06");
+    			add_location(h43, file$1, 181, 0, 4279);
+    			attr_dev(td13, "class", "datetime svelte-g79d06");
+    			add_location(td13, file$1, 184, 8, 4339);
+    			attr_dev(td14, "class", "svelte-g79d06");
+    			add_location(td14, file$1, 185, 8, 4385);
+    			attr_dev(td15, "class", "user-id svelte-g79d06");
+    			add_location(td15, file$1, 186, 8, 4412);
+    			attr_dev(td16, "class", "svelte-g79d06");
+    			add_location(td16, file$1, 187, 8, 4452);
+    			attr_dev(thead3, "class", "svelte-g79d06");
+    			add_location(thead3, file$1, 183, 4, 4323);
+    			add_location(tbody3, file$1, 189, 4, 4481);
+    			attr_dev(table3, "class", "user svelte-g79d06");
+    			add_location(table3, file$1, 182, 0, 4298);
+    			attr_dev(h44, "class", "svelte-g79d06");
+    			add_location(h44, file$1, 214, 0, 5165);
+    			attr_dev(td17, "class", "datetime svelte-g79d06");
+    			add_location(td17, file$1, 217, 8, 5213);
+    			attr_dev(td18, "class", "svelte-g79d06");
+    			add_location(td18, file$1, 218, 8, 5260);
+    			attr_dev(td19, "class", "svelte-g79d06");
+    			add_location(td19, file$1, 219, 8, 5287);
+    			attr_dev(td20, "class", "user-id svelte-g79d06");
+    			add_location(td20, file$1, 220, 8, 5311);
+    			attr_dev(td21, "class", "svelte-g79d06");
+    			add_location(td21, file$1, 221, 8, 5351);
+    			attr_dev(thead4, "class", "svelte-g79d06");
+    			add_location(thead4, file$1, 216, 4, 5197);
+    			add_location(tbody4, file$1, 223, 4, 5380);
+    			attr_dev(table4, "class", "svelte-g79d06");
+    			add_location(table4, file$1, 215, 0, 5185);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -12467,100 +12476,109 @@ var app = (function () {
     		m: function mount(target, anchor) {
     			insert_dev(target, h1, anchor);
     			insert_dev(target, t1, anchor);
+    			insert_dev(target, div, anchor);
+    			append_dev(div, span0);
+    			append_dev(span0, t2);
+    			append_dev(span0, t3);
+    			append_dev(div, t4);
+    			append_dev(div, br);
+    			append_dev(div, t5);
+    			append_dev(div, span1);
+    			append_dev(span1, t6);
+    			append_dev(span1, t7);
+    			insert_dev(target, t8, anchor);
     			insert_dev(target, h40, anchor);
-    			insert_dev(target, t3, anchor);
+    			insert_dev(target, t10, anchor);
     			insert_dev(target, table0, anchor);
     			append_dev(table0, thead0);
     			append_dev(thead0, td0);
-    			append_dev(thead0, t5);
+    			append_dev(thead0, t12);
     			append_dev(thead0, td1);
-    			append_dev(table0, t7);
+    			append_dev(thead0, t14);
+    			append_dev(thead0, td2);
+    			append_dev(thead0, t16);
+    			append_dev(thead0, td3);
+    			append_dev(table0, t18);
     			append_dev(table0, tbody0);
 
     			for (let i = 0; i < each_blocks_4.length; i += 1) {
     				each_blocks_4[i].m(tbody0, null);
     			}
 
-    			insert_dev(target, t8, anchor);
+    			insert_dev(target, t19, anchor);
     			insert_dev(target, h41, anchor);
-    			insert_dev(target, t10, anchor);
+    			insert_dev(target, t21, anchor);
     			insert_dev(target, table1, anchor);
     			append_dev(table1, thead1);
-    			append_dev(thead1, td2);
-    			append_dev(thead1, t12);
-    			append_dev(thead1, td3);
-    			append_dev(table1, t14);
+    			append_dev(thead1, td4);
+    			append_dev(thead1, t23);
+    			append_dev(thead1, td5);
+    			append_dev(thead1, t25);
+    			append_dev(thead1, td6);
+    			append_dev(thead1, t27);
+    			append_dev(thead1, td7);
+    			append_dev(table1, t29);
     			append_dev(table1, tbody1);
 
     			for (let i = 0; i < each_blocks_3.length; i += 1) {
     				each_blocks_3[i].m(tbody1, null);
     			}
 
-    			insert_dev(target, t15, anchor);
+    			insert_dev(target, t30, anchor);
     			insert_dev(target, h42, anchor);
-    			insert_dev(target, t17, anchor);
+    			insert_dev(target, t32, anchor);
     			insert_dev(target, table2, anchor);
     			append_dev(table2, thead2);
-    			append_dev(thead2, td4);
-    			append_dev(thead2, t19);
-    			append_dev(thead2, td5);
-    			append_dev(thead2, t21);
-    			append_dev(thead2, td6);
-    			append_dev(thead2, t23);
-    			append_dev(thead2, td7);
-    			append_dev(thead2, t25);
     			append_dev(thead2, td8);
-    			append_dev(table2, t27);
+    			append_dev(thead2, t34);
+    			append_dev(thead2, td9);
+    			append_dev(thead2, t36);
+    			append_dev(thead2, td10);
+    			append_dev(thead2, t38);
+    			append_dev(thead2, td11);
+    			append_dev(thead2, t40);
+    			append_dev(thead2, td12);
+    			append_dev(table2, t42);
     			append_dev(table2, tbody2);
 
     			for (let i = 0; i < each_blocks_2.length; i += 1) {
     				each_blocks_2[i].m(tbody2, null);
     			}
 
-    			insert_dev(target, t28, anchor);
+    			insert_dev(target, t43, anchor);
     			insert_dev(target, h43, anchor);
-    			insert_dev(target, t30, anchor);
+    			insert_dev(target, t45, anchor);
     			insert_dev(target, table3, anchor);
     			append_dev(table3, thead3);
-    			append_dev(thead3, td9);
-    			append_dev(thead3, t32);
-    			append_dev(thead3, td10);
-    			append_dev(thead3, t34);
-    			append_dev(thead3, td11);
-    			append_dev(thead3, t36);
-    			append_dev(thead3, td12);
-    			append_dev(thead3, t38);
     			append_dev(thead3, td13);
-    			append_dev(thead3, t40);
+    			append_dev(thead3, t47);
     			append_dev(thead3, td14);
-    			append_dev(table3, t42);
+    			append_dev(thead3, t49);
+    			append_dev(thead3, td15);
+    			append_dev(thead3, t51);
+    			append_dev(thead3, td16);
+    			append_dev(table3, t53);
     			append_dev(table3, tbody3);
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].m(tbody3, null);
     			}
 
-    			insert_dev(target, t43, anchor);
+    			insert_dev(target, t54, anchor);
     			insert_dev(target, h44, anchor);
-    			insert_dev(target, t45, anchor);
+    			insert_dev(target, t56, anchor);
     			insert_dev(target, table4, anchor);
     			append_dev(table4, thead4);
-    			append_dev(thead4, td15);
-    			append_dev(thead4, t47);
-    			append_dev(thead4, td16);
-    			append_dev(thead4, t49);
     			append_dev(thead4, td17);
-    			append_dev(thead4, t51);
+    			append_dev(thead4, t58);
     			append_dev(thead4, td18);
-    			append_dev(thead4, t53);
+    			append_dev(thead4, t60);
     			append_dev(thead4, td19);
-    			append_dev(thead4, t55);
+    			append_dev(thead4, t62);
     			append_dev(thead4, td20);
-    			append_dev(thead4, t57);
+    			append_dev(thead4, t64);
     			append_dev(thead4, td21);
-    			append_dev(thead4, t59);
-    			append_dev(thead4, td22);
-    			append_dev(table4, t61);
+    			append_dev(table4, t66);
     			append_dev(table4, tbody4);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -12568,6 +12586,9 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
+    			if (dirty & /*totalImp*/ 64) set_data_dev(t3, /*totalImp*/ ctx[6]);
+    			if (dirty & /*totalInstall*/ 32) set_data_dev(t7, /*totalInstall*/ ctx[5]);
+
     			if (dirty & /*rows5*/ 16) {
     				each_value_7 = /*rows5*/ ctx[4];
     				validate_each_argument(each_value_7);
@@ -12693,28 +12714,30 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(h1);
     			if (detaching) detach_dev(t1);
+    			if (detaching) detach_dev(div);
+    			if (detaching) detach_dev(t8);
     			if (detaching) detach_dev(h40);
-    			if (detaching) detach_dev(t3);
+    			if (detaching) detach_dev(t10);
     			if (detaching) detach_dev(table0);
     			destroy_each(each_blocks_4, detaching);
-    			if (detaching) detach_dev(t8);
+    			if (detaching) detach_dev(t19);
     			if (detaching) detach_dev(h41);
-    			if (detaching) detach_dev(t10);
+    			if (detaching) detach_dev(t21);
     			if (detaching) detach_dev(table1);
     			destroy_each(each_blocks_3, detaching);
-    			if (detaching) detach_dev(t15);
+    			if (detaching) detach_dev(t30);
     			if (detaching) detach_dev(h42);
-    			if (detaching) detach_dev(t17);
+    			if (detaching) detach_dev(t32);
     			if (detaching) detach_dev(table2);
     			destroy_each(each_blocks_2, detaching);
-    			if (detaching) detach_dev(t28);
+    			if (detaching) detach_dev(t43);
     			if (detaching) detach_dev(h43);
-    			if (detaching) detach_dev(t30);
+    			if (detaching) detach_dev(t45);
     			if (detaching) detach_dev(table3);
     			destroy_each(each_blocks_1, detaching);
-    			if (detaching) detach_dev(t43);
+    			if (detaching) detach_dev(t54);
     			if (detaching) detach_dev(h44);
-    			if (detaching) detach_dev(t45);
+    			if (detaching) detach_dev(t56);
     			if (detaching) detach_dev(table4);
     			destroy_each(each_blocks, detaching);
     		}
@@ -12741,6 +12764,8 @@ var app = (function () {
     	let rows3 = [];
     	let rows4 = [];
     	let rows5 = [];
+    	let totalInstall = 0;
+    	let totalImp = 0;
 
     	fetch(serverURL + "/install/list?app_id=" + appId, { method: 'GET' }).then(response => response.json()).then(success => {
     		$$invalidate(0, rows1 = success);
@@ -12782,6 +12807,14 @@ var app = (function () {
     		return [];
     	});
 
+    	fetch(serverURL + "/pettri/test1?app_id=" + appId, { method: 'GET' }).then(response => response.json()).then(success => {
+    		$$invalidate(5, totalInstall = success.totalInstall);
+    		$$invalidate(6, totalImp = success.totalImp);
+    	}).catch(error => {
+    		console.log(error);
+    		return [];
+    	});
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
@@ -12795,7 +12828,9 @@ var app = (function () {
     		rows2,
     		rows3,
     		rows4,
-    		rows5
+    		rows5,
+    		totalInstall,
+    		totalImp
     	});
 
     	$$self.$inject_state = $$props => {
@@ -12806,13 +12841,15 @@ var app = (function () {
     		if ('rows3' in $$props) $$invalidate(2, rows3 = $$props.rows3);
     		if ('rows4' in $$props) $$invalidate(3, rows4 = $$props.rows4);
     		if ('rows5' in $$props) $$invalidate(4, rows5 = $$props.rows5);
+    		if ('totalInstall' in $$props) $$invalidate(5, totalInstall = $$props.totalInstall);
+    		if ('totalImp' in $$props) $$invalidate(6, totalImp = $$props.totalImp);
     	};
 
     	if ($$props && "$$inject" in $$props) {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [rows1, rows2, rows3, rows4, rows5];
+    	return [rows1, rows2, rows3, rows4, rows5, totalInstall, totalImp];
     }
 
     class Dashboard extends SvelteComponentDev {

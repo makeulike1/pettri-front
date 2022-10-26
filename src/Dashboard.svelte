@@ -8,6 +8,8 @@
     let rows4 = []
     let rows5 = []
 
+    let totalInstall = 0;
+    let totalImp = 0;
 
 
     fetch(serverURL + "/install/list?app_id="+appId, {
@@ -71,21 +73,44 @@
             return [];
         }) 
 
+    fetch(serverURL + "/pettri/test1?app_id="+appId, {
+            method: 'GET'
+        }).then(response => response.json())
+            .then(success =>{
+            totalInstall = success.totalInstall
+            totalImp = success.totalImp
+        }).catch(error => {
+            console.log(error);
+            return [];
+        }) 
+
 </script>
+
 
 <h1>대시보드</h1>
 리포트에 있는 대시보드와 위젯 그대로 가져올 예정
+
+
+<div class='stat'>
+    <span class='count'>광고 노출 수 : {totalImp}</span>
+    <br>
+    <span class='count'>앱 설치 수 : {totalInstall}</span>
+</div>
 
 <h4>노출 로그</h4>
 <table>
     <thead>
         <td class='datetime'>클릭 날짜/시각</td>
-        <td>매체사 클릭키</td>
+        <td class='cp-id'>캠페인 항목번호</td>
+        <td class='trk-id'>트래킹 아이디</td>
+        <td class='ck'>매체사 클릭키</td>
     </thead>
     <tbody>
         {#each rows5 as it}
             <tr>
                 <td>{it.createtime}</td>
+                <td>{it.campaignId}</td>
+                <td>{it.trackingId}</td>
                 <td>{it.clickKey}</td>
             </tr>
         {/each}
@@ -98,12 +123,16 @@
 <table>
     <thead>
         <td class='datetime'>클릭 날짜/시각</td>
+        <td class='cp-id'>캠페인 항목번호</td>
+        <td class='trk-id'>트래킹 아이디</td>
         <td>매체사 클릭키</td>
     </thead>
     <tbody>
         {#each rows4 as it}
             <tr>
                 <td>{it.createtime}</td>
+                <td>{it.campaignId}</td>
+                <td>{it.trackingId}</td>
                 <td>{it.clickKey}</td>
             </tr>
         {/each}
@@ -154,8 +183,6 @@
 <table class='user'>
     <thead>
         <td class='datetime'>회원 생성 날짜/시각</td>
-        <td class='cp-id'>캠페인 항목 번호</td>
-        <td class='trk-id'>트래킹 아이디</td>
         <td>어트리뷰션 아이디</td>
         <td class='user-id'>회원 아이디</td>
         <td>속성</td>
@@ -164,8 +191,6 @@
         {#each rows2 as it}
             <tr>
                 <td>{it.createtime}</td>
-                <td>{it.cpId}</td>
-                <td>{it.trkId}</td>
                 <td>{it.attrId}</td>
                 <td>{it.userId}</td>
                 <td>
@@ -191,9 +216,6 @@
 <table>
     <thead>
         <td class='datetime'>이벤트 생성 날짜/시각</td>
-        <td class='app-id'>앱 아이디</td>
-        <td>캠페인 아이디</td>
-        <td>트래킹 아이디</td>
         <td>어트리뷰션 아이디</td>
         <td>이벤트 이름</td>
         <td class='user-id'>회원 아이디</td>
@@ -203,9 +225,6 @@
         {#each rows3 as it}
             <tr>
                 <td>{it.createtime}</td>
-                <td>{it.appId}</td>
-                <td>{it.cpId}</td>
-                <td>{it.trkId}</td>
                 <td>{it.attrId}</td>
                 <td>{it.name}</td>
                 <td>{it.userId}</td>
@@ -228,6 +247,15 @@
 </table>
 
 <style>
+
+    .stat{
+        margin-top:50px;
+    }
+
+    .stat .count{
+        font-size:20px;
+        font-weight:600;
+    }
 
     h4{
         margin-top:95px;
