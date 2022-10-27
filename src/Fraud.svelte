@@ -1,5 +1,5 @@
 <script>
-    import FraudBlackList 	 from "./fraud/FraudBlackList.svelte"
+    import FraudBlackList 	 from "./fraud/FraudBlackList.svelte"  
 </script>
 <h3 class='head-text'>프로드 방지</h3>
 <ul class="nav">

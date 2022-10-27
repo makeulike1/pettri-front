@@ -1,3 +1,6 @@
+<script>
+    
+</script>
 <div class="modal partner" tabindex="-1" role="dialog" id='signup'>
     <div class="modal-dialog" role="document">
       <div class="modal-content">

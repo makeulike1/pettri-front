@@ -4,7 +4,7 @@
     function signUp(){
         window.$('#signup').modal('show')
     }
-
+     
 </script>
 <h3 class='head-text'>광고 파트너</h3>
 <table class='partner'>

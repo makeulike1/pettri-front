@@ -1,5 +1,4 @@
 <script>
-    
 </script>
 <h3 class='head-text'>랜딩 설정</h3>
 <div class='land'>

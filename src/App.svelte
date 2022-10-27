@@ -8,25 +8,29 @@
 	import Tracking 					from "./Tracking.svelte"
 	import Attr 						from "./Attr.svelte"
 	import Dashboard  					from "./Dashboard.svelte"
-	
+	import Dashboard2  					from "./Dashboard2.svelte"
+	import Test10 						from "./Test10.svelte"
+    
 	let currentURL = new URL(window.location.href)
-	let appId   = currentURL.searchParams.get("app_id")
+	let appId   = currentURL.searchParams.get("app_id") 
+
 
 </script>
 
 <main>
 
-	<div class='top-cont'><span class='nav-open-menu' id='open-menu' onclick='openMenu()'>메뉴 펼치기</span></div>
+	<div class='top-cont'>
+	</div>
 
 	
 		<div class='nav' id='left-menu'>
 			<div class="top-nav">
 				<a href='../index.html'><div class='nav-logout'>로그아웃</div></a>
-				<div class='nav-close-out' onclick='closeMenu()'>메뉴닫기</div>
 			</div>
 			<ul class='nav-no-bullets'>
 				<li>
 					<Link href ="/dashboard?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-file-bar-graph nav-icon"></i>대시보드</ul></Link>
+					<Link href ="/dashboard2?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-file-bar-graph nav-icon"></i>대시보드 (임시)</ul></Link>
 					<Link href ="/campaign?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-globe nav-icon"></i>캠페인</ul></Link>
 					<!-- Link href ="/partner?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-person nav-icon"></i>광고 파트너</ul></Link -->
 					<Link href ="/landing?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-gear nav-icon"></i>랜딩 설정</ul></Link>
@@ -46,6 +50,17 @@
 						<Dashboard/>
 					</Route>
 
+					<!-- Router : Tracking Link -->
+					<Route path="/dashboard2" primary={false}>
+						<Dashboard2/>
+					</Route>
+
+					<!-- Router : Tracking Link -->
+					<Route path="/test10" primary={false}>
+						<Test10/>
+					</Route>
+
+						
 					<!-- Router : Tracking Link -->
 					<Route path="/tracking" primary={false}>
 						<Tracking/>
@@ -152,37 +167,8 @@
     }
  
 	.nav-icon{margin-right:20px;}
+  
  
-
-	.nav-open-menu{
-		cursor:pointer; 
-		font-weight:600;
-		position:fixed;
-		left:17px;
-		font-size:16px;
-		display:none;
-		color:#00264d;
-		top:14px;
-		z-index:999;
-	}
-
-	.nav-open-menu:hover{
-		text-decoration: underline;
-	}
-
-	.nav-close-out{
-		color:#00264d; 
-		font-size:16px; 
-		cursor:pointer; 
-		font-weight:600;
-		position:absolute;
-		left:15px;
-	}
-
-	.nav-close-out:hover{
-		text-decoration:underline;
-	}
-	
 	.nav-logout{
 		color:#00264d; 
 		font-size:16px; 
