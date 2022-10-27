@@ -102,10 +102,10 @@
     <tbody>
         {#each rows as it}
             <tr class='row-1'>
-                <td>{it.id}</td>
-                <td><input type='text' id='trk-name-{it.id}' value={it.name}/></td>
-                <td>{it.trackingId}</td>
-                <td>
+                <td class='padd'>{it.id}</td>
+                <td class='padd'><input type='text' id='trk-name-{it.id}' value={it.name}/></td>
+                <td class='padd'>{it.trackingId}</td>
+                <td class='padd'>
                     {#if it.status == 0}
                     활성화
                     {:else if it.status == 1}
@@ -113,7 +113,7 @@
                     {:else if it.status == 2}
                     보류됨
                     {/if}</td>
-                    <td>
+                    <td class='padd'>
                         <b>딥링크 경로</b>
                         <table>
                             <tbody>
@@ -137,7 +137,7 @@
                         <div class='web-path'>웹 경로</div>
                         <input type='text' class='web-path-textbox' id='web-path-{it.id}' value={it.webPath}/>
                     </td>
-                    <td>
+                    <td class='padd'>
                             <button type="button" class="btn btn-primary" on:click={()=>modify(it.id)}>수정</button>
                         {#if it.status == 0}
                             <button type="button" class="btn btn-secondary" on:click={()=>updateStatus(it.id, 1)}>트래킹 중지</button>
@@ -251,7 +251,16 @@
         width:120px;
     }
     table.trk-list thead td.status{
-        width:80px;
+        width:110px;
+    }
+
+    table.trk-list tbody td{
+        border-right:1px dotted #ececec;
+    }
+
+    table.trk-list tbody td.padd{
+        padding-left:20px;
+        padding-right:20px;
     }
 
     table.trk-list tr.row-1{
