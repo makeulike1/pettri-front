@@ -8,7 +8,7 @@
 	import Tracking 					from "./Tracking.svelte"
 	import Attr 						from "./Attr.svelte"
 	import Dashboard  					from "./Dashboard.svelte"
-	import Dashboard2  					from "./Dashboard2.svelte"
+	import Temp  					from "./Temp.svelte"
 	import Test10 						from "./Test10.svelte"
     
 	let currentURL = new URL(window.location.href)
@@ -30,7 +30,7 @@
 			<ul class='nav-no-bullets'>
 				<li>
 					<Link href ="/dashboard?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-file-bar-graph nav-icon"></i>대시보드</ul></Link>
-					<Link href ="/dashboard2?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-file-bar-graph nav-icon"></i>대시보드 (임시)</ul></Link>
+					<Link href ="/temp?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-file-bar-graph nav-icon"></i>대시보드 (임시)</ul></Link>
 					<Link href ="/campaign?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-globe nav-icon"></i>캠페인</ul></Link>
 					<!-- Link href ="/partner?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-person nav-icon"></i>광고 파트너</ul></Link -->
 					<Link href ="/landing?app_id={appId}"><ul class='nav-link-li'><i class="bi bi-gear nav-icon"></i>랜딩 설정</ul></Link>
@@ -51,8 +51,8 @@
 					</Route>
 
 					<!-- Router : Tracking Link -->
-					<Route path="/dashboard2" primary={false}>
-						<Dashboard2/>
+					<Route path="/temp" primary={false}>
+						<Temp/>
 					</Route>
 
 					<!-- Router : Tracking Link -->
