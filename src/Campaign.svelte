@@ -17,6 +17,22 @@
         })
 
 
+    function remove(id){
+
+        if(confirm("해당 캠페인을 정말로 삭제하시겠습니까?")){
+            console.log("!")
+            fetch("http://test.adrunner.co.kr:8083/campaign/delete?id="+id, {
+                    method: 'DELETE'
+                }).then(success =>{
+                    alert("캠페인이 정상적으로 삭제되었습니다.")
+                }).catch(error => {
+                    console.log(error);
+                    return [];
+                })
+        }
+    }
+
+
     function create(){
         if(confirm("캠페인을 신규로 생성하시겠습니까?")){
 
@@ -31,6 +47,7 @@
                 headers: {'Content-Type': 'application/json'}
                 }).then(success => {
                     alert("캠페인이 정상적으로 생성되었습니다.")
+                    location.replace('../campaign?app_id='+appId)
                 })
         }
 
@@ -50,6 +67,7 @@
         <td>수정 날짜/시각</td>
         <td>생성 날짜/시각</td>
         <td></td>
+        <td></td>
     </thead>
     <tbody>
         {#each cpList as it}
@@ -59,6 +77,7 @@
                 <td>{it.updatetime}</td>
                 <td>{it.createtime}</td>
                 <td><Link href="/campaign-info?app_id={appId}&campaign_id={it.id}">상세 보기</Link>
+                <td><a href on:click={remove(it.id)}>삭제</a></td>
             </tr>
         {/each}
     </tbody>

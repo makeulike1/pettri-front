@@ -19,7 +19,6 @@
     function remove(dashboardId){
 
         if(confirm("해당 대시보드를 정말로 삭제하시겠습니까?")){
-            console.log("!")
             fetch("http://test.adrunner.co.kr:8083/dashboard/delete?id="+dashboardId, {
                     method: 'DELETE'
                 }).then(success =>{
@@ -46,6 +45,7 @@
                 headers: {'Content-Type': 'application/json'}
                 }).then(success => {
                     alert("대시보드가 정상적으로 생성되었습니다.")
+                    location.replace('../dashboard?app_id='+appId)
                 })
         }
     }

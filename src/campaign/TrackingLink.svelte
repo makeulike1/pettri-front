@@ -51,6 +51,8 @@
                         text = "트래킹이 보류 처리되었습니다."
                         
                     alert(text)
+
+                    location.replace('../campaign?app_id='+appId)
                 })
         }
 

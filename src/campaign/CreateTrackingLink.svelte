@@ -21,6 +21,7 @@
                 headers: {'Content-Type': 'application/json'}
                 }).then(success => {
                     alert("트래킹 링크가 정상적으로 생성되었습니다.")
+                    location.replace('../campaign?app_id='+appId)
                 })
             }
     }

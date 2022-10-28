@@ -3276,7 +3276,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (62:20) <Link href="/campaign-info?app_id={appId}&campaign_id={it.id}">
+    // (79:20) <Link href="/campaign-info?app_id={appId}&campaign_id={it.id}">
     function create_default_slot$3(ctx) {
     	let t;
 
@@ -3296,14 +3296,14 @@ var app = (function () {
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(62:20) <Link href=\\\"/campaign-info?app_id={appId}&campaign_id={it.id}\\\">",
+    		source: "(79:20) <Link href=\\\"/campaign-info?app_id={appId}&campaign_id={it.id}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (56:8) {#each cpList as it}
+    // (73:8) {#each cpList as it}
     function create_each_block$4(ctx) {
     	let tr;
     	let td0;
@@ -3325,7 +3325,12 @@ var app = (function () {
     	let td4;
     	let link;
     	let t8;
+    	let td5;
+    	let a;
+    	let t10;
     	let current;
+    	let mounted;
+    	let dispose;
 
     	link = new Link({
     			props: {
@@ -3354,18 +3359,26 @@ var app = (function () {
     			td4 = element("td");
     			create_component(link.$$.fragment);
     			t8 = space();
+    			td5 = element("td");
+    			a = element("a");
+    			a.textContent = "삭제";
+    			t10 = space();
     			attr_dev(td0, "class", "svelte-1kqilfh");
-    			add_location(td0, file$k, 57, 16, 1487);
+    			add_location(td0, file$k, 74, 16, 1945);
     			attr_dev(td1, "class", "svelte-1kqilfh");
-    			add_location(td1, file$k, 58, 16, 1520);
+    			add_location(td1, file$k, 75, 16, 1978);
     			attr_dev(td2, "class", "svelte-1kqilfh");
-    			add_location(td2, file$k, 59, 16, 1555);
+    			add_location(td2, file$k, 76, 16, 2013);
     			attr_dev(td3, "class", "svelte-1kqilfh");
-    			add_location(td3, file$k, 60, 16, 1596);
+    			add_location(td3, file$k, 77, 16, 2054);
     			attr_dev(td4, "class", "svelte-1kqilfh");
-    			add_location(td4, file$k, 61, 16, 1637);
+    			add_location(td4, file$k, 78, 16, 2095);
+    			attr_dev(a, "href", "");
+    			add_location(a, file$k, 79, 20, 2195);
+    			attr_dev(td5, "class", "svelte-1kqilfh");
+    			add_location(td5, file$k, 79, 16, 2191);
     			attr_dev(tr, "class", "svelte-1kqilfh");
-    			add_location(tr, file$k, 56, 12, 1466);
+    			add_location(tr, file$k, 73, 12, 1924);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -3384,9 +3397,28 @@ var app = (function () {
     			append_dev(tr, td4);
     			mount_component(link, td4, null);
     			append_dev(td4, t8);
+    			append_dev(tr, td5);
+    			append_dev(td5, a);
+    			append_dev(tr, t10);
     			current = true;
+
+    			if (!mounted) {
+    				dispose = listen_dev(
+    					a,
+    					"click",
+    					function () {
+    						if (is_function(remove$1(/*it*/ ctx[4].id))) remove$1(/*it*/ ctx[4].id).apply(this, arguments);
+    					},
+    					false,
+    					false,
+    					false
+    				);
+
+    				mounted = true;
+    			}
     		},
-    		p: function update(ctx, dirty) {
+    		p: function update(new_ctx, dirty) {
+    			ctx = new_ctx;
     			if ((!current || dirty & /*cpList*/ 1) && t0_value !== (t0_value = /*it*/ ctx[4].id + "")) set_data_dev(t0, t0_value);
     			if ((!current || dirty & /*cpList*/ 1) && t2_value !== (t2_value = /*it*/ ctx[4].name + "")) set_data_dev(t2, t2_value);
     			if ((!current || dirty & /*cpList*/ 1) && t4_value !== (t4_value = /*it*/ ctx[4].updatetime + "")) set_data_dev(t4, t4_value);
@@ -3412,6 +3444,8 @@ var app = (function () {
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
     			destroy_component(link);
+    			mounted = false;
+    			dispose();
     		}
     	};
 
@@ -3419,7 +3453,7 @@ var app = (function () {
     		block,
     		id: create_each_block$4.name,
     		type: "each",
-    		source: "(56:8) {#each cpList as it}",
+    		source: "(73:8) {#each cpList as it}",
     		ctx
     	});
 
@@ -3441,29 +3475,31 @@ var app = (function () {
     	let t9;
     	let td4;
     	let t10;
-    	let tbody;
+    	let td5;
     	let t11;
+    	let tbody;
+    	let t12;
     	let button0;
-    	let t13;
+    	let t14;
     	let div8;
     	let div7;
     	let div6;
     	let div0;
     	let h5;
-    	let t15;
+    	let t16;
     	let button1;
     	let span;
-    	let t17;
+    	let t18;
     	let div4;
     	let div3;
     	let div1;
-    	let t19;
+    	let t20;
     	let div2;
     	let input;
-    	let t20;
+    	let t21;
     	let div5;
     	let button2;
-    	let t22;
+    	let t23;
     	let button3;
     	let current;
     	let mounted;
@@ -3501,104 +3537,108 @@ var app = (function () {
     			t9 = space();
     			td4 = element("td");
     			t10 = space();
+    			td5 = element("td");
+    			t11 = space();
     			tbody = element("tbody");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].c();
     			}
 
-    			t11 = space();
+    			t12 = space();
     			button0 = element("button");
     			button0.textContent = "Create";
-    			t13 = space();
+    			t14 = space();
     			div8 = element("div");
     			div7 = element("div");
     			div6 = element("div");
     			div0 = element("div");
     			h5 = element("h5");
     			h5.textContent = "캠페인 등록";
-    			t15 = space();
+    			t16 = space();
     			button1 = element("button");
     			span = element("span");
     			span.textContent = "×";
-    			t17 = space();
+    			t18 = space();
     			div4 = element("div");
     			div3 = element("div");
     			div1 = element("div");
     			div1.textContent = "이름 :";
-    			t19 = space();
+    			t20 = space();
     			div2 = element("div");
     			input = element("input");
-    			t20 = space();
+    			t21 = space();
     			div5 = element("div");
     			button2 = element("button");
     			button2.textContent = "등록";
-    			t22 = space();
+    			t23 = space();
     			button3 = element("button");
     			button3.textContent = "닫기";
     			attr_dev(h3, "class", "head-text");
-    			add_location(h3, file$k, 45, 0, 1206);
+    			add_location(h3, file$k, 61, 0, 1646);
     			attr_dev(td0, "class", "svelte-1kqilfh");
-    			add_location(td0, file$k, 48, 8, 1290);
+    			add_location(td0, file$k, 64, 8, 1730);
     			attr_dev(td1, "class", "svelte-1kqilfh");
-    			add_location(td1, file$k, 49, 8, 1314);
+    			add_location(td1, file$k, 65, 8, 1754);
     			attr_dev(td2, "class", "svelte-1kqilfh");
-    			add_location(td2, file$k, 50, 8, 1338);
+    			add_location(td2, file$k, 66, 8, 1778);
     			attr_dev(td3, "class", "svelte-1kqilfh");
-    			add_location(td3, file$k, 51, 8, 1364);
+    			add_location(td3, file$k, 67, 8, 1804);
     			attr_dev(td4, "class", "svelte-1kqilfh");
-    			add_location(td4, file$k, 52, 8, 1390);
-    			add_location(thead, file$k, 47, 4, 1274);
-    			add_location(tbody, file$k, 54, 4, 1417);
+    			add_location(td4, file$k, 68, 8, 1830);
+    			attr_dev(td5, "class", "svelte-1kqilfh");
+    			add_location(td5, file$k, 69, 8, 1848);
+    			add_location(thead, file$k, 63, 4, 1714);
+    			add_location(tbody, file$k, 71, 4, 1875);
     			attr_dev(table, "class", "campaign-list svelte-1kqilfh");
-    			add_location(table, file$k, 46, 0, 1240);
+    			add_location(table, file$k, 62, 0, 1680);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn btn-primary add-campaign svelte-1kqilfh");
-    			add_location(button0, file$k, 67, 0, 1774);
+    			add_location(button0, file$k, 85, 0, 2297);
     			attr_dev(h5, "class", "modal-title");
-    			add_location(h5, file$k, 73, 10, 2078);
+    			add_location(h5, file$k, 91, 10, 2601);
     			attr_dev(span, "aria-hidden", "true");
-    			add_location(span, file$k, 75, 12, 2213);
+    			add_location(span, file$k, 93, 12, 2736);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close svelte-1kqilfh");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$k, 74, 10, 2124);
+    			add_location(button1, file$k, 92, 10, 2647);
     			attr_dev(div0, "class", "modal-header svelte-1kqilfh");
-    			add_location(div0, file$k, 72, 8, 2041);
+    			add_location(div0, file$k, 90, 8, 2564);
     			attr_dev(div1, "class", "label svelte-1kqilfh");
-    			add_location(div1, file$k, 81, 16, 2369);
+    			add_location(div1, file$k, 99, 16, 2892);
     			attr_dev(input, "type", "text");
     			attr_dev(input, "id", "create-campaign-name");
     			attr_dev(input, "placeholder", "캠페인 이름");
     			attr_dev(input, "class", "svelte-1kqilfh");
-    			add_location(input, file$k, 83, 20, 2454);
+    			add_location(input, file$k, 101, 20, 2977);
     			attr_dev(div2, "class", "text svelte-1kqilfh");
-    			add_location(div2, file$k, 82, 16, 2415);
+    			add_location(div2, file$k, 100, 16, 2938);
     			attr_dev(div3, "class", "cont svelte-1kqilfh");
-    			add_location(div3, file$k, 80, 12, 2334);
+    			add_location(div3, file$k, 98, 12, 2857);
     			attr_dev(div4, "class", "modal-body");
-    			add_location(div4, file$k, 78, 8, 2296);
+    			add_location(div4, file$k, 96, 8, 2819);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-primary");
     			attr_dev(button2, "data-dismiss", "modal");
-    			add_location(button2, file$k, 89, 12, 2627);
+    			add_location(button2, file$k, 107, 12, 3150);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn btn-secondary");
     			attr_dev(button3, "data-dismiss", "modal");
-    			add_location(button3, file$k, 90, 12, 2736);
+    			add_location(button3, file$k, 108, 12, 3259);
     			attr_dev(div5, "class", "modal-footer");
-    			add_location(div5, file$k, 88, 8, 2588);
+    			add_location(div5, file$k, 106, 8, 3111);
     			attr_dev(div6, "class", "modal-content");
-    			add_location(div6, file$k, 71, 6, 2005);
+    			add_location(div6, file$k, 89, 6, 2528);
     			attr_dev(div7, "class", "modal-dialog");
     			attr_dev(div7, "role", "document");
-    			add_location(div7, file$k, 70, 4, 1956);
+    			add_location(div7, file$k, 88, 4, 2479);
     			attr_dev(div8, "class", "modal svelte-1kqilfh");
     			attr_dev(div8, "tabindex", "-1");
     			attr_dev(div8, "role", "dialog");
     			attr_dev(div8, "id", "popup-create-campaign");
-    			add_location(div8, file$k, 69, 0, 1877);
+    			add_location(div8, file$k, 87, 0, 2400);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3617,35 +3657,37 @@ var app = (function () {
     			append_dev(thead, td3);
     			append_dev(thead, t9);
     			append_dev(thead, td4);
-    			append_dev(table, t10);
+    			append_dev(thead, t10);
+    			append_dev(thead, td5);
+    			append_dev(table, t11);
     			append_dev(table, tbody);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
     				each_blocks[i].m(tbody, null);
     			}
 
-    			insert_dev(target, t11, anchor);
+    			insert_dev(target, t12, anchor);
     			insert_dev(target, button0, anchor);
-    			insert_dev(target, t13, anchor);
+    			insert_dev(target, t14, anchor);
     			insert_dev(target, div8, anchor);
     			append_dev(div8, div7);
     			append_dev(div7, div6);
     			append_dev(div6, div0);
     			append_dev(div0, h5);
-    			append_dev(div0, t15);
+    			append_dev(div0, t16);
     			append_dev(div0, button1);
     			append_dev(button1, span);
-    			append_dev(div6, t17);
+    			append_dev(div6, t18);
     			append_dev(div6, div4);
     			append_dev(div4, div3);
     			append_dev(div3, div1);
-    			append_dev(div3, t19);
+    			append_dev(div3, t20);
     			append_dev(div3, div2);
     			append_dev(div2, input);
-    			append_dev(div6, t20);
+    			append_dev(div6, t21);
     			append_dev(div6, div5);
     			append_dev(div5, button2);
-    			append_dev(div5, t22);
+    			append_dev(div5, t23);
     			append_dev(div5, button3);
     			current = true;
 
@@ -3659,7 +3701,7 @@ var app = (function () {
     			}
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*appId, cpList*/ 3) {
+    			if (dirty & /*remove, cpList, appId*/ 3) {
     				each_value = /*cpList*/ ctx[0];
     				validate_each_argument(each_value);
     				let i;
@@ -3710,9 +3752,9 @@ var app = (function () {
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(table);
     			destroy_each(each_blocks, detaching);
-    			if (detaching) detach_dev(t11);
+    			if (detaching) detach_dev(t12);
     			if (detaching) detach_dev(button0);
-    			if (detaching) detach_dev(t13);
+    			if (detaching) detach_dev(t14);
     			if (detaching) detach_dev(div8);
     			mounted = false;
     			run_all(dispose);
@@ -3728,6 +3770,19 @@ var app = (function () {
     	});
 
     	return block;
+    }
+
+    function remove$1(id) {
+    	if (confirm("해당 캠페인을 정말로 삭제하시겠습니까?")) {
+    		console.log("!");
+
+    		fetch("http://test.adrunner.co.kr:8083/campaign/delete?id=" + id, { method: 'DELETE' }).then(success => {
+    			alert("캠페인이 정상적으로 삭제되었습니다.");
+    		}).catch(error => {
+    			console.log(error);
+    			return [];
+    		});
+    	}
     }
 
     function createCampaign() {
@@ -3762,7 +3817,7 @@ var app = (function () {
     				headers: { 'Content-Type': 'application/json' }
     			}).then(success => {
     				alert("캠페인이 정상적으로 생성되었습니다.");
-    				location.replace('../campaign/list?app_id=' + appId);
+    				location.replace('../campaign?app_id=' + appId);
     			});
     		}
     	}
@@ -3778,6 +3833,7 @@ var app = (function () {
     		currentURL,
     		appId,
     		cpList,
+    		remove: remove$1,
     		create,
     		createCampaign
     	});
@@ -3816,7 +3872,7 @@ var app = (function () {
 
     function get_each_context$3(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[10] = list[i];
+    	child_ctx[9] = list[i];
     	return child_ctx;
     }
 
@@ -3910,11 +3966,11 @@ var app = (function () {
     	let dispose;
 
     	function click_handler_2() {
-    		return /*click_handler_2*/ ctx[7](/*it*/ ctx[10]);
+    		return /*click_handler_2*/ ctx[6](/*it*/ ctx[9]);
     	}
 
     	function click_handler_3() {
-    		return /*click_handler_3*/ ctx[8](/*it*/ ctx[10]);
+    		return /*click_handler_3*/ ctx[7](/*it*/ ctx[9]);
     	}
 
     	const block = {
@@ -3926,10 +3982,10 @@ var app = (function () {
     			button1.textContent = "트래킹 보류";
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn btn-secondary");
-    			add_location(button0, file$j, 144, 28, 4779);
+    			add_location(button0, file$j, 144, 28, 4714);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "btn btn-secondary");
-    			add_location(button1, file$j, 145, 28, 4909);
+    			add_location(button1, file$j, 145, 28, 4844);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button0, anchor);
@@ -3975,7 +4031,7 @@ var app = (function () {
     	let dispose;
 
     	function click_handler_1() {
-    		return /*click_handler_1*/ ctx[6](/*it*/ ctx[10]);
+    		return /*click_handler_1*/ ctx[5](/*it*/ ctx[9]);
     	}
 
     	const block = {
@@ -3984,7 +4040,7 @@ var app = (function () {
     			button.textContent = "트래킹 중지";
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "btn btn-secondary");
-    			add_location(button, file$j, 142, 28, 4599);
+    			add_location(button, file$j, 142, 28, 4534);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, button, anchor);
@@ -4019,7 +4075,7 @@ var app = (function () {
     function create_each_block$3(ctx) {
     	let tr2;
     	let td0;
-    	let t0_value = /*it*/ ctx[10].id + "";
+    	let t0_value = /*it*/ ctx[9].id + "";
     	let t0;
     	let t1;
     	let td1;
@@ -4028,7 +4084,7 @@ var app = (function () {
     	let input0_value_value;
     	let t2;
     	let td2;
-    	let t3_value = /*it*/ ctx[10].trackingId + "";
+    	let t3_value = /*it*/ ctx[9].trackingId + "";
     	let t3;
     	let t4;
     	let td3;
@@ -4074,12 +4130,12 @@ var app = (function () {
     	let t23;
     	let br2;
     	let t24;
-    	let t25_value = /*it*/ ctx[10].updatetime + "";
+    	let t25_value = /*it*/ ctx[9].updatetime + "";
     	let t25;
     	let t26;
     	let br3;
     	let t27;
-    	let t28_value = /*it*/ ctx[10].createtime + "";
+    	let t28_value = /*it*/ ctx[9].createtime + "";
     	let t28;
     	let t29;
     	let br4;
@@ -4091,28 +4147,28 @@ var app = (function () {
     	let dispose;
 
     	function select_block_type(ctx, dirty) {
-    		if (/*it*/ ctx[10].status == 0) return create_if_block_2;
-    		if (/*it*/ ctx[10].status == 1) return create_if_block_3;
-    		if (/*it*/ ctx[10].status == 2) return create_if_block_4;
+    		if (/*it*/ ctx[9].status == 0) return create_if_block_2;
+    		if (/*it*/ ctx[9].status == 1) return create_if_block_3;
+    		if (/*it*/ ctx[9].status == 2) return create_if_block_4;
     	}
 
     	let current_block_type = select_block_type(ctx);
     	let if_block0 = current_block_type && current_block_type(ctx);
 
     	function click_handler() {
-    		return /*click_handler*/ ctx[5](/*it*/ ctx[10]);
+    		return /*click_handler*/ ctx[4](/*it*/ ctx[9]);
     	}
 
     	function select_block_type_1(ctx, dirty) {
-    		if (/*it*/ ctx[10].status == 0) return create_if_block;
-    		if (/*it*/ ctx[10].status == 1) return create_if_block_1;
+    		if (/*it*/ ctx[9].status == 0) return create_if_block;
+    		if (/*it*/ ctx[9].status == 1) return create_if_block_1;
     	}
 
     	let current_block_type_1 = select_block_type_1(ctx);
     	let if_block1 = current_block_type_1 && current_block_type_1(ctx);
 
     	function click_handler_4() {
-    		return /*click_handler_4*/ ctx[9](/*it*/ ctx[10]);
+    		return /*click_handler_4*/ ctx[8](/*it*/ ctx[9]);
     	}
 
     	const block = {
@@ -4185,69 +4241,69 @@ var app = (function () {
     			span.textContent = "링크 보기";
     			t32 = space();
     			attr_dev(td0, "class", "padd svelte-1o84nt1");
-    			add_location(td0, file$j, 104, 16, 2753);
+    			add_location(td0, file$j, 104, 16, 2688);
     			attr_dev(input0, "type", "text");
-    			attr_dev(input0, "id", input0_id_value = "trk-name-" + /*it*/ ctx[10].id);
-    			input0.value = input0_value_value = /*it*/ ctx[10].name;
+    			attr_dev(input0, "id", input0_id_value = "trk-name-" + /*it*/ ctx[9].id);
+    			input0.value = input0_value_value = /*it*/ ctx[9].name;
     			attr_dev(input0, "class", "svelte-1o84nt1");
-    			add_location(input0, file$j, 105, 33, 2816);
+    			add_location(input0, file$j, 105, 33, 2751);
     			attr_dev(td1, "class", "padd svelte-1o84nt1");
-    			add_location(td1, file$j, 105, 16, 2799);
+    			add_location(td1, file$j, 105, 16, 2734);
     			attr_dev(td2, "class", "padd svelte-1o84nt1");
-    			add_location(td2, file$j, 106, 16, 2896);
+    			add_location(td2, file$j, 106, 16, 2831);
     			attr_dev(td3, "class", "padd svelte-1o84nt1");
-    			add_location(td3, file$j, 107, 16, 2950);
-    			add_location(b0, file$j, 116, 24, 3265);
+    			add_location(td3, file$j, 107, 16, 2885);
+    			add_location(b0, file$j, 116, 24, 3200);
     			attr_dev(td4, "class", "path svelte-1o84nt1");
-    			add_location(td4, file$j, 120, 36, 3420);
+    			add_location(td4, file$j, 120, 36, 3355);
     			attr_dev(input1, "type", "text");
-    			attr_dev(input1, "id", input1_id_value = "deep-path-" + /*it*/ ctx[10].id);
-    			input1.value = input1_value_value = /*it*/ ctx[10].deepPath;
+    			attr_dev(input1, "id", input1_id_value = "deep-path-" + /*it*/ ctx[9].id);
+    			input1.value = input1_value_value = /*it*/ ctx[9].deepPath;
     			attr_dev(input1, "class", "svelte-1o84nt1");
-    			add_location(input1, file$j, 121, 56, 3501);
+    			add_location(input1, file$j, 121, 56, 3436);
     			attr_dev(td5, "class", "textbox svelte-1o84nt1");
-    			add_location(td5, file$j, 121, 36, 3481);
-    			add_location(tr0, file$j, 119, 32, 3379);
-    			add_location(tbody0, file$j, 118, 28, 3339);
-    			add_location(table0, file$j, 117, 24, 3303);
-    			add_location(br0, file$j, 125, 24, 3702);
-    			add_location(b1, file$j, 126, 24, 3735);
+    			add_location(td5, file$j, 121, 36, 3416);
+    			add_location(tr0, file$j, 119, 32, 3314);
+    			add_location(tbody0, file$j, 118, 28, 3274);
+    			add_location(table0, file$j, 117, 24, 3238);
+    			add_location(br0, file$j, 125, 24, 3637);
+    			add_location(b1, file$j, 126, 24, 3670);
     			attr_dev(td6, "class", "path svelte-1o84nt1");
-    			add_location(td6, file$j, 130, 36, 3890);
+    			add_location(td6, file$j, 130, 36, 3825);
     			attr_dev(input2, "type", "text");
-    			attr_dev(input2, "id", input2_id_value = "store-path-" + /*it*/ ctx[10].id);
-    			input2.value = input2_value_value = /*it*/ ctx[10].storePath;
+    			attr_dev(input2, "id", input2_id_value = "store-path-" + /*it*/ ctx[9].id);
+    			input2.value = input2_value_value = /*it*/ ctx[9].storePath;
     			attr_dev(input2, "class", "svelte-1o84nt1");
-    			add_location(input2, file$j, 131, 56, 3971);
+    			add_location(input2, file$j, 131, 56, 3906);
     			attr_dev(td7, "class", "textbox svelte-1o84nt1");
-    			add_location(td7, file$j, 131, 36, 3951);
-    			add_location(tr1, file$j, 129, 32, 3849);
-    			add_location(tbody1, file$j, 128, 28, 3809);
-    			add_location(table1, file$j, 127, 24, 3773);
-    			add_location(br1, file$j, 135, 24, 4174);
+    			add_location(td7, file$j, 131, 36, 3886);
+    			add_location(tr1, file$j, 129, 32, 3784);
+    			add_location(tbody1, file$j, 128, 28, 3744);
+    			add_location(table1, file$j, 127, 24, 3708);
+    			add_location(br1, file$j, 135, 24, 4109);
     			attr_dev(div0, "class", "web-path svelte-1o84nt1");
-    			add_location(div0, file$j, 136, 24, 4203);
+    			add_location(div0, file$j, 136, 24, 4138);
     			attr_dev(input3, "type", "text");
     			attr_dev(input3, "class", "web-path-textbox svelte-1o84nt1");
-    			attr_dev(input3, "id", input3_id_value = "web-path-" + /*it*/ ctx[10].id);
-    			input3.value = input3_value_value = /*it*/ ctx[10].webPath;
-    			add_location(input3, file$j, 137, 24, 4260);
+    			attr_dev(input3, "id", input3_id_value = "web-path-" + /*it*/ ctx[9].id);
+    			input3.value = input3_value_value = /*it*/ ctx[9].webPath;
+    			add_location(input3, file$j, 137, 24, 4195);
     			attr_dev(td8, "class", "padd svelte-1o84nt1");
-    			add_location(td8, file$j, 115, 20, 3223);
+    			add_location(td8, file$j, 115, 20, 3158);
     			attr_dev(button, "type", "button");
     			attr_dev(button, "class", "btn btn-primary");
-    			add_location(button, file$j, 140, 28, 4439);
-    			add_location(br2, file$j, 147, 24, 5065);
-    			add_location(br3, file$j, 149, 24, 5145);
-    			add_location(br4, file$j, 151, 24, 5225);
+    			add_location(button, file$j, 140, 28, 4374);
+    			add_location(br2, file$j, 147, 24, 5000);
+    			add_location(br3, file$j, 149, 24, 5080);
+    			add_location(br4, file$j, 151, 24, 5160);
     			attr_dev(span, "class", "show-popup svelte-1o84nt1");
-    			add_location(span, file$j, 153, 28, 5306);
+    			add_location(span, file$j, 153, 28, 5241);
     			attr_dev(div1, "class", "td-footer svelte-1o84nt1");
-    			add_location(div1, file$j, 152, 24, 5254);
+    			add_location(div1, file$j, 152, 24, 5189);
     			attr_dev(td9, "class", "padd svelte-1o84nt1");
-    			add_location(td9, file$j, 139, 20, 4393);
+    			add_location(td9, file$j, 139, 20, 4328);
     			attr_dev(tr2, "class", "row-1 svelte-1o84nt1");
-    			add_location(tr2, file$j, 103, 12, 2718);
+    			add_location(tr2, file$j, 103, 12, 2653);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr2, anchor);
@@ -4322,17 +4378,17 @@ var app = (function () {
     		},
     		p: function update(new_ctx, dirty) {
     			ctx = new_ctx;
-    			if (dirty & /*rows*/ 4 && t0_value !== (t0_value = /*it*/ ctx[10].id + "")) set_data_dev(t0, t0_value);
+    			if (dirty & /*rows*/ 4 && t0_value !== (t0_value = /*it*/ ctx[9].id + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty & /*rows*/ 4 && input0_id_value !== (input0_id_value = "trk-name-" + /*it*/ ctx[10].id)) {
+    			if (dirty & /*rows*/ 4 && input0_id_value !== (input0_id_value = "trk-name-" + /*it*/ ctx[9].id)) {
     				attr_dev(input0, "id", input0_id_value);
     			}
 
-    			if (dirty & /*rows*/ 4 && input0_value_value !== (input0_value_value = /*it*/ ctx[10].name) && input0.value !== input0_value_value) {
+    			if (dirty & /*rows*/ 4 && input0_value_value !== (input0_value_value = /*it*/ ctx[9].name) && input0.value !== input0_value_value) {
     				prop_dev(input0, "value", input0_value_value);
     			}
 
-    			if (dirty & /*rows*/ 4 && t3_value !== (t3_value = /*it*/ ctx[10].trackingId + "")) set_data_dev(t3, t3_value);
+    			if (dirty & /*rows*/ 4 && t3_value !== (t3_value = /*it*/ ctx[9].trackingId + "")) set_data_dev(t3, t3_value);
 
     			if (current_block_type !== (current_block_type = select_block_type(ctx))) {
     				if (if_block0) if_block0.d(1);
@@ -4344,27 +4400,27 @@ var app = (function () {
     				}
     			}
 
-    			if (dirty & /*rows*/ 4 && input1_id_value !== (input1_id_value = "deep-path-" + /*it*/ ctx[10].id)) {
+    			if (dirty & /*rows*/ 4 && input1_id_value !== (input1_id_value = "deep-path-" + /*it*/ ctx[9].id)) {
     				attr_dev(input1, "id", input1_id_value);
     			}
 
-    			if (dirty & /*rows*/ 4 && input1_value_value !== (input1_value_value = /*it*/ ctx[10].deepPath) && input1.value !== input1_value_value) {
+    			if (dirty & /*rows*/ 4 && input1_value_value !== (input1_value_value = /*it*/ ctx[9].deepPath) && input1.value !== input1_value_value) {
     				prop_dev(input1, "value", input1_value_value);
     			}
 
-    			if (dirty & /*rows*/ 4 && input2_id_value !== (input2_id_value = "store-path-" + /*it*/ ctx[10].id)) {
+    			if (dirty & /*rows*/ 4 && input2_id_value !== (input2_id_value = "store-path-" + /*it*/ ctx[9].id)) {
     				attr_dev(input2, "id", input2_id_value);
     			}
 
-    			if (dirty & /*rows*/ 4 && input2_value_value !== (input2_value_value = /*it*/ ctx[10].storePath) && input2.value !== input2_value_value) {
+    			if (dirty & /*rows*/ 4 && input2_value_value !== (input2_value_value = /*it*/ ctx[9].storePath) && input2.value !== input2_value_value) {
     				prop_dev(input2, "value", input2_value_value);
     			}
 
-    			if (dirty & /*rows*/ 4 && input3_id_value !== (input3_id_value = "web-path-" + /*it*/ ctx[10].id)) {
+    			if (dirty & /*rows*/ 4 && input3_id_value !== (input3_id_value = "web-path-" + /*it*/ ctx[9].id)) {
     				attr_dev(input3, "id", input3_id_value);
     			}
 
-    			if (dirty & /*rows*/ 4 && input3_value_value !== (input3_value_value = /*it*/ ctx[10].webPath) && input3.value !== input3_value_value) {
+    			if (dirty & /*rows*/ 4 && input3_value_value !== (input3_value_value = /*it*/ ctx[9].webPath) && input3.value !== input3_value_value) {
     				prop_dev(input3, "value", input3_value_value);
     			}
 
@@ -4380,8 +4436,8 @@ var app = (function () {
     				}
     			}
 
-    			if (dirty & /*rows*/ 4 && t25_value !== (t25_value = /*it*/ ctx[10].updatetime + "")) set_data_dev(t25, t25_value);
-    			if (dirty & /*rows*/ 4 && t28_value !== (t28_value = /*it*/ ctx[10].createtime + "")) set_data_dev(t28, t28_value);
+    			if (dirty & /*rows*/ 4 && t25_value !== (t25_value = /*it*/ ctx[9].updatetime + "")) set_data_dev(t25, t25_value);
+    			if (dirty & /*rows*/ 4 && t28_value !== (t28_value = /*it*/ ctx[9].createtime + "")) set_data_dev(t28, t28_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr2);
@@ -4587,69 +4643,69 @@ var app = (function () {
     			div3 = element("div");
     			button1 = element("button");
     			button1.textContent = "닫기";
-    			add_location(h3, file$j, 90, 0, 2418);
+    			add_location(h3, file$j, 90, 0, 2353);
     			attr_dev(td0, "class", "number svelte-1o84nt1");
-    			add_location(td0, file$j, 94, 8, 2480);
+    			add_location(td0, file$j, 94, 8, 2415);
     			attr_dev(td1, "class", "name svelte-1o84nt1");
-    			add_location(td1, file$j, 95, 8, 2515);
+    			add_location(td1, file$j, 95, 8, 2450);
     			attr_dev(td2, "class", "tracking-id svelte-1o84nt1");
-    			add_location(td2, file$j, 96, 8, 2548);
+    			add_location(td2, file$j, 96, 8, 2483);
     			attr_dev(td3, "class", "status svelte-1o84nt1");
-    			add_location(td3, file$j, 97, 8, 2591);
+    			add_location(td3, file$j, 97, 8, 2526);
     			attr_dev(td4, "class", "svelte-1o84nt1");
-    			add_location(td4, file$j, 98, 8, 2626);
+    			add_location(td4, file$j, 98, 8, 2561);
     			attr_dev(td5, "class", "svelte-1o84nt1");
-    			add_location(td5, file$j, 99, 8, 2644);
+    			add_location(td5, file$j, 99, 8, 2579);
     			attr_dev(thead, "class", "svelte-1o84nt1");
-    			add_location(thead, file$j, 93, 4, 2464);
-    			add_location(tbody, file$j, 101, 4, 2671);
+    			add_location(thead, file$j, 93, 4, 2399);
+    			add_location(tbody, file$j, 101, 4, 2606);
     			attr_dev(table, "class", "trk-list svelte-1o84nt1");
-    			add_location(table, file$j, 92, 0, 2435);
+    			add_location(table, file$j, 92, 0, 2370);
     			attr_dev(div0, "class", "footer svelte-1o84nt1");
-    			add_location(div0, file$j, 162, 0, 5508);
+    			add_location(div0, file$j, 162, 0, 5443);
     			attr_dev(h5, "class", "modal-title");
-    			add_location(h5, file$j, 170, 10, 5832);
+    			add_location(h5, file$j, 170, 10, 5767);
     			attr_dev(span0, "aria-hidden", "true");
-    			add_location(span0, file$j, 172, 12, 5967);
+    			add_location(span0, file$j, 172, 12, 5902);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "close");
     			attr_dev(button0, "data-dismiss", "modal");
     			attr_dev(button0, "aria-label", "Close");
-    			add_location(button0, file$j, 171, 10, 5878);
+    			add_location(button0, file$j, 171, 10, 5813);
     			attr_dev(div1, "class", "modal-header svelte-1o84nt1");
-    			add_location(div1, file$j, 169, 8, 5795);
-    			add_location(br0, file$j, 176, 12, 6087);
-    			add_location(b0, file$j, 177, 12, 6104);
-    			add_location(br1, file$j, 178, 12, 6130);
+    			add_location(div1, file$j, 169, 8, 5730);
+    			add_location(br0, file$j, 176, 12, 6022);
+    			add_location(b0, file$j, 177, 12, 6039);
+    			add_location(br1, file$j, 178, 12, 6065);
     			attr_dev(span1, "id", "click-url");
-    			add_location(span1, file$j, 179, 12, 6147);
-    			add_location(br2, file$j, 180, 12, 6188);
-    			add_location(br3, file$j, 181, 12, 6205);
-    			add_location(br4, file$j, 182, 12, 6222);
-    			add_location(b1, file$j, 183, 12, 6239);
-    			add_location(br5, file$j, 184, 12, 6265);
+    			add_location(span1, file$j, 179, 12, 6082);
+    			add_location(br2, file$j, 180, 12, 6123);
+    			add_location(br3, file$j, 181, 12, 6140);
+    			add_location(br4, file$j, 182, 12, 6157);
+    			add_location(b1, file$j, 183, 12, 6174);
+    			add_location(br5, file$j, 184, 12, 6200);
     			attr_dev(span2, "id", "imp-url");
-    			add_location(span2, file$j, 185, 12, 6282);
-    			add_location(br6, file$j, 186, 12, 6321);
-    			add_location(br7, file$j, 187, 12, 6338);
+    			add_location(span2, file$j, 185, 12, 6217);
+    			add_location(br6, file$j, 186, 12, 6256);
+    			add_location(br7, file$j, 187, 12, 6273);
     			attr_dev(div2, "class", "modal-body");
-    			add_location(div2, file$j, 175, 8, 6050);
+    			add_location(div2, file$j, 175, 8, 5985);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "btn btn-secondary");
     			attr_dev(button1, "data-dismiss", "modal");
-    			add_location(button1, file$j, 190, 12, 6405);
+    			add_location(button1, file$j, 190, 12, 6340);
     			attr_dev(div3, "class", "modal-footer");
-    			add_location(div3, file$j, 189, 8, 6366);
+    			add_location(div3, file$j, 189, 8, 6301);
     			attr_dev(div4, "class", "modal-content");
-    			add_location(div4, file$j, 168, 6, 5759);
+    			add_location(div4, file$j, 168, 6, 5694);
     			attr_dev(div5, "class", "modal-dialog svelte-1o84nt1");
     			attr_dev(div5, "role", "document");
-    			add_location(div5, file$j, 167, 4, 5710);
+    			add_location(div5, file$j, 167, 4, 5645);
     			attr_dev(div6, "class", "modal trk-link svelte-1o84nt1");
     			attr_dev(div6, "tabindex", "-1");
     			attr_dev(div6, "role", "dialog");
     			attr_dev(div6, "id", "trk-popup");
-    			add_location(div6, file$j, 166, 0, 5634);
+    			add_location(div6, file$j, 166, 0, 5569);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -4720,7 +4776,7 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, [dirty]) {
-    			if (dirty & /*showPopup, rows, updateStatus, modify*/ 28) {
+    			if (dirty & /*showPopup, rows, updateStatus, modify*/ 12) {
     				each_value = /*rows*/ ctx[2];
     				validate_each_argument(each_value);
     				let i;
@@ -4747,7 +4803,7 @@ var app = (function () {
     			const link_changes = {};
     			if (dirty & /*appId, campaignId*/ 3) link_changes.href = "/campaign-info/cctl?app_id=" + /*appId*/ ctx[0] + "&campaign_id=" + /*campaignId*/ ctx[1];
 
-    			if (dirty & /*$$scope*/ 8192) {
+    			if (dirty & /*$$scope*/ 4096) {
     				link_changes.$$scope = { dirty, ctx };
     			}
 
@@ -4792,6 +4848,29 @@ var app = (function () {
     	window.$('#imp-url').text(impURL);
     }
 
+    function modify(id) {
+    	let payload = {
+    		id,
+    		"name": window.$('#trk-name-' + id).val(),
+    		"deepPath": window.$('#deep-path-' + id).val(),
+    		"storePath": window.$('#store-path-' + id).val(),
+    		"webPath": window.$('#web-path-' + id).val()
+    	};
+
+    	console.log(payload);
+
+    	if (confirm("해당 트래킹 링크를 정말로 수정하시겠습니까?")) {
+    		// 트래킹 링크 수정
+    		fetch("http://test.adrunner.co.kr:8083/tracking-link/modify", {
+    			method: 'PUT',
+    			body: JSON.stringify(payload),
+    			headers: { 'Content-Type': 'application/json' }
+    		}).then(success => {
+    			alert("트래킹 링크를 정상적으로 수정하였습니다.");
+    		});
+    	}
+    }
+
     function instance$j($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
     	validate_slots('TrackingLink', slots, []);
@@ -4820,30 +4899,6 @@ var app = (function () {
     				if (status == 1) text = "트래킹이 중지되었습니다.";
     				if (status == 2) text = "트래킹이 보류 처리되었습니다.";
     				alert(text);
-    				location.replace('../campaign?app_id=' + appId);
-    			});
-    		}
-    	}
-
-    	function modify(id) {
-    		let payload = {
-    			id,
-    			"name": window.$('#trk-name-' + id).val(),
-    			"deepPath": window.$('#deep-path-' + id).val(),
-    			"storePath": window.$('#store-path-' + id).val(),
-    			"webPath": window.$('#web-path-' + id).val()
-    		};
-
-    		console.log(payload);
-
-    		if (confirm("해당 트래킹 링크를 정말로 수정하시겠습니까?")) {
-    			// 트래킹 링크 수정
-    			fetch("http://test.adrunner.co.kr:8083/tracking-link/modify", {
-    				method: 'PUT',
-    				body: JSON.stringify(payload),
-    				headers: { 'Content-Type': 'application/json' }
-    			}).then(success => {
-    				alert("트래킹 링크를 정상적으로 수정하였습니다.");
     				location.replace('../campaign?app_id=' + appId);
     			});
     		}
@@ -4891,7 +4946,6 @@ var app = (function () {
     		campaignId,
     		rows,
     		updateStatus,
-    		modify,
     		click_handler,
     		click_handler_1,
     		click_handler_2,
@@ -11502,7 +11556,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (72:9) {#each rows1 as it}
+    // (71:9) {#each rows1 as it}
     function create_each_block$1(ctx) {
     	let tr;
     	let td0;
@@ -11546,18 +11600,18 @@ var app = (function () {
     			a1 = element("a");
     			a1.textContent = "삭제";
     			t9 = space();
-    			add_location(td0, file$3, 74, 20, 2098);
-    			add_location(td1, file$3, 75, 20, 2135);
-    			add_location(td2, file$3, 76, 20, 2174);
+    			add_location(td0, file$3, 73, 20, 2069);
+    			add_location(td1, file$3, 74, 20, 2106);
+    			add_location(td2, file$3, 75, 20, 2145);
     			attr_dev(a0, "href", a0_href_value = "/test10?app_id=" + /*appId*/ ctx[1] + "&dashboard_id=" + /*it*/ ctx[4].id);
     			attr_dev(a0, "class", "svelte-io04vr");
-    			add_location(a0, file$3, 78, 24, 2248);
+    			add_location(a0, file$3, 77, 24, 2219);
     			attr_dev(a1, "href", "");
     			attr_dev(a1, "class", "svelte-io04vr");
-    			add_location(a1, file$3, 79, 24, 2333);
-    			add_location(td3, file$3, 77, 20, 2219);
+    			add_location(a1, file$3, 78, 24, 2304);
+    			add_location(td3, file$3, 76, 20, 2190);
     			attr_dev(tr, "class", "svelte-io04vr");
-    			add_location(tr, file$3, 73, 16, 2073);
+    			add_location(tr, file$3, 72, 16, 2044);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -11613,7 +11667,7 @@ var app = (function () {
     		block,
     		id: create_each_block$1.name,
     		type: "each",
-    		source: "(72:9) {#each rows1 as it}",
+    		source: "(71:9) {#each rows1 as it}",
     		ctx
     	});
 
@@ -11733,76 +11787,76 @@ var app = (function () {
     			t23 = space();
     			button3 = element("button");
     			button3.textContent = "닫기";
-    			add_location(h1, file$3, 61, 0, 1767);
+    			add_location(h1, file$3, 60, 0, 1738);
     			attr_dev(td0, "class", "id svelte-io04vr");
-    			add_location(td0, file$3, 65, 9, 1863);
+    			add_location(td0, file$3, 64, 9, 1834);
     			attr_dev(td1, "class", "name svelte-io04vr");
-    			add_location(td1, file$3, 66, 9, 1898);
+    			add_location(td1, file$3, 65, 9, 1869);
     			attr_dev(td2, "class", "createtime svelte-io04vr");
-    			add_location(td2, file$3, 67, 9, 1932);
-    			add_location(td3, file$3, 68, 9, 1978);
-    			add_location(thead, file$3, 64, 5, 1846);
-    			add_location(tbody, file$3, 70, 5, 2007);
+    			add_location(td2, file$3, 66, 9, 1903);
+    			add_location(td3, file$3, 67, 9, 1949);
+    			add_location(thead, file$3, 63, 5, 1817);
+    			add_location(tbody, file$3, 69, 5, 1978);
     			attr_dev(table, "class", "dashboard-list svelte-io04vr");
-    			add_location(table, file$3, 63, 1, 1810);
+    			add_location(table, file$3, 62, 1, 1781);
     			attr_dev(button0, "type", "button");
     			attr_dev(button0, "class", "btn btn-primary add-dashboard svelte-io04vr");
-    			add_location(button0, file$3, 86, 1, 2464);
+    			add_location(button0, file$3, 85, 1, 2435);
     			attr_dev(h5, "class", "modal-title");
-    			add_location(h5, file$3, 92, 10, 2771);
+    			add_location(h5, file$3, 91, 10, 2742);
     			attr_dev(span, "aria-hidden", "true");
-    			add_location(span, file$3, 94, 12, 2907);
+    			add_location(span, file$3, 93, 12, 2878);
     			attr_dev(button1, "type", "button");
     			attr_dev(button1, "class", "close svelte-io04vr");
     			attr_dev(button1, "data-dismiss", "modal");
     			attr_dev(button1, "aria-label", "Close");
-    			add_location(button1, file$3, 93, 10, 2818);
+    			add_location(button1, file$3, 92, 10, 2789);
     			attr_dev(div0, "class", "modal-header svelte-io04vr");
-    			add_location(div0, file$3, 91, 8, 2734);
+    			add_location(div0, file$3, 90, 8, 2705);
     			attr_dev(div1, "class", "label svelte-io04vr");
-    			add_location(div1, file$3, 100, 16, 3063);
+    			add_location(div1, file$3, 99, 16, 3034);
     			attr_dev(input0, "type", "text");
     			attr_dev(input0, "id", "create-dashboard-name");
     			attr_dev(input0, "placeholder", "대시보드 이름");
     			attr_dev(input0, "class", "svelte-io04vr");
-    			add_location(input0, file$3, 102, 20, 3148);
+    			add_location(input0, file$3, 101, 20, 3119);
     			attr_dev(div2, "class", "text svelte-io04vr");
-    			add_location(div2, file$3, 101, 16, 3109);
+    			add_location(div2, file$3, 100, 16, 3080);
     			attr_dev(div3, "class", "cont svelte-io04vr");
-    			add_location(div3, file$3, 99, 12, 3028);
+    			add_location(div3, file$3, 98, 12, 2999);
     			attr_dev(div4, "class", "label svelte-io04vr");
-    			add_location(div4, file$3, 107, 16, 3311);
+    			add_location(div4, file$3, 106, 16, 3282);
     			attr_dev(input1, "type", "text");
     			attr_dev(input1, "id", "create-dashboard-campaignid");
     			attr_dev(input1, "placeholder", "캠페인 번호");
     			attr_dev(input1, "class", "svelte-io04vr");
-    			add_location(input1, file$3, 109, 20, 3400);
+    			add_location(input1, file$3, 108, 20, 3371);
     			attr_dev(div5, "class", "text svelte-io04vr");
-    			add_location(div5, file$3, 108, 16, 3361);
+    			add_location(div5, file$3, 107, 16, 3332);
     			attr_dev(div6, "class", "cont svelte-io04vr");
-    			add_location(div6, file$3, 106, 12, 3276);
+    			add_location(div6, file$3, 105, 12, 3247);
     			attr_dev(div7, "class", "modal-body");
-    			add_location(div7, file$3, 97, 8, 2990);
+    			add_location(div7, file$3, 96, 8, 2961);
     			attr_dev(button2, "type", "button");
     			attr_dev(button2, "class", "btn btn-primary");
     			attr_dev(button2, "data-dismiss", "modal");
-    			add_location(button2, file$3, 115, 12, 3580);
+    			add_location(button2, file$3, 114, 12, 3551);
     			attr_dev(button3, "type", "button");
     			attr_dev(button3, "class", "btn btn-secondary");
     			attr_dev(button3, "data-dismiss", "modal");
-    			add_location(button3, file$3, 116, 12, 3689);
+    			add_location(button3, file$3, 115, 12, 3660);
     			attr_dev(div8, "class", "modal-footer");
-    			add_location(div8, file$3, 114, 8, 3541);
+    			add_location(div8, file$3, 113, 8, 3512);
     			attr_dev(div9, "class", "modal-content");
-    			add_location(div9, file$3, 90, 6, 2698);
+    			add_location(div9, file$3, 89, 6, 2669);
     			attr_dev(div10, "class", "modal-dialog");
     			attr_dev(div10, "role", "document");
-    			add_location(div10, file$3, 89, 4, 2649);
+    			add_location(div10, file$3, 88, 4, 2620);
     			attr_dev(div11, "class", "modal svelte-io04vr");
     			attr_dev(div11, "tabindex", "-1");
     			attr_dev(div11, "role", "dialog");
     			attr_dev(div11, "id", "popup-create-dashboard");
-    			add_location(div11, file$3, 88, 1, 2569);
+    			add_location(div11, file$3, 87, 1, 2540);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -11919,8 +11973,6 @@ var app = (function () {
 
     function remove(dashboardId) {
     	if (confirm("해당 대시보드를 정말로 삭제하시겠습니까?")) {
-    		console.log("!");
-
     		fetch("http://test.adrunner.co.kr:8083/dashboard/delete?id=" + dashboardId, { method: 'DELETE' }).then(success => {
     			alert("대시보드가 정상적으로 삭제되었습니다.");
     		}).catch(error => {
