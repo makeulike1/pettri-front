@@ -137,7 +137,7 @@
 
 
 
-<h4>인스톨</h4>
+<h4>인스톨 ( 딥 링크 오픈 )</h4>
 <table class='install'>
     <thead>
         <td class='datetime'>설치 날짜/시각</td>
