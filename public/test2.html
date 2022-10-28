@@ -14,8 +14,10 @@
         <script>
             
             let ck = uuidv4()
-            let TRACKING_IMP_URL    = 'http://test.adrunner.co.kr:8083/api/v1/imp/a1/9f8cac8ebc8542f?click_key='+ck;
-            let TRACKING_CLICK_URL  = 'http://test.adrunner.co.kr:8083/api/v1/click/a1/9f8cac8ebc8542f?click_key='+ck;
+            let TRACKING_CLICK_URL = "http://test.adrunner.co.kr:8083/api/v1/click/9f8cac8ebc8542f/da59b67df?click_key="+ck;
+            let TRACKING_IMP_URL = "http://test.adrunner.co.kr:8083/api/v1/imp/9f8cac8ebc8542f/da59b67df?click_key="+ck;
+            //let TRACKING_IMP_URL    = 'http://test.adrunner.co.kr:8083/api/v1/imp/a1/9f8cac8ebc8542f?click_key='+ck;
+            //let TRACKING_CLICK_URL  = 'http://test.adrunner.co.kr:8083/api/v1/click/a1/9f8cac8ebc8542f?click_key='+ck;
 
             fetch(TRACKING_IMP_URL, {
                     method: 'GET'
