@@ -3272,11 +3272,11 @@ var app = (function () {
 
     function get_each_context$4(ctx, list, i) {
     	const child_ctx = ctx.slice();
-    	child_ctx[3] = list[i];
+    	child_ctx[4] = list[i];
     	return child_ctx;
     }
 
-    // (37:20) <Link href="/campaign-info?app_id={appId}&campaign_id={it.id}">
+    // (62:20) <Link href="/campaign-info?app_id={appId}&campaign_id={it.id}">
     function create_default_slot$3(ctx) {
     	let t;
 
@@ -3296,30 +3296,30 @@ var app = (function () {
     		block,
     		id: create_default_slot$3.name,
     		type: "slot",
-    		source: "(37:20) <Link href=\\\"/campaign-info?app_id={appId}&campaign_id={it.id}\\\">",
+    		source: "(62:20) <Link href=\\\"/campaign-info?app_id={appId}&campaign_id={it.id}\\\">",
     		ctx
     	});
 
     	return block;
     }
 
-    // (31:8) {#each cpList as it}
+    // (56:8) {#each cpList as it}
     function create_each_block$4(ctx) {
     	let tr;
     	let td0;
-    	let t0_value = /*it*/ ctx[3].id + "";
+    	let t0_value = /*it*/ ctx[4].id + "";
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*it*/ ctx[3].name + "";
+    	let t2_value = /*it*/ ctx[4].name + "";
     	let t2;
     	let t3;
     	let td2;
-    	let t4_value = /*it*/ ctx[3].updatetime + "";
+    	let t4_value = /*it*/ ctx[4].updatetime + "";
     	let t4;
     	let t5;
     	let td3;
-    	let t6_value = /*it*/ ctx[3].createtime + "";
+    	let t6_value = /*it*/ ctx[4].createtime + "";
     	let t6;
     	let t7;
     	let td4;
@@ -3329,7 +3329,7 @@ var app = (function () {
 
     	link = new Link({
     			props: {
-    				href: "/campaign-info?app_id=" + /*appId*/ ctx[1] + "&campaign_id=" + /*it*/ ctx[3].id,
+    				href: "/campaign-info?app_id=" + /*appId*/ ctx[1] + "&campaign_id=" + /*it*/ ctx[4].id,
     				$$slots: { default: [create_default_slot$3] },
     				$$scope: { ctx }
     			},
@@ -3354,18 +3354,18 @@ var app = (function () {
     			td4 = element("td");
     			create_component(link.$$.fragment);
     			t8 = space();
-    			attr_dev(td0, "class", "svelte-eo2io");
-    			add_location(td0, file$k, 32, 16, 786);
-    			attr_dev(td1, "class", "svelte-eo2io");
-    			add_location(td1, file$k, 33, 16, 819);
-    			attr_dev(td2, "class", "svelte-eo2io");
-    			add_location(td2, file$k, 34, 16, 854);
-    			attr_dev(td3, "class", "svelte-eo2io");
-    			add_location(td3, file$k, 35, 16, 895);
-    			attr_dev(td4, "class", "svelte-eo2io");
-    			add_location(td4, file$k, 36, 16, 936);
-    			attr_dev(tr, "class", "svelte-eo2io");
-    			add_location(tr, file$k, 31, 12, 765);
+    			attr_dev(td0, "class", "svelte-1kqilfh");
+    			add_location(td0, file$k, 57, 16, 1487);
+    			attr_dev(td1, "class", "svelte-1kqilfh");
+    			add_location(td1, file$k, 58, 16, 1520);
+    			attr_dev(td2, "class", "svelte-1kqilfh");
+    			add_location(td2, file$k, 59, 16, 1555);
+    			attr_dev(td3, "class", "svelte-1kqilfh");
+    			add_location(td3, file$k, 60, 16, 1596);
+    			attr_dev(td4, "class", "svelte-1kqilfh");
+    			add_location(td4, file$k, 61, 16, 1637);
+    			attr_dev(tr, "class", "svelte-1kqilfh");
+    			add_location(tr, file$k, 56, 12, 1466);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -3387,14 +3387,14 @@ var app = (function () {
     			current = true;
     		},
     		p: function update(ctx, dirty) {
-    			if ((!current || dirty & /*cpList*/ 1) && t0_value !== (t0_value = /*it*/ ctx[3].id + "")) set_data_dev(t0, t0_value);
-    			if ((!current || dirty & /*cpList*/ 1) && t2_value !== (t2_value = /*it*/ ctx[3].name + "")) set_data_dev(t2, t2_value);
-    			if ((!current || dirty & /*cpList*/ 1) && t4_value !== (t4_value = /*it*/ ctx[3].updatetime + "")) set_data_dev(t4, t4_value);
-    			if ((!current || dirty & /*cpList*/ 1) && t6_value !== (t6_value = /*it*/ ctx[3].createtime + "")) set_data_dev(t6, t6_value);
+    			if ((!current || dirty & /*cpList*/ 1) && t0_value !== (t0_value = /*it*/ ctx[4].id + "")) set_data_dev(t0, t0_value);
+    			if ((!current || dirty & /*cpList*/ 1) && t2_value !== (t2_value = /*it*/ ctx[4].name + "")) set_data_dev(t2, t2_value);
+    			if ((!current || dirty & /*cpList*/ 1) && t4_value !== (t4_value = /*it*/ ctx[4].updatetime + "")) set_data_dev(t4, t4_value);
+    			if ((!current || dirty & /*cpList*/ 1) && t6_value !== (t6_value = /*it*/ ctx[4].createtime + "")) set_data_dev(t6, t6_value);
     			const link_changes = {};
-    			if (dirty & /*cpList*/ 1) link_changes.href = "/campaign-info?app_id=" + /*appId*/ ctx[1] + "&campaign_id=" + /*it*/ ctx[3].id;
+    			if (dirty & /*cpList*/ 1) link_changes.href = "/campaign-info?app_id=" + /*appId*/ ctx[1] + "&campaign_id=" + /*it*/ ctx[4].id;
 
-    			if (dirty & /*$$scope*/ 64) {
+    			if (dirty & /*$$scope*/ 128) {
     				link_changes.$$scope = { dirty, ctx };
     			}
 
@@ -3419,7 +3419,7 @@ var app = (function () {
     		block,
     		id: create_each_block$4.name,
     		type: "each",
-    		source: "(31:8) {#each cpList as it}",
+    		source: "(56:8) {#each cpList as it}",
     		ctx
     	});
 
@@ -3442,7 +3442,32 @@ var app = (function () {
     	let td4;
     	let t10;
     	let tbody;
+    	let t11;
+    	let button0;
+    	let t13;
+    	let div8;
+    	let div7;
+    	let div6;
+    	let div0;
+    	let h5;
+    	let t15;
+    	let button1;
+    	let span;
+    	let t17;
+    	let div4;
+    	let div3;
+    	let div1;
+    	let t19;
+    	let div2;
+    	let input;
+    	let t20;
+    	let div5;
+    	let button2;
+    	let t22;
+    	let button3;
     	let current;
+    	let mounted;
+    	let dispose;
     	let each_value = /*cpList*/ ctx[0];
     	validate_each_argument(each_value);
     	let each_blocks = [];
@@ -3482,22 +3507,98 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
+    			t11 = space();
+    			button0 = element("button");
+    			button0.textContent = "Create";
+    			t13 = space();
+    			div8 = element("div");
+    			div7 = element("div");
+    			div6 = element("div");
+    			div0 = element("div");
+    			h5 = element("h5");
+    			h5.textContent = "캠페인 등록";
+    			t15 = space();
+    			button1 = element("button");
+    			span = element("span");
+    			span.textContent = "×";
+    			t17 = space();
+    			div4 = element("div");
+    			div3 = element("div");
+    			div1 = element("div");
+    			div1.textContent = "이름 :";
+    			t19 = space();
+    			div2 = element("div");
+    			input = element("input");
+    			t20 = space();
+    			div5 = element("div");
+    			button2 = element("button");
+    			button2.textContent = "등록";
+    			t22 = space();
+    			button3 = element("button");
+    			button3.textContent = "닫기";
     			attr_dev(h3, "class", "head-text");
-    			add_location(h3, file$k, 20, 0, 505);
-    			attr_dev(td0, "class", "svelte-eo2io");
-    			add_location(td0, file$k, 23, 8, 589);
-    			attr_dev(td1, "class", "svelte-eo2io");
-    			add_location(td1, file$k, 24, 8, 613);
-    			attr_dev(td2, "class", "svelte-eo2io");
-    			add_location(td2, file$k, 25, 8, 637);
-    			attr_dev(td3, "class", "svelte-eo2io");
-    			add_location(td3, file$k, 26, 8, 663);
-    			attr_dev(td4, "class", "svelte-eo2io");
-    			add_location(td4, file$k, 27, 8, 689);
-    			add_location(thead, file$k, 22, 4, 573);
-    			add_location(tbody, file$k, 29, 4, 716);
-    			attr_dev(table, "class", "campaign-list svelte-eo2io");
-    			add_location(table, file$k, 21, 0, 539);
+    			add_location(h3, file$k, 45, 0, 1206);
+    			attr_dev(td0, "class", "svelte-1kqilfh");
+    			add_location(td0, file$k, 48, 8, 1290);
+    			attr_dev(td1, "class", "svelte-1kqilfh");
+    			add_location(td1, file$k, 49, 8, 1314);
+    			attr_dev(td2, "class", "svelte-1kqilfh");
+    			add_location(td2, file$k, 50, 8, 1338);
+    			attr_dev(td3, "class", "svelte-1kqilfh");
+    			add_location(td3, file$k, 51, 8, 1364);
+    			attr_dev(td4, "class", "svelte-1kqilfh");
+    			add_location(td4, file$k, 52, 8, 1390);
+    			add_location(thead, file$k, 47, 4, 1274);
+    			add_location(tbody, file$k, 54, 4, 1417);
+    			attr_dev(table, "class", "campaign-list svelte-1kqilfh");
+    			add_location(table, file$k, 46, 0, 1240);
+    			attr_dev(button0, "type", "button");
+    			attr_dev(button0, "class", "btn btn-primary add-campaign svelte-1kqilfh");
+    			add_location(button0, file$k, 67, 0, 1774);
+    			attr_dev(h5, "class", "modal-title");
+    			add_location(h5, file$k, 73, 10, 2078);
+    			attr_dev(span, "aria-hidden", "true");
+    			add_location(span, file$k, 75, 12, 2213);
+    			attr_dev(button1, "type", "button");
+    			attr_dev(button1, "class", "close svelte-1kqilfh");
+    			attr_dev(button1, "data-dismiss", "modal");
+    			attr_dev(button1, "aria-label", "Close");
+    			add_location(button1, file$k, 74, 10, 2124);
+    			attr_dev(div0, "class", "modal-header svelte-1kqilfh");
+    			add_location(div0, file$k, 72, 8, 2041);
+    			attr_dev(div1, "class", "label svelte-1kqilfh");
+    			add_location(div1, file$k, 81, 16, 2369);
+    			attr_dev(input, "type", "text");
+    			attr_dev(input, "id", "create-campaign-name");
+    			attr_dev(input, "placeholder", "캠페인 이름");
+    			attr_dev(input, "class", "svelte-1kqilfh");
+    			add_location(input, file$k, 83, 20, 2454);
+    			attr_dev(div2, "class", "text svelte-1kqilfh");
+    			add_location(div2, file$k, 82, 16, 2415);
+    			attr_dev(div3, "class", "cont svelte-1kqilfh");
+    			add_location(div3, file$k, 80, 12, 2334);
+    			attr_dev(div4, "class", "modal-body");
+    			add_location(div4, file$k, 78, 8, 2296);
+    			attr_dev(button2, "type", "button");
+    			attr_dev(button2, "class", "btn btn-primary");
+    			attr_dev(button2, "data-dismiss", "modal");
+    			add_location(button2, file$k, 89, 12, 2627);
+    			attr_dev(button3, "type", "button");
+    			attr_dev(button3, "class", "btn btn-secondary");
+    			attr_dev(button3, "data-dismiss", "modal");
+    			add_location(button3, file$k, 90, 12, 2736);
+    			attr_dev(div5, "class", "modal-footer");
+    			add_location(div5, file$k, 88, 8, 2588);
+    			attr_dev(div6, "class", "modal-content");
+    			add_location(div6, file$k, 71, 6, 2005);
+    			attr_dev(div7, "class", "modal-dialog");
+    			attr_dev(div7, "role", "document");
+    			add_location(div7, file$k, 70, 4, 1956);
+    			attr_dev(div8, "class", "modal svelte-1kqilfh");
+    			attr_dev(div8, "tabindex", "-1");
+    			attr_dev(div8, "role", "dialog");
+    			attr_dev(div8, "id", "popup-create-campaign");
+    			add_location(div8, file$k, 69, 0, 1877);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -3523,7 +3624,39 @@ var app = (function () {
     				each_blocks[i].m(tbody, null);
     			}
 
+    			insert_dev(target, t11, anchor);
+    			insert_dev(target, button0, anchor);
+    			insert_dev(target, t13, anchor);
+    			insert_dev(target, div8, anchor);
+    			append_dev(div8, div7);
+    			append_dev(div7, div6);
+    			append_dev(div6, div0);
+    			append_dev(div0, h5);
+    			append_dev(div0, t15);
+    			append_dev(div0, button1);
+    			append_dev(button1, span);
+    			append_dev(div6, t17);
+    			append_dev(div6, div4);
+    			append_dev(div4, div3);
+    			append_dev(div3, div1);
+    			append_dev(div3, t19);
+    			append_dev(div3, div2);
+    			append_dev(div2, input);
+    			append_dev(div6, t20);
+    			append_dev(div6, div5);
+    			append_dev(div5, button2);
+    			append_dev(div5, t22);
+    			append_dev(div5, button3);
     			current = true;
+
+    			if (!mounted) {
+    				dispose = [
+    					listen_dev(button0, "click", createCampaign, false, false, false),
+    					listen_dev(button2, "click", /*create*/ ctx[2], false, false, false)
+    				];
+
+    				mounted = true;
+    			}
     		},
     		p: function update(ctx, [dirty]) {
     			if (dirty & /*appId, cpList*/ 3) {
@@ -3577,6 +3710,12 @@ var app = (function () {
     			if (detaching) detach_dev(t1);
     			if (detaching) detach_dev(table);
     			destroy_each(each_blocks, detaching);
+    			if (detaching) detach_dev(t11);
+    			if (detaching) detach_dev(button0);
+    			if (detaching) detach_dev(t13);
+    			if (detaching) detach_dev(div8);
+    			mounted = false;
+    			run_all(dispose);
     		}
     	};
 
@@ -3589,6 +3728,10 @@ var app = (function () {
     	});
 
     	return block;
+    }
+
+    function createCampaign() {
+    	window.$('#popup-create-campaign').modal('show');
     }
 
     function instance$k($$self, $$props, $$invalidate) {
@@ -3606,13 +3749,38 @@ var app = (function () {
     		return [];
     	});
 
+    	function create() {
+    		if (confirm("캠페인을 신규로 생성하시겠습니까?")) {
+    			let payload = {
+    				appId,
+    				'name': window.$('#create-campaign-name').val()
+    			};
+
+    			fetch("http://test.adrunner.co.kr:8083/campaign/create", {
+    				method: 'POST',
+    				body: JSON.stringify(payload),
+    				headers: { 'Content-Type': 'application/json' }
+    			}).then(success => {
+    				alert("캠페인이 정상적으로 생성되었습니다.");
+    				location.replace('../campaign/list?app_id=' + appId);
+    			});
+    		}
+    	}
+
     	const writable_props = [];
 
     	Object.keys($$props).forEach(key => {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1$3.warn(`<Campaign> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({ Link, currentURL, appId, cpList });
+    	$$self.$capture_state = () => ({
+    		Link,
+    		currentURL,
+    		appId,
+    		cpList,
+    		create,
+    		createCampaign
+    	});
 
     	$$self.$inject_state = $$props => {
     		if ('currentURL' in $$props) currentURL = $$props.currentURL;
@@ -3624,7 +3792,7 @@ var app = (function () {
     		$$self.$inject_state($$props.$$inject);
     	}
 
-    	return [cpList, appId];
+    	return [cpList, appId, create];
     }
 
     class Campaign extends SvelteComponentDev {
