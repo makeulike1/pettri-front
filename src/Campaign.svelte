@@ -31,7 +31,6 @@
                 headers: {'Content-Type': 'application/json'}
                 }).then(success => {
                     alert("캠페인이 정상적으로 생성되었습니다.")
-                    location.replace('../campaign/list?app_id='+appId)
                 })
         }
 

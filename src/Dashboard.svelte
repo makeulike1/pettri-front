@@ -46,7 +46,6 @@
                 headers: {'Content-Type': 'application/json'}
                 }).then(success => {
                     alert("대시보드가 정상적으로 생성되었습니다.")
-                    location.replace('../dashboard?app_id='+appId)
                 })
         }
     }

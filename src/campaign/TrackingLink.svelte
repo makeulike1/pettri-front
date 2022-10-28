@@ -51,7 +51,6 @@
                         text = "트래킹이 보류 처리되었습니다."
                         
                     alert(text)
-                    location.replace('../campaign?app_id='+appId)
                 })
         }
 
@@ -79,7 +78,6 @@
                     }
                 }).then(success => {
                     alert("트래킹 링크를 정상적으로 수정하였습니다.")
-                    location.replace('../campaign?app_id='+appId)
                 })
             }
     }
