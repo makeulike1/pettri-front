@@ -7,6 +7,7 @@
     let rows3 = []
     let rows4 = []
     let rows5 = []
+    let rows6 = []
 
     let totalInstall = 0;
     let totalImp = 0;
@@ -61,6 +62,7 @@
             return [];
         })
 
+
     fetch(serverURL + "/imp/list?app_id="+appId, {
             method: 'GET'
         }).then(response => response.json())
@@ -71,6 +73,19 @@
             console.log(error);
             return [];
         }) 
+
+
+    fetch(serverURL + "/re-install/list?app_id="+appId, {
+            method: 'GET'
+        }).then(response => response.json())
+            .then(success =>{
+            rows6 = success
+            console.log(rows6)
+        }).catch(error => {
+            console.log(error);
+            return [];
+        }) 
+
 
     fetch(serverURL + "/pettri/test1?app_id="+appId, {
             method: 'GET'
@@ -165,6 +180,23 @@
                         </tbody>
                     </table>
                 </td>
+            </tr>
+        {/each}
+
+    </tbody>
+</table>
+
+<h4>재설치</h4>
+<table class='install'>
+    <thead>
+        <td class='datetime'>설치 날짜/시각</td>
+        <td class='trk-id'>트래킹 아이디</td>
+    </thead>
+    <tbody>
+        {#each rows6 as it}
+            <tr>
+                <td>{it.createtime}</td>
+                <td>{it.trkId}</td>
             </tr>
         {/each}
 
