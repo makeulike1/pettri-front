@@ -196,7 +196,7 @@
         {#each rows6 as it}
             <tr>
                 <td>{it.createtime}</td>
-                <td>{it.trkId}</td>
+                <td>{it.trackingId}</td>
             </tr>
         {/each}
 
