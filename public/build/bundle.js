@@ -208,6 +208,7 @@ var app = (function () {
     }
 
     const dirty_components = [];
+    const intros = { enabled: false };
     const binding_callbacks = [];
     const render_callbacks = [];
     const flush_callbacks = [];
@@ -12122,7 +12123,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (118:8) {#each rows5 as it}
+    // (120:8) {#each rows5 as it}
     function create_each_block_8(ctx) {
     	let tr;
     	let td0;
@@ -12158,14 +12159,14 @@ var app = (function () {
     			t6 = text(t6_value);
     			t7 = space();
     			attr_dev(td0, "class", "svelte-c1c4px");
-    			add_location(td0, file$2, 119, 16, 2948);
+    			add_location(td0, file$2, 121, 16, 2995);
     			attr_dev(td1, "class", "svelte-c1c4px");
-    			add_location(td1, file$2, 120, 16, 2989);
+    			add_location(td1, file$2, 122, 16, 3036);
     			attr_dev(td2, "class", "svelte-c1c4px");
-    			add_location(td2, file$2, 121, 16, 3030);
+    			add_location(td2, file$2, 123, 16, 3077);
     			attr_dev(td3, "class", "svelte-c1c4px");
-    			add_location(td3, file$2, 122, 16, 3071);
-    			add_location(tr, file$2, 118, 12, 2927);
+    			add_location(td3, file$2, 124, 16, 3118);
+    			add_location(tr, file$2, 120, 12, 2974);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12197,14 +12198,14 @@ var app = (function () {
     		block,
     		id: create_each_block_8.name,
     		type: "each",
-    		source: "(118:8) {#each rows5 as it}",
+    		source: "(120:8) {#each rows5 as it}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (140:8) {#each rows4 as it}
+    // (142:8) {#each rows4 as it}
     function create_each_block_7(ctx) {
     	let tr;
     	let td0;
@@ -12240,14 +12241,14 @@ var app = (function () {
     			t6 = text(t6_value);
     			t7 = space();
     			attr_dev(td0, "class", "svelte-c1c4px");
-    			add_location(td0, file$2, 141, 16, 3426);
+    			add_location(td0, file$2, 143, 16, 3473);
     			attr_dev(td1, "class", "svelte-c1c4px");
-    			add_location(td1, file$2, 142, 16, 3467);
+    			add_location(td1, file$2, 144, 16, 3514);
     			attr_dev(td2, "class", "svelte-c1c4px");
-    			add_location(td2, file$2, 143, 16, 3508);
+    			add_location(td2, file$2, 145, 16, 3555);
     			attr_dev(td3, "class", "svelte-c1c4px");
-    			add_location(td3, file$2, 144, 16, 3549);
-    			add_location(tr, file$2, 140, 12, 3405);
+    			add_location(td3, file$2, 146, 16, 3596);
+    			add_location(tr, file$2, 142, 12, 3452);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12279,14 +12280,14 @@ var app = (function () {
     		block,
     		id: create_each_block_7.name,
     		type: "each",
-    		source: "(140:8) {#each rows4 as it}",
+    		source: "(142:8) {#each rows4 as it}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (174:28) {#each it.prop as it1}
+    // (176:28) {#each it.prop as it1}
     function create_each_block_6(ctx) {
     	let tr;
     	let td0;
@@ -12308,11 +12309,11 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(td0, "class", "svelte-c1c4px");
-    			add_location(td0, file$2, 175, 36, 4282);
+    			add_location(td0, file$2, 177, 36, 4329);
     			attr_dev(td1, "class", "svelte-c1c4px");
-    			add_location(td1, file$2, 176, 36, 4337);
+    			add_location(td1, file$2, 178, 36, 4384);
     			attr_dev(tr, "class", "svelte-c1c4px");
-    			add_location(tr, file$2, 174, 32, 4241);
+    			add_location(tr, file$2, 176, 32, 4288);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12336,14 +12337,14 @@ var app = (function () {
     		block,
     		id: create_each_block_6.name,
     		type: "each",
-    		source: "(174:28) {#each it.prop as it1}",
+    		source: "(176:28) {#each it.prop as it1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (165:8) {#each rows1 as it}
+    // (167:8) {#each rows1 as it}
     function create_each_block_5(ctx) {
     	let tr;
     	let td0;
@@ -12399,20 +12400,20 @@ var app = (function () {
 
     			t8 = space();
     			attr_dev(td0, "class", "svelte-c1c4px");
-    			add_location(td0, file$2, 166, 16, 3946);
+    			add_location(td0, file$2, 168, 16, 3993);
     			attr_dev(td1, "class", "svelte-c1c4px");
-    			add_location(td1, file$2, 167, 16, 3987);
+    			add_location(td1, file$2, 169, 16, 4034);
     			attr_dev(td2, "class", "svelte-c1c4px");
-    			add_location(td2, file$2, 168, 16, 4023);
+    			add_location(td2, file$2, 170, 16, 4070);
     			attr_dev(td3, "class", "svelte-c1c4px");
-    			add_location(td3, file$2, 169, 16, 4060);
-    			add_location(tbody, file$2, 172, 24, 4150);
+    			add_location(td3, file$2, 171, 16, 4107);
+    			add_location(tbody, file$2, 174, 24, 4197);
     			attr_dev(table, "class", "svelte-c1c4px");
-    			add_location(table, file$2, 171, 20, 4118);
+    			add_location(table, file$2, 173, 20, 4165);
     			attr_dev(td4, "class", "svelte-c1c4px");
-    			add_location(td4, file$2, 170, 16, 4093);
+    			add_location(td4, file$2, 172, 16, 4140);
     			attr_dev(tr, "class", "svelte-c1c4px");
-    			add_location(tr, file$2, 165, 12, 3925);
+    			add_location(tr, file$2, 167, 12, 3972);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12478,14 +12479,14 @@ var app = (function () {
     		block,
     		id: create_each_block_5.name,
     		type: "each",
-    		source: "(165:8) {#each rows1 as it}",
+    		source: "(167:8) {#each rows1 as it}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (196:8) {#each rows6 as it}
+    // (200:8) {#each rows6 as it}
     function create_each_block_4(ctx) {
     	let tr;
     	let td0;
@@ -12493,9 +12494,17 @@ var app = (function () {
     	let t0;
     	let t1;
     	let td1;
-    	let t2_value = /*it*/ ctx[10].trkId + "";
+    	let t2_value = /*it*/ ctx[10].trackingId + "";
     	let t2;
     	let t3;
+    	let td2;
+    	let t4_value = /*it*/ ctx[10].attrId + "";
+    	let t4;
+    	let t5;
+    	let td3;
+    	let t6_value = /*it*/ ctx[10].clickKey + "";
+    	let t6;
+    	let t7;
 
     	const block = {
     		c: function create() {
@@ -12506,12 +12515,22 @@ var app = (function () {
     			td1 = element("td");
     			t2 = text(t2_value);
     			t3 = space();
+    			td2 = element("td");
+    			t4 = text(t4_value);
+    			t5 = space();
+    			td3 = element("td");
+    			t6 = text(t6_value);
+    			t7 = space();
     			attr_dev(td0, "class", "svelte-c1c4px");
-    			add_location(td0, file$2, 197, 16, 4792);
+    			add_location(td0, file$2, 201, 16, 4902);
     			attr_dev(td1, "class", "svelte-c1c4px");
-    			add_location(td1, file$2, 198, 16, 4833);
+    			add_location(td1, file$2, 202, 16, 4943);
+    			attr_dev(td2, "class", "svelte-c1c4px");
+    			add_location(td2, file$2, 203, 16, 4984);
+    			attr_dev(td3, "class", "svelte-c1c4px");
+    			add_location(td3, file$2, 204, 16, 5021);
     			attr_dev(tr, "class", "svelte-c1c4px");
-    			add_location(tr, file$2, 196, 12, 4771);
+    			add_location(tr, file$2, 200, 12, 4881);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12521,10 +12540,18 @@ var app = (function () {
     			append_dev(tr, td1);
     			append_dev(td1, t2);
     			append_dev(tr, t3);
+    			append_dev(tr, td2);
+    			append_dev(td2, t4);
+    			append_dev(tr, t5);
+    			append_dev(tr, td3);
+    			append_dev(td3, t6);
+    			append_dev(tr, t7);
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*rows6*/ 32 && t0_value !== (t0_value = /*it*/ ctx[10].createtime + "")) set_data_dev(t0, t0_value);
-    			if (dirty & /*rows6*/ 32 && t2_value !== (t2_value = /*it*/ ctx[10].trkId + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*rows6*/ 32 && t2_value !== (t2_value = /*it*/ ctx[10].trackingId + "")) set_data_dev(t2, t2_value);
+    			if (dirty & /*rows6*/ 32 && t4_value !== (t4_value = /*it*/ ctx[10].attrId + "")) set_data_dev(t4, t4_value);
+    			if (dirty & /*rows6*/ 32 && t6_value !== (t6_value = /*it*/ ctx[10].clickKey + "")) set_data_dev(t6, t6_value);
     		},
     		d: function destroy(detaching) {
     			if (detaching) detach_dev(tr);
@@ -12535,14 +12562,14 @@ var app = (function () {
     		block,
     		id: create_each_block_4.name,
     		type: "each",
-    		source: "(196:8) {#each rows6 as it}",
+    		source: "(200:8) {#each rows6 as it}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (225:28) {#each it.prop as it1}
+    // (231:28) {#each it.prop as it1}
     function create_each_block_3(ctx) {
     	let tr;
     	let td0;
@@ -12564,11 +12591,11 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(td0, "class", "svelte-c1c4px");
-    			add_location(td0, file$2, 226, 36, 5506);
+    			add_location(td0, file$2, 232, 36, 5697);
     			attr_dev(td1, "class", "svelte-c1c4px");
-    			add_location(td1, file$2, 227, 36, 5561);
+    			add_location(td1, file$2, 233, 36, 5752);
     			attr_dev(tr, "class", "svelte-c1c4px");
-    			add_location(tr, file$2, 225, 32, 5465);
+    			add_location(tr, file$2, 231, 32, 5656);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12592,14 +12619,14 @@ var app = (function () {
     		block,
     		id: create_each_block_3.name,
     		type: "each",
-    		source: "(225:28) {#each it.prop as it1}",
+    		source: "(231:28) {#each it.prop as it1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (217:8) {#each rows2 as it}
+    // (223:8) {#each rows2 as it}
     function create_each_block_2(ctx) {
     	let tr;
     	let td0;
@@ -12648,18 +12675,18 @@ var app = (function () {
 
     			t6 = space();
     			attr_dev(td0, "class", "svelte-c1c4px");
-    			add_location(td0, file$2, 218, 16, 5184);
+    			add_location(td0, file$2, 224, 16, 5375);
     			attr_dev(td1, "class", "svelte-c1c4px");
-    			add_location(td1, file$2, 219, 16, 5225);
+    			add_location(td1, file$2, 225, 16, 5416);
     			attr_dev(td2, "class", "svelte-c1c4px");
-    			add_location(td2, file$2, 220, 16, 5262);
-    			add_location(tbody, file$2, 223, 24, 5374);
+    			add_location(td2, file$2, 226, 16, 5453);
+    			add_location(tbody, file$2, 229, 24, 5565);
     			attr_dev(table, "class", "user-prop svelte-c1c4px");
-    			add_location(table, file$2, 222, 20, 5324);
+    			add_location(table, file$2, 228, 20, 5515);
     			attr_dev(td3, "class", "svelte-c1c4px");
-    			add_location(td3, file$2, 221, 16, 5299);
+    			add_location(td3, file$2, 227, 16, 5490);
     			attr_dev(tr, "class", "svelte-c1c4px");
-    			add_location(tr, file$2, 217, 12, 5163);
+    			add_location(tr, file$2, 223, 12, 5354);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12721,14 +12748,14 @@ var app = (function () {
     		block,
     		id: create_each_block_2.name,
     		type: "each",
-    		source: "(217:8) {#each rows2 as it}",
+    		source: "(223:8) {#each rows2 as it}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (260:28) {#each it.prop as it1}
+    // (266:28) {#each it.prop as it1}
     function create_each_block_1(ctx) {
     	let tr;
     	let td0;
@@ -12750,10 +12777,10 @@ var app = (function () {
     			t2 = text(t2_value);
     			t3 = space();
     			attr_dev(td0, "class", "svelte-c1c4px");
-    			add_location(td0, file$2, 261, 36, 6440);
+    			add_location(td0, file$2, 267, 36, 6631);
     			attr_dev(td1, "class", "svelte-c1c4px");
-    			add_location(td1, file$2, 262, 36, 6495);
-    			add_location(tr, file$2, 260, 32, 6399);
+    			add_location(td1, file$2, 268, 36, 6686);
+    			add_location(tr, file$2, 266, 32, 6590);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12777,14 +12804,14 @@ var app = (function () {
     		block,
     		id: create_each_block_1.name,
     		type: "each",
-    		source: "(260:28) {#each it.prop as it1}",
+    		source: "(266:28) {#each it.prop as it1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (251:8) {#each rows3 as it}
+    // (257:8) {#each rows3 as it}
     function create_each_block(ctx) {
     	let tr;
     	let td0;
@@ -12840,19 +12867,19 @@ var app = (function () {
 
     			t8 = space();
     			attr_dev(td0, "class", "svelte-c1c4px");
-    			add_location(td0, file$2, 252, 16, 6083);
+    			add_location(td0, file$2, 258, 16, 6274);
     			attr_dev(td1, "class", "svelte-c1c4px");
-    			add_location(td1, file$2, 253, 16, 6124);
+    			add_location(td1, file$2, 259, 16, 6315);
     			attr_dev(td2, "class", "svelte-c1c4px");
-    			add_location(td2, file$2, 254, 16, 6161);
+    			add_location(td2, file$2, 260, 16, 6352);
     			attr_dev(td3, "class", "svelte-c1c4px");
-    			add_location(td3, file$2, 255, 16, 6196);
-    			add_location(tbody, file$2, 258, 24, 6308);
+    			add_location(td3, file$2, 261, 16, 6387);
+    			add_location(tbody, file$2, 264, 24, 6499);
     			attr_dev(table, "class", "user-prop svelte-c1c4px");
-    			add_location(table, file$2, 257, 20, 6258);
+    			add_location(table, file$2, 263, 20, 6449);
     			attr_dev(td4, "class", "svelte-c1c4px");
-    			add_location(td4, file$2, 256, 16, 6233);
-    			add_location(tr, file$2, 251, 12, 6062);
+    			add_location(td4, file$2, 262, 16, 6424);
+    			add_location(tr, file$2, 257, 12, 6253);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -12918,7 +12945,7 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(251:8) {#each rows3 as it}",
+    		source: "(257:8) {#each rows3 as it}",
     		ctx
     	});
 
@@ -12989,36 +13016,40 @@ var app = (function () {
     	let t45;
     	let td14;
     	let t47;
+    	let td15;
+    	let t49;
+    	let td16;
+    	let t51;
     	let tbody3;
-    	let t48;
+    	let t52;
     	let h44;
-    	let t50;
+    	let t54;
     	let table4;
     	let thead4;
-    	let td15;
-    	let t52;
-    	let td16;
-    	let t54;
     	let td17;
     	let t56;
     	let td18;
     	let t58;
+    	let td19;
+    	let t60;
+    	let td20;
+    	let t62;
     	let tbody4;
-    	let t59;
+    	let t63;
     	let h45;
-    	let t61;
+    	let t65;
     	let table5;
     	let thead5;
-    	let td19;
-    	let t63;
-    	let td20;
-    	let t65;
     	let td21;
     	let t67;
     	let td22;
     	let t69;
     	let td23;
     	let t71;
+    	let td24;
+    	let t73;
+    	let td25;
+    	let t75;
     	let tbody5;
     	let each_value_8 = /*rows5*/ ctx[4];
     	validate_each_argument(each_value_8);
@@ -13167,57 +13198,63 @@ var app = (function () {
     			td14 = element("td");
     			td14.textContent = "트래킹 아이디";
     			t47 = space();
+    			td15 = element("td");
+    			td15.textContent = "어르티뷰션 아이디";
+    			t49 = space();
+    			td16 = element("td");
+    			td16.textContent = "매체사 클릭키";
+    			t51 = space();
     			tbody3 = element("tbody");
 
     			for (let i = 0; i < each_blocks_2.length; i += 1) {
     				each_blocks_2[i].c();
     			}
 
-    			t48 = space();
+    			t52 = space();
     			h44 = element("h4");
     			h44.textContent = "회원 데이터베이스";
-    			t50 = space();
+    			t54 = space();
     			table4 = element("table");
     			thead4 = element("thead");
-    			td15 = element("td");
-    			td15.textContent = "회원 생성 날짜/시각";
-    			t52 = space();
-    			td16 = element("td");
-    			td16.textContent = "어트리뷰션 아이디";
-    			t54 = space();
     			td17 = element("td");
-    			td17.textContent = "회원 아이디";
+    			td17.textContent = "회원 생성 날짜/시각";
     			t56 = space();
     			td18 = element("td");
-    			td18.textContent = "속성";
+    			td18.textContent = "어트리뷰션 아이디";
     			t58 = space();
+    			td19 = element("td");
+    			td19.textContent = "회원 아이디";
+    			t60 = space();
+    			td20 = element("td");
+    			td20.textContent = "속성";
+    			t62 = space();
     			tbody4 = element("tbody");
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].c();
     			}
 
-    			t59 = space();
+    			t63 = space();
     			h45 = element("h4");
     			h45.textContent = "이벤트 데이터베이스";
-    			t61 = space();
+    			t65 = space();
     			table5 = element("table");
     			thead5 = element("thead");
-    			td19 = element("td");
-    			td19.textContent = "이벤트 생성 날짜/시각";
-    			t63 = space();
-    			td20 = element("td");
-    			td20.textContent = "어트리뷰션 아이디";
-    			t65 = space();
     			td21 = element("td");
-    			td21.textContent = "이벤트 이름";
+    			td21.textContent = "이벤트 생성 날짜/시각";
     			t67 = space();
     			td22 = element("td");
-    			td22.textContent = "회원 아이디";
+    			td22.textContent = "어트리뷰션 아이디";
     			t69 = space();
     			td23 = element("td");
-    			td23.textContent = "속성";
+    			td23.textContent = "이벤트 이름";
     			t71 = space();
+    			td24 = element("td");
+    			td24.textContent = "회원 아이디";
+    			t73 = space();
+    			td25 = element("td");
+    			td25.textContent = "속성";
+    			t75 = space();
     			tbody5 = element("tbody");
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -13225,102 +13262,106 @@ var app = (function () {
     			}
 
     			attr_dev(span0, "class", "count svelte-c1c4px");
-    			add_location(span0, file$2, 103, 4, 2548);
-    			add_location(br, file$2, 104, 4, 2600);
+    			add_location(span0, file$2, 105, 4, 2595);
+    			add_location(br, file$2, 106, 4, 2647);
     			attr_dev(span1, "class", "count svelte-c1c4px");
-    			add_location(span1, file$2, 105, 4, 2609);
+    			add_location(span1, file$2, 107, 4, 2656);
     			attr_dev(div, "class", "stat svelte-c1c4px");
-    			add_location(div, file$2, 102, 0, 2525);
+    			add_location(div, file$2, 104, 0, 2572);
     			attr_dev(h40, "class", "svelte-c1c4px");
-    			add_location(h40, file$2, 108, 0, 2668);
+    			add_location(h40, file$2, 110, 0, 2715);
     			attr_dev(td0, "class", "datetime svelte-c1c4px");
-    			add_location(td0, file$2, 111, 8, 2711);
+    			add_location(td0, file$2, 113, 8, 2758);
     			attr_dev(td1, "class", "cp-id svelte-c1c4px");
-    			add_location(td1, file$2, 112, 8, 2754);
+    			add_location(td1, file$2, 114, 8, 2801);
     			attr_dev(td2, "class", "trk-id svelte-c1c4px");
-    			add_location(td2, file$2, 113, 8, 2794);
+    			add_location(td2, file$2, 115, 8, 2841);
     			attr_dev(td3, "class", "ck svelte-c1c4px");
-    			add_location(td3, file$2, 114, 8, 2834);
+    			add_location(td3, file$2, 116, 8, 2881);
     			attr_dev(thead0, "class", "svelte-c1c4px");
-    			add_location(thead0, file$2, 110, 4, 2695);
-    			add_location(tbody0, file$2, 116, 4, 2879);
+    			add_location(thead0, file$2, 112, 4, 2742);
+    			add_location(tbody0, file$2, 118, 4, 2926);
     			attr_dev(table0, "class", "svelte-c1c4px");
-    			add_location(table0, file$2, 109, 0, 2683);
+    			add_location(table0, file$2, 111, 0, 2730);
     			attr_dev(h41, "class", "svelte-c1c4px");
-    			add_location(h41, file$2, 130, 0, 3153);
+    			add_location(h41, file$2, 132, 0, 3200);
     			attr_dev(td4, "class", "datetime svelte-c1c4px");
-    			add_location(td4, file$2, 133, 8, 3200);
+    			add_location(td4, file$2, 135, 8, 3247);
     			attr_dev(td5, "class", "cp-id svelte-c1c4px");
-    			add_location(td5, file$2, 134, 8, 3243);
+    			add_location(td5, file$2, 136, 8, 3290);
     			attr_dev(td6, "class", "trk-id svelte-c1c4px");
-    			add_location(td6, file$2, 135, 8, 3283);
+    			add_location(td6, file$2, 137, 8, 3330);
     			attr_dev(td7, "class", "svelte-c1c4px");
-    			add_location(td7, file$2, 136, 8, 3323);
+    			add_location(td7, file$2, 138, 8, 3370);
     			attr_dev(thead1, "class", "svelte-c1c4px");
-    			add_location(thead1, file$2, 132, 4, 3184);
-    			add_location(tbody1, file$2, 138, 4, 3357);
+    			add_location(thead1, file$2, 134, 4, 3231);
+    			add_location(tbody1, file$2, 140, 4, 3404);
     			attr_dev(table1, "class", "svelte-c1c4px");
-    			add_location(table1, file$2, 131, 0, 3172);
+    			add_location(table1, file$2, 133, 0, 3219);
     			attr_dev(h42, "class", "svelte-c1c4px");
-    			add_location(h42, file$2, 154, 0, 3633);
+    			add_location(h42, file$2, 156, 0, 3680);
     			attr_dev(td8, "class", "datetime svelte-c1c4px");
-    			add_location(td8, file$2, 157, 8, 3702);
+    			add_location(td8, file$2, 159, 8, 3749);
     			attr_dev(td9, "class", "trk-id svelte-c1c4px");
-    			add_location(td9, file$2, 158, 8, 3745);
+    			add_location(td9, file$2, 160, 8, 3792);
     			attr_dev(td10, "class", "svelte-c1c4px");
-    			add_location(td10, file$2, 159, 8, 3785);
+    			add_location(td10, file$2, 161, 8, 3832);
     			attr_dev(td11, "class", "ck svelte-c1c4px");
-    			add_location(td11, file$2, 160, 8, 3812);
+    			add_location(td11, file$2, 162, 8, 3859);
     			attr_dev(td12, "class", "svelte-c1c4px");
-    			add_location(td12, file$2, 161, 8, 3848);
+    			add_location(td12, file$2, 163, 8, 3895);
     			attr_dev(thead2, "class", "svelte-c1c4px");
-    			add_location(thead2, file$2, 156, 4, 3686);
-    			add_location(tbody2, file$2, 163, 4, 3877);
+    			add_location(thead2, file$2, 158, 4, 3733);
+    			add_location(tbody2, file$2, 165, 4, 3924);
     			attr_dev(table2, "class", "install svelte-c1c4px");
-    			add_location(table2, file$2, 155, 0, 3658);
+    			add_location(table2, file$2, 157, 0, 3705);
     			attr_dev(h43, "class", "svelte-c1c4px");
-    			add_location(h43, file$2, 188, 0, 4574);
+    			add_location(h43, file$2, 190, 0, 4621);
     			attr_dev(td13, "class", "datetime svelte-c1c4px");
-    			add_location(td13, file$2, 191, 8, 4631);
+    			add_location(td13, file$2, 193, 8, 4678);
     			attr_dev(td14, "class", "trk-id svelte-c1c4px");
-    			add_location(td14, file$2, 192, 8, 4674);
+    			add_location(td14, file$2, 194, 8, 4721);
+    			attr_dev(td15, "class", "svelte-c1c4px");
+    			add_location(td15, file$2, 195, 8, 4761);
+    			attr_dev(td16, "class", "ck svelte-c1c4px");
+    			add_location(td16, file$2, 196, 8, 4788);
     			attr_dev(thead3, "class", "svelte-c1c4px");
-    			add_location(thead3, file$2, 190, 4, 4615);
-    			add_location(tbody3, file$2, 194, 4, 4723);
+    			add_location(thead3, file$2, 192, 4, 4662);
+    			add_location(tbody3, file$2, 198, 4, 4833);
     			attr_dev(table3, "class", "install svelte-c1c4px");
-    			add_location(table3, file$2, 189, 0, 4587);
+    			add_location(table3, file$2, 191, 0, 4634);
     			attr_dev(h44, "class", "svelte-c1c4px");
-    			add_location(h44, file$2, 207, 0, 4913);
-    			attr_dev(td15, "class", "datetime svelte-c1c4px");
-    			add_location(td15, file$2, 210, 8, 4973);
-    			attr_dev(td16, "class", "svelte-c1c4px");
-    			add_location(td16, file$2, 211, 8, 5019);
-    			attr_dev(td17, "class", "user-id svelte-c1c4px");
-    			add_location(td17, file$2, 212, 8, 5046);
+    			add_location(h44, file$2, 213, 0, 5104);
+    			attr_dev(td17, "class", "datetime svelte-c1c4px");
+    			add_location(td17, file$2, 216, 8, 5164);
     			attr_dev(td18, "class", "svelte-c1c4px");
-    			add_location(td18, file$2, 213, 8, 5086);
-    			attr_dev(thead4, "class", "svelte-c1c4px");
-    			add_location(thead4, file$2, 209, 4, 4957);
-    			add_location(tbody4, file$2, 215, 4, 5115);
-    			attr_dev(table4, "class", "user svelte-c1c4px");
-    			add_location(table4, file$2, 208, 0, 4932);
-    			attr_dev(h45, "class", "svelte-c1c4px");
-    			add_location(h45, file$2, 240, 0, 5799);
-    			attr_dev(td19, "class", "datetime svelte-c1c4px");
-    			add_location(td19, file$2, 243, 8, 5847);
+    			add_location(td18, file$2, 217, 8, 5210);
+    			attr_dev(td19, "class", "user-id svelte-c1c4px");
+    			add_location(td19, file$2, 218, 8, 5237);
     			attr_dev(td20, "class", "svelte-c1c4px");
-    			add_location(td20, file$2, 244, 8, 5894);
-    			attr_dev(td21, "class", "svelte-c1c4px");
-    			add_location(td21, file$2, 245, 8, 5921);
-    			attr_dev(td22, "class", "user-id svelte-c1c4px");
-    			add_location(td22, file$2, 246, 8, 5945);
+    			add_location(td20, file$2, 219, 8, 5277);
+    			attr_dev(thead4, "class", "svelte-c1c4px");
+    			add_location(thead4, file$2, 215, 4, 5148);
+    			add_location(tbody4, file$2, 221, 4, 5306);
+    			attr_dev(table4, "class", "user svelte-c1c4px");
+    			add_location(table4, file$2, 214, 0, 5123);
+    			attr_dev(h45, "class", "svelte-c1c4px");
+    			add_location(h45, file$2, 246, 0, 5990);
+    			attr_dev(td21, "class", "datetime svelte-c1c4px");
+    			add_location(td21, file$2, 249, 8, 6038);
+    			attr_dev(td22, "class", "svelte-c1c4px");
+    			add_location(td22, file$2, 250, 8, 6085);
     			attr_dev(td23, "class", "svelte-c1c4px");
-    			add_location(td23, file$2, 247, 8, 5985);
+    			add_location(td23, file$2, 251, 8, 6112);
+    			attr_dev(td24, "class", "user-id svelte-c1c4px");
+    			add_location(td24, file$2, 252, 8, 6136);
+    			attr_dev(td25, "class", "svelte-c1c4px");
+    			add_location(td25, file$2, 253, 8, 6176);
     			attr_dev(thead5, "class", "svelte-c1c4px");
-    			add_location(thead5, file$2, 242, 4, 5831);
-    			add_location(tbody5, file$2, 249, 4, 6014);
+    			add_location(thead5, file$2, 248, 4, 6022);
+    			add_location(tbody5, file$2, 255, 4, 6205);
     			attr_dev(table5, "class", "svelte-c1c4px");
-    			add_location(table5, file$2, 241, 0, 5819);
+    			add_location(table5, file$2, 247, 0, 6010);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -13403,47 +13444,51 @@ var app = (function () {
     			append_dev(thead3, td13);
     			append_dev(thead3, t45);
     			append_dev(thead3, td14);
-    			append_dev(table3, t47);
+    			append_dev(thead3, t47);
+    			append_dev(thead3, td15);
+    			append_dev(thead3, t49);
+    			append_dev(thead3, td16);
+    			append_dev(table3, t51);
     			append_dev(table3, tbody3);
 
     			for (let i = 0; i < each_blocks_2.length; i += 1) {
     				each_blocks_2[i].m(tbody3, null);
     			}
 
-    			insert_dev(target, t48, anchor);
+    			insert_dev(target, t52, anchor);
     			insert_dev(target, h44, anchor);
-    			insert_dev(target, t50, anchor);
+    			insert_dev(target, t54, anchor);
     			insert_dev(target, table4, anchor);
     			append_dev(table4, thead4);
-    			append_dev(thead4, td15);
-    			append_dev(thead4, t52);
-    			append_dev(thead4, td16);
-    			append_dev(thead4, t54);
     			append_dev(thead4, td17);
     			append_dev(thead4, t56);
     			append_dev(thead4, td18);
-    			append_dev(table4, t58);
+    			append_dev(thead4, t58);
+    			append_dev(thead4, td19);
+    			append_dev(thead4, t60);
+    			append_dev(thead4, td20);
+    			append_dev(table4, t62);
     			append_dev(table4, tbody4);
 
     			for (let i = 0; i < each_blocks_1.length; i += 1) {
     				each_blocks_1[i].m(tbody4, null);
     			}
 
-    			insert_dev(target, t59, anchor);
+    			insert_dev(target, t63, anchor);
     			insert_dev(target, h45, anchor);
-    			insert_dev(target, t61, anchor);
+    			insert_dev(target, t65, anchor);
     			insert_dev(target, table5, anchor);
     			append_dev(table5, thead5);
-    			append_dev(thead5, td19);
-    			append_dev(thead5, t63);
-    			append_dev(thead5, td20);
-    			append_dev(thead5, t65);
     			append_dev(thead5, td21);
     			append_dev(thead5, t67);
     			append_dev(thead5, td22);
     			append_dev(thead5, t69);
     			append_dev(thead5, td23);
-    			append_dev(table5, t71);
+    			append_dev(thead5, t71);
+    			append_dev(thead5, td24);
+    			append_dev(thead5, t73);
+    			append_dev(thead5, td25);
+    			append_dev(table5, t75);
     			append_dev(table5, tbody5);
 
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -13622,14 +13667,14 @@ var app = (function () {
     			if (detaching) detach_dev(t43);
     			if (detaching) detach_dev(table3);
     			destroy_each(each_blocks_2, detaching);
-    			if (detaching) detach_dev(t48);
+    			if (detaching) detach_dev(t52);
     			if (detaching) detach_dev(h44);
-    			if (detaching) detach_dev(t50);
+    			if (detaching) detach_dev(t54);
     			if (detaching) detach_dev(table4);
     			destroy_each(each_blocks_1, detaching);
-    			if (detaching) detach_dev(t59);
+    			if (detaching) detach_dev(t63);
     			if (detaching) detach_dev(h45);
-    			if (detaching) detach_dev(t61);
+    			if (detaching) detach_dev(t65);
     			if (detaching) detach_dev(table5);
     			destroy_each(each_blocks, detaching);
     		}
@@ -13723,6 +13768,7 @@ var app = (function () {
     	});
 
     	$$self.$capture_state = () => ({
+    		intros,
     		currentURL,
     		appId,
     		rows1,
