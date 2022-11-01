@@ -193,7 +193,7 @@
     <thead>
         <td class='datetime'>설치 날짜/시각</td>
         <td class='trk-id'>트래킹 아이디</td>
-        <td>어르티뷰션 아이디</td>
+        <td>어트리뷰션 아이디</td>
         <td class='ck'>매체사 클릭키</td>
     </thead>
     <tbody>
